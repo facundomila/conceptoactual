@@ -1,0 +1,13 @@
+@import 'styles/globals';
+
+.modal {
+  background-color: white;
+  padding: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 200px 33.3%;
+  width: 33.3%;
+  height: 150px;
+  z-index: 1005;
+}

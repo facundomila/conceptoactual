@@ -1,0 +1,25 @@
+@import 'styles/globals';
+
+.site-map {
+  color: $color-accent;
+  width: 720px;
+  padding: 20px;
+  text-align: center;
+
+  &-line {
+    border: dashed 1px;
+    color: $color-tertiary;
+  }
+
+  &-paragraph {
+    color: $color-primary;
+    font-size: 13px;
+  }
+
+  &-secciones {
+    position: relative;
+    float: left;
+    width: 220px;
+    margin: 6px;
+  }
+}

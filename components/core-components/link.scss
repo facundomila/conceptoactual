@@ -1,0 +1,10 @@
+@import 'styles/globals';
+
+.link {
+  color: $color-tertiary;
+  padding: 2px;
+}
+
+.link:hover {
+  color: $color-secondary;
+}

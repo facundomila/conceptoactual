@@ -1,0 +1,19 @@
+@import 'styles/globals';
+
+.header {
+  background-color: $background-color;
+  font-family: $font-primary;
+  color: $color-primary;
+
+  &-logo {
+    width: 280px;
+    padding: 30px;
+  }
+
+  &-navigation {
+    position: relative;
+    float: right;
+    width: 580px;
+    top: 55px;
+  }
+}

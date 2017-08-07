@@ -25,7 +25,7 @@ var NewItem = React.createClass({
     },
 
     renderImg: function (news) {
-        return <div className="new-item-image"><img src={news.img}/></div>;
+        return <img className="new-item-image" src={news.img}/>;
     },
 
     renderShareItemBar: function (news) {

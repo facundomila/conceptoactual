@@ -2,16 +2,15 @@
 
 .new-item {
   background-color: $background-color;
-  margin: 1%;
-  border: solid $color-secondary 6px;
-  width: 20%;
-  height: 210px;
+  position: relative;
   float: left;
-  padding: 10px;
+  width: 33.33%;
+  margin: 0;
 
   &-title {
-    position: relative;
-    top: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     color: $color-primary;
     text-align: center;
     font-weight: bold;
@@ -19,19 +18,21 @@
   }
 
   &-category {
-    position: relative;
-    top: 95px;
     color: $color-primary;
     text-align: center;
     font-size: 12px;
   }
 
   &-image {
+    opacity: 1;
+    display: block;
     width: 100%;
+    cursor: pointer;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
   }
-}
-
-.new-item:hover {
-  border: solid $color-accent 7px;
-  cursor: pointer;
+  &-image:hover {
+    opacity: 0.3;
+  }
 }

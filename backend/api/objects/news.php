@@ -11,8 +11,7 @@ class News {
     public $subtitle;
     public $description;
     public $paragraph;
-    public $ruta;
-    public $ruta_miniatura;
+    public $ubicacion;
     public $epigraph;
     public $category_id;
     public $category_name;
@@ -34,7 +33,7 @@ class News {
                     subtitle=:subtitle,
                     description=:description,
                     paragraph=:paragraph,
-                    img=:img;
+                    ubicacion=:ubicacion;
                     epigraph=:epigraph,
                     category_id=:category_id,
                     created=:created";
@@ -47,7 +46,6 @@ class News {
         $this->subtitle=htmlspecialchars(strip_tags($this->subtitle));
         $this->description=htmlspecialchars(strip_tags($this->description));
         $this->paragraph=htmlspecialchars(strip_tags($this->paragraph));
-        $this->img=htmlspecialchars(strip_tags($this->img));
         $this->epigraph=htmlspecialchars(strip_tags($this->epigraph));
         $this->category_id=htmlspecialchars(strip_tags($this->category_id));
         $this->created=htmlspecialchars(strip_tags($this->created));
@@ -57,7 +55,6 @@ class News {
         $stmt->bindParam(":subtitle", $this->subtitle);
         $stmt->bindParam(":description", $this->description);
         $stmt->bindParam(":paragraph", $this->paragraph);
-        $stmt->bindParam(":img", $this->img);
         $stmt->bindParam(":epigraph", $this->epigraph);
         $stmt->bindParam(":category_id", $this->category_id);
         $stmt->bindParam(":created", $this->created);
@@ -76,7 +73,7 @@ class News {
         // select all query
         $query = "SELECT
                     c.name as category_name, n.id, n.title, n.subtitle, n.description,
-                    n.paragraph, n.ruta, n.ruta_miniatura, n.epigraph, n.category_id, n.created, n.modificated
+                    n.paragraph, n.ubicacion, n.epigraph, n.category_id, n.created, n.modificated
                 FROM
                     " . $this->table_name . " n
                     LEFT JOIN

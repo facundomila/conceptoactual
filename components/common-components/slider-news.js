@@ -15,18 +15,25 @@ var SliderNews = React.createClass({
                 <li data-slide-to="2"></li>
                 <li data-slide-to="3"></li>
                 <li data-slide-to="4"></li>
+                <li data-slide-to="5"></li>
               </ol>
               <div className="carousel-inner">
                 <div className="item active">
-                  <img src={get} alt={this.getAltProps} />
+                  <img src={"cpanel/"+news[1].ruta} />
                 </div>
                 <div className="item">
-                  <img src="images/chicago.jpg" alt="Chicago" />
+                  <img src={"cpanel/"+news[2].ruta} />
                 </div>
-
                 <div className="item">
-                  <img src="images/ny.jpg" alt="New york" />
+                  <img src={"cpanel/"+news[3].ruta} />
                 </div>
+                <div className="item">
+                  <img src={"cpanel/"+news[4].ruta} />
+                </div>
+                <div className="item">
+                  <img src={"cpanel/"+news[5].ruta} />
+                </div>
+                
               </div>
 
               <a className="left carousel-control" href="#myCarousel" data-slide="prev">

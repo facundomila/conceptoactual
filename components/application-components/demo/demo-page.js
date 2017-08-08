@@ -25,6 +25,16 @@ var DemoPage = React.createClass({
 
     render: function () {
         var NewsStore = this.state.news.records;
+        var HighlightedNews = [];
+
+        NewsStore.forEach(function (item) {
+          if (item.category_name === "Novedades") {
+            HighlightedNews.push(item);
+          }
+        });
+
+
+        console.log('high',NewsStore, HighlightedNews);
 
         return (
             <div className="demo-page">
@@ -32,7 +42,7 @@ var DemoPage = React.createClass({
                 <Logo />
               </Header>
               <div className="demo-page-highlighted">
-                <SliderNews>{NewsStore}</SliderNews>
+                <SliderNews>{HighlightedNews}</SliderNews>
               </div>
               <div className="demo-page-main">
                 <NewsGrid>{NewsStore}</NewsGrid>

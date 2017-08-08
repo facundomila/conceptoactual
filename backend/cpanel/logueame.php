@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$connect = mysqli_connect("localhost","root","","tutorialesyoutube");
+$connect = mysqli_connect("localhost","root","","c0780297_data");
 
 if(isset($_POST["user"]) && isset($_POST["pass"])){
   $user = mysqli_real_escape_string($connect, $_POST["user"]);

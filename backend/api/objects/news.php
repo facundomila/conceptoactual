@@ -11,7 +11,8 @@ class News {
     public $subtitle;
     public $description;
     public $paragraph;
-    public $img;
+    public $ruta;
+    public $ruta_miniatura;
     public $epigraph;
     public $category_id;
     public $category_name;
@@ -75,7 +76,7 @@ class News {
         // select all query
         $query = "SELECT
                     c.name as category_name, n.id, n.title, n.subtitle, n.description,
-                    n.paragraph, n.img, n.epigraph, n.category_id, n.created, n.modificated
+                    n.paragraph, n.ruta, n.ruta_miniatura, n.epigraph, n.category_id, n.created, n.modificated
                 FROM
                     " . $this->table_name . " n
                     LEFT JOIN

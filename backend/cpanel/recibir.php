@@ -1,4 +1,4 @@
-<title>lnrtutoriales</title>
+<title>Control Panel</title>
 <?php
 //conexion a la base de datos
 $conexion= mysql_connect ("localhost","c0780297_data","35LAmafebi") or die ("no hay conexion al servidor");
@@ -40,13 +40,17 @@ mysql_select_db ("c0780297_data") or die ("no existe la base de datos");
           imagedestroy($gd_s);
           imagedestroy($gd_d);
 
-echo $_POST["title"];
-
 $titulo = $_POST["title"];
+$subtitulo = $_POST["subtitle"];
+$ubicacion = $_POST["ubicacion"];
+$category_id = $_POST["category_id"];
+$description = $_POST["description"];
+$paragraph = $_POST["paragraph"];
+$epigraph = $_POST["epigraph"];
 
 echo 'Se ha ingresado: '.$titulo.' correctamente.';
- 
+
 //insertamos los datos en la db
-$sql="INSERT INTO  news (title,ruta,ruta_miniatura) values('$titulo','".$destino."','".$destmini."') ";
+$sql="INSERT INTO  news (title,subtitle,ubicacion,category_id,description,paragraph,epigraph,ruta,ruta_miniatura) values('$titulo','$subtitulo','$ubicacion','$category_id','$description','$paragraph','$epigraph','".$destino."','".$destmini."')";
 $res=mysql_query($sql,$conexion);
 ?>

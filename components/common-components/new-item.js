@@ -11,7 +11,6 @@ var NewItem = React.createClass({
                 {this.renderTitle(news)}
                 {this.renderSubtitle(news)}
                 {this.renderImg(news)}
-                {this.renderShareItemBar(news)}
             </div>
         );
     },
@@ -21,11 +20,13 @@ var NewItem = React.createClass({
     },
 
     renderSubtitle: function (news) {
-        return <div className="new-item-category">{news.subtitle}</div>;
+        return <div className="new-item-category">{news.category_name}</div>;
     },
 
     renderImg: function (news) {
-        return <img className="new-item-image" src={news.ruta_miniatura}/>;
+        var dynamicPath = "http://conceptoactual.com/cpanel/";
+
+        return <img className="new-item-image" src={dynamicPath+news.ruta_miniatura}/>;
     },
 
     renderShareItemBar: function (news) {

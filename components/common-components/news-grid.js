@@ -8,7 +8,7 @@ var NewsGrid = React.createClass({
         var news = this.props.children;
 
         return (
-            <div className="product-list">
+            <div className="news-grid">
                 {_.map(news, this.renderItems)}
             </div>
         );

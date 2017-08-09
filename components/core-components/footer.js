@@ -6,18 +6,13 @@ var Footer = React.createClass({
 
     render: function () {
         return (
-            <div className="footer">
-                <img className="footer-logo" src="images/logo_blanco.png" />
-                <div className="footer-social">
+            <div className="myfooter">
+                <div className="myfooter-social">
                     <Link linkType="facebook"/>
                     <Link linkType="whatsapp"/>
                     <Link linkType="twitter"/>
-                    <Link linkType="linkedin"/>
+                    <Link linkType="instagram"/>
                 </div>
-                <div className="footer-site-map">
-                    <SiteMap />
-                </div>
-                <span className="footer-copyright">© 2017 - conceptoActual.com</span>
             </div>
         );
     }

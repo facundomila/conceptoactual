@@ -55,9 +55,9 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
                 <textarea name="paragraph" rows="30" cols="50"></textarea>
               </div>
               <div class="fifth-part">
-              <label>Adjuntar Imagen</label>
+              <span><label>Adjuntar Imagen [ Las imagenes deben ser en formato JPG y tamaño 1920 px x 1080 px ]</label>
                 <input name="archivo" type="file" size="100" />
-                <input name="action" type="hidden" value="upload" />
+                <input name="action" type="hidden" value="upload" /></span><br>
               <label>Pie de imagen:</label>
                 <input name="epigraph" type="text" size="100" />
               </div>

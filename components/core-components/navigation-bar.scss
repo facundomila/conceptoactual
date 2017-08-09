@@ -1,13 +1,20 @@
 @import 'styles/globals';
 
 .navigation-bar {
-  color: $color-primary;
+  color: $color-secondary;
+  overflow: hidden;
+  background-color: $color-primary;
+  position: relative;
+  width: 100%;
+
+  z-index: 5000;
+  height: 80px;
 
   &-links {
-    color: white;
+    color: #333;
+    padding: 2%;
     font-size: 14px;
     text-decoration: none;
-    padding: 10px;
 
     &--vertical {
       color: white;
@@ -23,10 +30,15 @@
 
   &-links:hover {
     color: $color-secondary;
+    text-decoration: none;
   }
 
   &--horizontal {
-
+    width: 70%;
+    margin: 10px 15%;
+    &-img {
+      padding: 0 24px;
+    }
   }
 
   &--vertical {

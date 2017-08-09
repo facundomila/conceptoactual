@@ -4,10 +4,11 @@ var SliderNews = React.createClass({
 
     render: function () {
         var news = this.props.children;
-        console.log(news)
+        console.log(news);
+        var dynamicPath = "http://conceptoactual.com/cpanel/";
 
         return (
-          <div className="container">
+          <div {...this.getProps()}>
             <div id="myCarousel" className="carousel slide" data-ride="carousel">
               <ol className="carousel-indicators">
                 <li data-slide-to="0" className="active"></li>
@@ -19,21 +20,29 @@ var SliderNews = React.createClass({
               </ol>
               <div className="carousel-inner">
                 <div className="item active">
-                  <img src={"cpanel/"+news[1].ruta} />
+                  <div className="slider-news-title">{news[0].title}</div>
+                  <img src={dynamicPath+news[0].ruta} />
                 </div>
                 <div className="item">
-                  <img src={"cpanel/"+news[2].ruta} />
+                  <div className="slider-news-title">{news[1].title}</div>
+                  <img src={dynamicPath+news[1].ruta} />
                 </div>
                 <div className="item">
-                  <img src={"cpanel/"+news[3].ruta} />
+                  <div className="slider-news-title">{news[2].title}</div>
+                  <img src={dynamicPath+news[2].ruta} />
                 </div>
                 <div className="item">
-                  <img src={"cpanel/"+news[4].ruta} />
+                  <div className="slider-news-title">{news[3].title}</div>
+                  <img src={dynamicPath+news[3].ruta} />
                 </div>
                 <div className="item">
-                  <img src={"cpanel/"+news[5].ruta} />
+                  <div className="slider-news-title">{news[4].title}</div>
+                  <img src={dynamicPath+news[4].ruta} />
                 </div>
-                
+                <div className="item">
+                  <div className="slider-news-title">{news[5].title}</div>
+                  <img src={dynamicPath+news[5].ruta} />
+                </div>
               </div>
 
               <a className="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -47,6 +56,16 @@ var SliderNews = React.createClass({
             </div>
           </div>
         );
+    },
+
+    getProps: function() {
+      return {
+          className: 'container',
+          style: {
+            width: '100%',
+            padding: 0
+          }
+      }
     }
 });
 

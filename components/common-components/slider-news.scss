@@ -2,7 +2,7 @@
 
 .slider-news {
   background-color: $background-color;
-  max-width: 1000px;
+  max-width: 1200px;
   position: relative;
   margin: auto;
 
@@ -26,5 +26,13 @@
     &dot:hover {
       background-color: red;
     }
+  }
+  &-title {
+    position: absolute;
+    top: 150px;
+    text-align: center;
+    padding: 50px 180px;
+    color: $color-primary;
+    font-size: 45px;
   }
 }

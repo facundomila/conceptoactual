@@ -18,12 +18,15 @@ var NavigationBar = React.createClass({
         if (this.props.alignment === 'horizontal') {
             links = (
                 <div className="navigation-bar--horizontal">
-                    <a href="#" className="navigation-bar-links">General</a> |
-                    <a href="#" className="navigation-bar-links">Deportes</a> |
-                    <a href="#" className="navigation-bar-links">Espectaculo</a> |
-                    <a href="#" className="navigation-bar-links">Economia</a> |
-                    <a href="#" className="navigation-bar-links">Tecnologia</a> |
-                    <a href="#" className="navigation-bar-links">Turismo</a>
+                    <a href="#" className="navigation-bar-links">NOVEDADES</a>
+                    <a href="#" className="navigation-bar-links">DEPORTES</a>
+                    <a href="#" className="navigation-bar-links">LIFE STYLE</a>
+                    <a href="#" className="navigation-bar-links">TURISMO</a>
+                    <img className="navigation-bar--horizontal-img" src="images/small-logo.png" />
+                    <a href="#" className="navigation-bar-links">OCIO</a>
+                    <a href="#" className="navigation-bar-links">TECNO</a>
+                    <a href="#" className="navigation-bar-links">SOCIALES</a>
+                    <a href="#" className="navigation-bar-links">CONCEPTO ACTUAL TV</a>
                 </div>
             );
         } else if (this.props.alignment === 'vertical') {

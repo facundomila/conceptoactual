@@ -1,10 +1,66 @@
 @import 'styles/globals';
 
 .link {
-  color: $color-tertiary;
-  padding: 2px;
+
+  &--facebook {
+    background-color: #3B5998;
+    color: $color-primary;
+    margin: 2px;
+    padding: 18px;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  &--facebook:hover {
+    opacity: 1;
+    color: $color-primary;
+  }
+  &--twitter {
+    background-color: #55ACEE;
+    color: $color-primary;
+    margin: 2px;
+    padding: 18px;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  &--twitter:hover {
+    opacity: 1;
+    color: $color-primary;
+  }
+  &--instagram {
+    background-color: #e4405b;
+    color: $color-primary;
+    margin: 2px;
+    padding: 18px;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  &--instagram:hover {
+    opacity: 1;
+    color: $color-primary;
+  }
+  &--whatsapp {
+    background-color: #25d366;
+    color: $color-primary;
+    margin: 2px;
+    padding: 18px;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  &--whatsapp:hover {
+    opacity: 1;
+    color: $color-primary;
+  }
 }
 
 .link:hover {
-  color: $color-secondary;
+  opacity: 1;
+  color: $color-primary;
 }

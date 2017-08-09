@@ -40,6 +40,8 @@ if($num>0){
             "subtitle" => $subtitle,
             "description" => html_entity_decode($description),
             "paragraph" => $paragraph,
+            "ruta" => $ruta,
+            "ruta_miniatura" => $ruta_miniatura,
             "ubicacion" => $ubicacion,
             "epigraph" => $epigraph,
             "category_id" => $category_id,

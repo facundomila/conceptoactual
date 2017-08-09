@@ -1,4 +1,9 @@
+<html>
+<head>
+<meta charset="iso-8859-1">
 <title>Control Panel</title>
+</head>
+<body>
 <?php
 //conexion a la base de datos
 $conexion= mysql_connect ("localhost","c0780297_data","35LAmafebi") or die ("no hay conexion al servidor");
@@ -27,8 +32,8 @@ mysql_select_db ("c0780297_data") or die ("no existe la base de datos");
           //creamos la miniaturas
           $source=$destino;
           $destmini="imagenes/miniaturas/".$prefijo."_".$archivo;//ruta donde se guardan las miniaturas
-          $width_d=200; // ancho de la imagen
-          $height_d=250; // alto de la imagen
+          $width_d=640; // ancho de la imagen
+          $height_d=360; // alto de la imagen
 
 
 	//copyamos la miniatura
@@ -48,9 +53,15 @@ $description = $_POST["description"];
 $paragraph = $_POST["paragraph"];
 $epigraph = $_POST["epigraph"];
 
-echo 'Se ha ingresado: '.$titulo.' correctamente.';
-
 //insertamos los datos en la db
 $sql="INSERT INTO  news (title,subtitle,ubicacion,category_id,description,paragraph,epigraph,ruta,ruta_miniatura) values('$titulo','$subtitulo','$ubicacion','$category_id','$description','$paragraph','$epigraph','".$destino."','".$destmini."')";
 $res=mysql_query($sql,$conexion);
+
+echo 'Se ha ingresado: '.$titulo.' correctamente.';
 ?>
+<script>
+alert("La noticia ha sido agregada correctamente!")
+window.location.href = "index.php";
+</script>
+</body>
+</html>

@@ -7,6 +7,7 @@ var IconFacebook = require('react-icons/lib/fa/facebook');
 var IconTwitter = require('react-icons/lib/fa/twitter');
 var IconLinkedin = require('react-icons/lib/fa/linkedin');
 var IconWhatsapp = require('react-icons/lib/fa/whatsapp');
+var IconInstagram = require('react-icons/lib/fa/instagram');
 
 var Icon = React.createClass({
 
@@ -27,7 +28,8 @@ var Icon = React.createClass({
             facebook: <IconFacebook />,
             linkedin: <IconLinkedin />,
             whatsapp: <IconWhatsapp />,
-            twitter: <IconTwitter />
+            twitter: <IconTwitter />,
+            instagram: <IconInstagram />
         };
 
         return icons[this.props.type];

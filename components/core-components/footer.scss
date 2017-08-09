@@ -1,47 +1,16 @@
 @import 'styles/globals';
 
-.footer {
+.myfooter {
+  margin-top: 50px;
+  position: relative;
+  height: 140px;
   color: $color-primary;
-  position: absolute;
-  right: 0;
-  left: 0;
+  padding: 30px 10%;
   background-color: $background-color;
-
-  &-logo {
-    position:relative;
-    float: left;
-    opacity: 0.7;
-    width: 400px;
-  }
 
   &-social {
     cursor: pointer;
     position: relative;
     float: right;
-    width: 160px;
-    top: 25px;
-    font-size: 25px;
-  }
-
-  &-navigation {
-    position: relative;
-    float: right;
-    width: 120px;
-    top: 140px;
-  }
-
-  &-copyright {
-    position: relative;
-    float: right;
-    top: 320px;
-    padding: 30px;
-    color: $color-accent;
-    font-size: 12px;
-  }
-
-  &-site-map {
-    position: relative;
-    float: left;
-    top: 60px;
   }
 }

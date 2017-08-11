@@ -1,5 +1,6 @@
-var DemoPage = require('components/application-components/demo/demo-page');
-var IndexPage = require('components/application-components/index-page');
+var DemoPage = require('components/application-components/demo-page/demo-page');
+var IndexPage = require('components/application-components/index-page/index-page');
+var ShowNews = require('components/application-components/show-news/show-news');
 var React = require('react');
 var ReactRouter = require('react-router');
 var browserHistory = ReactRouter.browserHistory;
@@ -12,6 +13,7 @@ var appRoutes = (
         <Route path="/" component={IndexPage} />
         <Route path="/index.html" component={IndexPage} />
         <Route path="/demo.html" component={DemoPage} />
+        <Route path="/news.html" component={ShowNews} />
     </Router>
 );
 

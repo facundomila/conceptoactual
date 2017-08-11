@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta charset="iso-8859-1">
+<meta charset="utf-8">
 <title>Control Panel</title>
 </head>
 <body>

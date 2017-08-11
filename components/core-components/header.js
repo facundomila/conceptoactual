@@ -6,7 +6,9 @@ var Header = React.createClass({
     render: function () {
         return (
             <div className="header">
-                <img className="header-logo" src="images/iso_blanco.png" />
+              <a href="demo.html">
+                  <img className="header-logo" src="images/iso_blanco.png" />
+                </a>
             </div>
         );
     }

@@ -35,14 +35,12 @@ var DemoPage = React.createClass({
           }
         });
 
-        console.log('high',NewsStore, HighlightedNews);
-
         return (
             <div className="demo-page">
               <Header>
                 <Logo />
               </Header>
-              <NavigationBar alignment="horizontal" />
+              <NavigationBar />
               <div className="demo-page-highlighted">
                 <SliderNews>{HighlightedNews}</SliderNews>
               </div>

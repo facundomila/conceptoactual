@@ -1,7 +1,10 @@
 @import 'styles/globals';
 
 .placement {
+  background-color: #FFF;
+
   &-img {
-    width: 100%;
+    width: 23%;
+    margin: 1%;
   }
 }

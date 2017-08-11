@@ -9,7 +9,10 @@ var Placement = React.createClass({
     render: function () {
         return (
             <div className="placement">
-              <img className="placement-img" src={this.getPlacement()} />
+              <img className="placement-img" src='images/lolapaloza.jpg' />
+              <img className="placement-img" src='images/santafe.jpg' />
+              <img className="placement-img" src='images/lolapaloza.jpg' />
+              <img className="placement-img" src='images/santafe.jpg' />
             </div>
         );
     },

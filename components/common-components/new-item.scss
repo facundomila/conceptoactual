@@ -4,8 +4,8 @@
   background-color: $background-color;
   position: relative;
   float: left;
-  width: 33.33%;
-  margin: 0;
+  width: 31.3%;
+  margin: 1%;
 
   &-title {
     position: absolute;
@@ -38,4 +38,22 @@
   &-image:hover {
     opacity: 0.3;
   }
+}
+
+.new-item:nth-child(4) {
+  width: 48%;
+}
+.new-item:nth-child(5) {
+  width: 48%;
+}
+.new-item:last-child {
+  width: 98%;
+}
+
+//mobile style
+@media only screen and (max-width: 720px) {
+  .new-item {width: 100%; margin: 0}
+  .new-item:nth-child(4) {width: 100%; margin: 0}
+  .new-item:nth-child(5) {width: 100%; margin: 0}
+  .new-item:last-child {width: 100%; margin: 0}
 }

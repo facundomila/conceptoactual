@@ -4,7 +4,6 @@ var SliderNews = React.createClass({
 
     render: function () {
         var news = this.props.children;
-        console.log(news);
         var dynamicPath = "http://conceptoactual.com/cpanel/";
 
         return (

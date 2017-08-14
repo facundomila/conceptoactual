@@ -8,11 +8,11 @@ var NewItem = React.createClass({
 
         return (
             <div className="new-item">
-            <a href={this.getLocation(news)}>
-                {this.renderTitle(news)}
-                {this.renderSubtitle(news)}
-                {this.renderImg(news)}
-            </a>
+              <a href={this.getLocation(news)}>
+                  {this.renderTitle(news)}
+                  {this.renderSubtitle(news)}
+                  {this.renderImg(news)}
+              </a>
             </div>
         );
     },

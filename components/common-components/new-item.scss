@@ -1,29 +1,48 @@
 @import 'styles/globals';
 
 .new-item {
-  background-color: $background-color;
+  z-index: 1000;
   position: relative;
   float: left;
   width: 31.3%;
   margin: 1%;
+  transition: .2s ease;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+
+  &-overlay {
+    z-index: 5000;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+  }
 
   &-title {
+    z-index: 1000;
+    font-family: $titles;
     position: absolute;
     top: 30px;
     padding: 15px;
     color: $color-primary;
     text-align: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 36px;
   }
 
   &-category {
     width: 100%;
+    font-family: $titles;
     text-align: center;
     position: absolute;
     bottom:30px;
     color: $color-primary;
-    font-size: 16px;
+    font-size: 22px;
   }
 
   &-image {
@@ -32,12 +51,20 @@
     width: 100%;
     cursor: pointer;
     height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
   }
   &-image:hover {
-    opacity: 0.3;
+
   }
+}
+.new-item:hover {
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.01);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.01);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.01);
+  transition: all 200ms ease-in;
+  transform: scale(1.01);
 }
 
 .new-item:nth-child(4) {
@@ -51,9 +78,16 @@
 }
 
 //mobile style
-@media only screen and (max-width: 720px) {
+@media only screen and (max-device-width : 768px) {
   .new-item {width: 100%; margin: 0}
   .new-item:nth-child(4) {width: 100%; margin: 0}
   .new-item:nth-child(5) {width: 100%; margin: 0}
   .new-item:last-child {width: 100%; margin: 0}
+
+  .new-item-title {
+    font-family: $titles;
+    font-size: 42px;
+    padding: 65px;
+    top: 100px;
+  }
 }

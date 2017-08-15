@@ -2,7 +2,7 @@
 
 .link {
 
-  &--facebook {
+  &-facebook {
     background-color: #3B5998;
     color: $color-primary;
     margin: 2px;
@@ -11,12 +11,51 @@
     text-decoration: none;
     border-radius: 50%;
     opacity: 0.5;
+
+    &--no_bubble {
+      color: $color-accent;
+      padding: 2px;
+      font-size: 22px;
+      text-decoration: none;
+    }
+    &--no_bubble:hover {
+      color: $color-tertiary;
+      text-decoration: none;
+    }
   }
-  &--facebook:hover {
+  &-facebook:hover {
     opacity: 1;
     color: $color-primary;
   }
-  &--twitter {
+  &-linkedin {
+    background-color: #0177b5;
+    color: $color-primary;
+    margin: 2px;
+    padding: 18px;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  &-linkedin:hover {
+    opacity: 1;
+    color: $color-primary;
+  }
+  &-youtube {
+    background-color: #e62117;
+    color: $color-primary;
+    margin: 2px;
+    padding: 18px;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  &-youtube:hover {
+    opacity: 1;
+    color: $color-primary;
+  }
+  &-twitter {
     background-color: #55ACEE;
     color: $color-primary;
     margin: 2px;
@@ -25,12 +64,23 @@
     text-decoration: none;
     border-radius: 50%;
     opacity: 0.5;
+
+    &--no_bubble {
+      color: $color-accent;
+      padding: 2px;
+      font-size: 22px;
+      text-decoration: none;
+    }
+    &--no_bubble:hover {
+      color: $color-tertiary;
+      text-decoration: none;
+    }
   }
-  &--twitter:hover {
+  &-twitter:hover {
     opacity: 1;
     color: $color-primary;
   }
-  &--instagram {
+  &-instagram {
     background-color: #e4405b;
     color: $color-primary;
     margin: 2px;
@@ -39,12 +89,23 @@
     text-decoration: none;
     border-radius: 50%;
     opacity: 0.5;
+
+    &--no_bubble {
+      color: $color-accent;
+      padding: 2px;
+      font-size: 22px;
+      text-decoration: none;
+    }
+    &--no_bubble:hover {
+      color: $color-tertiary;
+      text-decoration: none;
+    }
   }
-  &--instagram:hover {
+  &-instagram:hover {
     opacity: 1;
     color: $color-primary;
   }
-  &--whatsapp {
+  &-whatsapp {
     background-color: #25d366;
     color: $color-primary;
     margin: 2px;
@@ -54,7 +115,7 @@
     border-radius: 50%;
     opacity: 0.5;
   }
-  &--whatsapp:hover {
+  &-whatsapp:hover {
     opacity: 1;
     color: $color-primary;
   }
@@ -63,4 +124,37 @@
 .link:hover {
   opacity: 1;
   color: $color-primary;
+}
+
+@media only screen and (max-device-width : 768px) {
+  .link-facebook {
+    font-size: 24px;
+    padding: 20px;
+    margin: 2px;
+  }
+  .link-twitter {
+    font-size: 24px;
+    padding: 20px;
+    margin: 2px;
+  }
+  .link-whatsapp {
+    font-size: 24px;
+    padding: 20px;
+    margin: 2px;
+  }
+  .link-instagram {
+    font-size: 24px;
+    padding: 20px;
+    margin: 2px;
+  }
+  .link-linkedin {
+    font-size: 24px;
+    padding: 20px;
+    margin: 2px;
+  }
+  .link-youtube {
+    font-size: 24px;
+    padding: 20px;
+    margin: 2px;
+  }
 }

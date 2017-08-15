@@ -1,16 +1,23 @@
 @import 'styles/globals';
 
-.myfooter {
-  margin-top: 50px;
-  position: relative;
+.footer-concepto {
   height: 140px;
-  color: $color-primary;
   padding: 30px 10%;
-  background-color: $background-color;
 
   &-social {
+    margin: 24px 34%;
     cursor: pointer;
     position: relative;
-    float: right;
+    width: 32%;
+  }
+}
+
+@media only screen and (max-device-width : 768px) {
+  .demo-page-main {top: 140px}
+  .demo-page-ads2 {top: 140px}
+  .demo-page-footer {top: 140px}
+  .footer-concepto-social {
+    margin: 24px 27%;
+    width: 54%;
   }
 }

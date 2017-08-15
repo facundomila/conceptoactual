@@ -4,6 +4,7 @@
   background-color: $background-color;
   max-width: 1200px;
   position: relative;
+  top: 100px;
   margin: auto;
 
   &-container {
@@ -13,6 +14,8 @@
   }
 
   &-status {
+    position: relative;
+
     &-dot {
       cursor:pointer;
       height: 13px;
@@ -28,11 +31,34 @@
     }
   }
   &-title {
+    font-family: $titles;
+    font-size: 50px;
     position: absolute;
     top: 150px;
     text-align: center;
     padding: 50px 180px;
     color: $color-primary;
-    font-size: 45px;
+    text-shadow: 1px 1px #000;
+  }
+}
+.carousel-indicators {
+  bottom: 100px
+}
+.carousel img {
+  width: 100%
+}
+//mobile style
+@media only screen and (max-device-width : 768px) {
+  div.container {
+    top: 140px !important;
+  }
+  .slider-news-title {
+    padding: 100px 100px;
+    font-family: $titles;
+    font-size: 56px;
+    top: 5px;
+  }
+  .carousel-indicators {
+    bottom: 100px;
   }
 }

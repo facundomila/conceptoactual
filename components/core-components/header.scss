@@ -1,7 +1,7 @@
 @import 'styles/globals';
 
-.header {
-  background-color: $background-color;
+#particles-js {
+  background: $background-gradient;
   font-family: $font-primary;
   color: $color-primary;
   overflow: hidden;
@@ -10,30 +10,39 @@
   top: 0;
   width: 100%;
   z-index: 1001;
-
-  &-logo {
+}
+.header-logo-block {
+  float: left;
+  width: 26%;
+  margin: 0 0 0 36%;
+}
+.header-logo {
     padding: 10px;
-  }
+    width: auto;
+    z-index: 1200;
+}
+.header-social {
+  width: 6%;
+  margin: 50px 10px 0 6%;
+  z-index: 1200;
+  cursor: pointer;
+  position: relative;
+  float: right;
+}
+.particles-js-canvas-el {
+  position: absolute;
+  left: 0
 }
 
 //Mobile Style
-@media only screen and (max-width: 720px) {
-  .header {
-    color: $color-primary;
-    height: 80px;
-
-    &-logo {
-      position: relative;
-      float: right;
-      width: 430px;
-      padding: 8px 50px;
-    }
-
-    &-navigation {
-      position: relative;
-      float: right;
-      width: 580px;
-      top: 55px;
-    }
+@media only screen and (max-device-width : 768px) {
+  #particles-js {height: 140px}
+  .header-logo {
+      width: 680px;
+      padding: 8px 20px;
   }
+  .header-logo-block {
+    margin: 0 0 0 18%;
+  }
+  .header-social {display: none}
 }

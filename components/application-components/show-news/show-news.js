@@ -43,8 +43,12 @@ var ShowNews = React.createClass({
               </Header>
               <NavigationBar />
               <Notice>{itemToRender}</Notice>
-              <Placement ad="santafe" />
-              <Footer />
+              <div className="show-news-page-ads2">
+                <img src='images/lolla.png' />
+              </div>
+              <div className="show-news-page-footer">
+                <Footer />
+              </div>
             </div>
         );
     }

@@ -6,12 +6,14 @@ var Footer = React.createClass({
 
     render: function () {
         return (
-            <div className="myfooter">
-                <div className="myfooter-social">
+            <div className="footer-concepto">
+                <div className="footer-concepto-social">
                     <Link linkType="facebook"/>
-                    <Link linkType="whatsapp"/>
                     <Link linkType="twitter"/>
+                    <Link linkType="linkedin"/>
                     <Link linkType="instagram"/>
+                    <Link linkType="whatsapp"/>
+                    <Link linkType="youtube"/>
                 </div>
             </div>
         );

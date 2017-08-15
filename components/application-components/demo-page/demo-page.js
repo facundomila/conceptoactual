@@ -44,12 +44,18 @@ var DemoPage = React.createClass({
               <div className="demo-page-highlighted">
                 <SliderNews>{HighlightedNews}</SliderNews>
               </div>
-              <Placement ad="lolla" />
+              <div className="demo-page-ads">
+                <img src='images/lolla.png' />
+              </div>
               <div className="demo-page-main">
                 <NewsGrid>{NewsStore}</NewsGrid>
               </div>
-              <Placement ad="santafe" />
-              <Footer />
+              <div className="demo-page-ads2">
+                <img src='images/stafecultura.jpg' />
+              </div>
+              <div className="demo-page-footer">
+                <Footer />
+              </div>
             </div>
         );
     }

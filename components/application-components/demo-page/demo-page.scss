@@ -4,8 +4,49 @@
   color: $color-tertiary;
   padding: 2px;
 
-  &-main {
+  &-highlighted {
+    position: relative;
     width: 100%;
-    background-color: $color-primary;
   }
+
+  &-ads {
+    position: relative;
+    top: 180px;
+    width: 100%;
+  }
+
+  &-ads img {
+    width: 100%;
+  }
+
+  &-main {
+    position: relative;
+    top: 180px;
+    width: 100%;
+  }
+
+  &-ads2 {
+    position: relative;
+    top: 180px;
+    width: 100%;
+    z-index: 900
+  }
+
+  &-ads2 img {
+    width: 100%;
+  }
+
+  &-footer {
+    position: relative;
+    top: 180px;
+    width: 100%;
+    background: $background-gradient;
+  }
+}
+
+@media only screen and (max-device-width : 768px) {
+  .demo-page-ads {top: 140px}
+  .demo-page-main {top: 140px}
+  .demo-page-ads2 {top: 140px}
+  .demo-page-footer {top: 140px}
 }

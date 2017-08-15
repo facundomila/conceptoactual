@@ -5,7 +5,17 @@ var classNames = require('classnames');
 var Link = React.createClass({
 
     propTypes: {
-        linkType: React.PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'whatsapp'])
+        linkType: React.PropTypes.oneOf([
+        'facebook',
+        'twitter',
+        'instagram',
+        'whatsapp',
+        'linkedin',
+        'youtube',
+        'facebook_simple',
+        'twitter_simple',
+        'instagram_simple'
+      ])
     },
 
     render: function () {
@@ -24,11 +34,19 @@ var Link = React.createClass({
     },
 
     getClass: function () {
+      var kind = this.props.kind || null;
+      var type = this.props.linkType;
+
         return classNames({
-            'link--facebook': (this.props.linkType === 'facebook'),
-            'link--twitter': (this.props.linkType === 'twitter'),
-            'link--instagram': (this.props.linkType === 'instagram'),
-            'link--whatsapp': (this.props.linkType === 'whatsapp'),
+            'link-facebook--no_bubble': (type === 'facebook'  && kind === 'no_bubble'),
+            'link-twitter--no_bubble': (type === 'twitter'  && kind === 'no_bubble'),
+            'link-instagram--no_bubble': (type === 'instagram' && kind === 'no_bubble'),
+            'link-facebook': (type === 'facebook' && kind === null),
+            'link-twitter': (type === 'twitter' && kind === null),
+            'link-instagram': (type === 'instagram' && kind === null),
+            'link-whatsapp': (type === 'whatsapp' && kind === null),
+            'link-linkedin': (type === 'linkedin' && kind === null),
+            'link-youtube': (type === 'youtube' && kind === null),
         })
     }
 });

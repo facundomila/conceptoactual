@@ -3,4 +3,36 @@
 .show-news-page {
   color: $color-tertiary;
   padding: 2px;
+
+  &-ads2 {
+    position: relative;
+    top: 180px;
+    width: 100%;
+    z-index: 900
+  }
+
+  &-ads2 img {
+    width: 100%;
+  }
+
+  &-footer {
+    position: relative;
+    top: 180px;
+    width: 100%;
+    background-color: $background-color-accent;
+  }
+}
+
+@media only screen and (max-device-width : 768px) {
+  .notice-header {
+      top: 100px;
+      height: 340px;
+  }
+  .notice-title {
+    font-size: 30px;
+  }
+  .notice-subtitle {
+    margin-top: 15px;
+    font-size: 18px;
+  }
 }

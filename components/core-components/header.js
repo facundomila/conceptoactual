@@ -1,15 +1,22 @@
 var React = require('react');
-var NavigationBar = require('components/core-components/navigation-bar')
+var Link = require('components/core-components/link');
 
 var Header = React.createClass({
 
     render: function () {
         return (
-            <div className="header">
-              <a href="demo.html">
+            <div id="particles-js">
+              <div className="header-logo-block">
+                <a href="demo.html">
                   <img className="header-logo" src="images/iso_blanco.png" />
                 </a>
-            </div>
+              </div>
+              <div className="header-social">
+                  <Link kind="no_bubble" linkType="facebook"/>
+                  <Link kind="no_bubble" linkType="twitter"/>
+                  <Link kind="no_bubble" linkType="instagram"/>
+              </div>
+      			</div>
         );
     }
 });

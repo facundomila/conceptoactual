@@ -1,14 +1,16 @@
-$color-accent: #E26058;
+$color-accent: #dc2b7e;
 $color-primary: #FFFFFF;
-$color-secondary: #0065B4;
-$color-tertiary: #4AAAA7;
+$color-secondary: #0a2548;
+$color-tertiary: #f7c938;
 
 $color-primary-darker: darken($color-primary, 20%);
 $color-secondary-darker: darken($color-secondary, 20%);
 $color-tertiary-darker: darken($color-tertiary, 20%);
 
 $font-primary: "Trebuchet MS", Helvetica, sans-serif;
+$titles: "Fjalla One", sans-serif;
+$noticia: "Raleway", sans-serif;
 
-$background-color: #000;
-$background-color-light: #454545;
-$background-color-accent: #F0F0F0;
+$background-color: #fff;
+$background-gradient: radial-gradient(ellipse at center, #124e99 0%,#071a33 99%);
+$background-color-accent: #0a2548;

@@ -6,6 +6,7 @@ if(!isset($_SESSION["user"])){
 
 echo '<div class="bienvenido">Bienvenido:'.$_SESSION["user"].'</div>';
 echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
+echo '<div class="menu"><a href="index.php">Menu principal</a></div>';
 
 ?>
 <!DOCTYPE html>
@@ -22,6 +23,7 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
         <div class="form-container">
           <form action="update.php" method="POST" enctype="multipart/form-data">
               <div class="first-part">
+              <input id="idnews" name="id" />
               <label>Titulo:</label>
                 <input id="title" name="title" type="text" size="100" />
               <label>Ubicacion:</label>
@@ -61,37 +63,47 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
               <label>Pie de imagen:</label>
                 <input id="epigraph" name="epigraph" type="text" size="100" required/>
               </div>
-              <button type="submit" class="btn btn-default">Enviar noticia</button>
+              <button type="submit" class="btn btn-default">Actualizar</button>
               </form>
             </div>
       <script>
-        var news;
-        var toEdit = document.location.search.substring(4))
+        var collection;
         var xmlhttp = new XMLHttpRequest();
 
-        function populateValues(news) {
-          console.log('news', news)
+        function populateValues(collection) {
+          var filter = document.location.search.substring(4);
+          var news = [];
+
+          collection.forEach(function (item) {
+            if (item.id === filter) {
+              news.push(item);
+            }
+          });
+
+          var idnews = document.getElementById("idnews");
+            idnews.setAttribute("value", filter);
           var tit = document.getElementById("title");
-          tit.setAttribute("value", news.title);
+            tit.setAttribute("value", news[0].title);
           var ubi = document.getElementById("ubicacion");
-          ubi.setAttribute("selected", news.ubicacion);
+            ubi.setAttribute("selected", news[0].ubicacion);
           var subt = document.getElementById("subtitle");
+            subt.setAttribute("value", news[0].subtitle);
           var cid = document.getElementById("category_id");
-          cid.setAttribute("selected", news.category_id);
-          subt.setAttribute("value", news.subtitle);
-          var textDesc = news.description;
-          document.getElementById("description").value=textDesc;
-          var textParr = news.paragraph;
-          document.getElementById("paragraph").value=textParr;
+            cid.setAttribute("selected", news[0].category_id);
+          var textDesc = news[0].description;
+            document.getElementById("description").value=textDesc;
+          var textParr = news[0].paragraph;
+            document.getElementById("paragraph").value=textParr;
           var thumb = document.getElementById("thumb");
-          thumb.setAttribute("src", news.ruta_miniatura);
+            thumb.setAttribute("src", news[0].ruta_miniatura);
           var epi = document.getElementById("epigraph");
-          epi.setAttribute("value", news.epigraph);
+            epi.setAttribute("value", news[0].epigraph);
         }
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 myObj = JSON.parse(this.responseText);
-                news = myObj.records.map(populateValues);
+                collection = myObj.records;
+                populateValues(collection);
             }
         };
         xmlhttp.open("GET", "http://conceptoactual.com/api/news/read.php", true);

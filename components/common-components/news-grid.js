@@ -14,8 +14,8 @@ var NewsGrid = React.createClass({
         );
     },
 
-    renderItems: function (news, key) {
-        return <NewItem key={key}>{news}</NewItem>;
+    renderItems: function (item, key) {
+        return <NewItem key={key}>{item}</NewItem>;
     }
 });
 

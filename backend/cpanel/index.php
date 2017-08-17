@@ -11,19 +11,33 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Control Panel</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script src="js/jquery-1.12.3.min.js" charset="utf-8"></script>
     <script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
   </head>
   <body>
         <div class="form-container">
-          <form action="recibir.php" method="POST" enctype="multipart/form-data">
+          <form action="insert.php" method="POST" enctype="multipart/form-data">
               <div class="first-part">
               <label>Titulo:</label>
-                <input name="title" type="text" size="100" />
+                <input name="title" type="text" size="100" required/>
               <label>Ubicacion:</label>
                   <select name="ubicacion" type="text">
                     <option value="0">Destacadas</option>
@@ -32,7 +46,7 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
               </div>
               <div class="second-part">
               <label>Subtitulo:</label>
-                <input name="subtitle" type="text" size="100" />
+                <input name="subtitle" type="text" size="100" required/>
                 <label>Categoria:</label>
                     <select name="category_id" type="text">
                         <option value="1">Novedades</option>
@@ -47,34 +61,38 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
               </div>
               <div class="third-part">
               <label>Bajada:</label><br>
-                <textarea name="description" rows="3" cols="30"></textarea>
+                <textarea name="description" rows="3" cols="30" required></textarea>
               </div>
               <div class="fourth-part">
               <label>Cuerpo de noticia:</label><br>
-                <textarea name="paragraph" rows="30" cols="50"></textarea>
+                <textarea name="paragraph" rows="30" cols="50" required></textarea>
               </div>
               <div class="fifth-part">
               <span><label>Adjuntar Imagen [ Las imagenes deben ser en formato JPG y tamaño 1920 px x 1080 px ]</label>
-                <input name="archivo" type="file" size="100" />
+                <input name="archivo" type="file" size="100" required/>
                 <input name="action" type="hidden" value="upload" /></span><br>
               <label>Pie de imagen:</label>
-                <input name="epigraph" type="text" size="100" />
+                <input name="epigraph" type="text" size="100" required/>
               </div>
               <button type="submit" class="btn btn-default">Enviar noticia</button>
               </form>
     </div>
     <div class="form-container" id="news-list">
       <h1>Noticias</h1>
-      <div class="example"></div>
-    </div>
+      <table>
+        <tr>
+          <th>Titulo</th>
+          <th>Categoria</th>
+          <th>Accion</th>
+        </tr>
       <script>
         var news;
 
         var xmlhttp = new XMLHttpRequest();
 
         function writeNews(news) {
-            var item = document.createElement("div");
-            item.innerHTML = news.title + " - <b>"+news.category_name+"</b> <button onclick='deleteItem("+news.id+")'> Eliminar nota</button>";
+            var item = document.createElement("tr");
+            item.innerHTML = "<td>"+ news.title + "</td><td>"+ news.category_name +"</td><td><button onclick='editItem("+news.id+")'> Editar </button><button onclick='deleteItem("+news.id+")'> Eliminar </button></td>";
             document.getElementById("news-list").appendChild(item);
         }
         xmlhttp.onreadystatechange = function() {
@@ -86,11 +104,17 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
         xmlhttp.open("GET", "http://conceptoactual.com/api/news/read.php", true);
         xmlhttp.send();
 
+        function editItem(id) {
+          location.assign("http://conceptoactual.com/cpanel/edit.php?id="+id);
+        }
+
         function deleteItem(id) {
           xmlhttp.open("POST", "http://conceptoactual.com/api/news/delete.php", true);
           xmlhttp.send(JSON.stringify({id: id}));
           location.reload();
         }
       </script>
+      </table>
+      </div>
   </body>
 </html>

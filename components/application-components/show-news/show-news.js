@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var React = require('react');
 var Footer = require('components/core-components/footer');
 var Header = require('components/core-components/header');
@@ -29,12 +30,18 @@ var ShowNews = React.createClass({
         var NewsStore = this.state.news.records;
         var handleItem = this.props.location.query.id;
         var itemToRender = [];
-
+        
         NewsStore.forEach(function (item) {
           if (item.id === handleItem) {
             itemToRender.push(item);
           }
         });
+
+        var recomended = [
+          NewsStore[0],
+          NewsStore[1],
+          NewsStore[2]
+        ];
 
         return (
             <div className="show-news-page">
@@ -43,6 +50,9 @@ var ShowNews = React.createClass({
               </Header>
               <NavigationBar />
               <Notice>{itemToRender}</Notice>
+              <div className="show-news-page-recomended">
+                <NewsGrid>{recomended}</NewsGrid>
+              </div>
               <div className="show-news-page-ads2">
                 <img src='images/lolla.png' />
               </div>

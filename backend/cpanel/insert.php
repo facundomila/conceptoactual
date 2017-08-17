@@ -6,8 +6,10 @@
 <body>
 <?php
 //conexion a la base de datos
+
 $conexion= mysql_connect ("localhost","c0780297_data","35LAmafebi") or die ("no hay conexion al servidor");
 mysql_select_db ("c0780297_data") or die ("no existe la base de datos");
+mysql_set_charset("utf8");
 
 
 	      $status = "";
@@ -24,7 +26,7 @@ mysql_select_db ("c0780297_data") or die ("no existe la base de datos");
           //subimos la imagen original
           $destino =  "imagenes/originales/".$prefijo."_".$archivo; //ruta de la imagen original
           (copy($_FILES['archivo']['tmp_name'],$destino)) or die ("Error al subir la imagen ".$archivo);
-          $status = "La imagen <b>".$archivo."</b> se a subido correctamente !";
+          $status = "La imagen <b>".$archivo."</b> se a subido correctamente!";
 	      $post=$destino;
 
 		  echo $status;

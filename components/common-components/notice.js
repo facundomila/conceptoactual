@@ -6,8 +6,6 @@ var Notice = React.createClass({
         var item = this.props.children;
         var dynamicPath = "http://conceptoactual.com/cpanel/";
 
-        console.log('test',item);
-
         return (
             <div className="notice">
                 <div className="notice-header">

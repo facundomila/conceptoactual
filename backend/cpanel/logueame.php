@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-$connect = mysqli_connect("localhost","root","","c0780297_data");
+$connect = mysqli_connect("localhost","c0780297_data","35LAmafebi","c0780297_data");
+mysql_set_charset("utf8");
 
 if(isset($_POST["user"]) && isset($_POST["pass"])){
   $user = mysqli_real_escape_string($connect, $_POST["user"]);

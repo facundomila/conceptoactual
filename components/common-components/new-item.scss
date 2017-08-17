@@ -5,6 +5,7 @@
   position: relative;
   float: left;
   width: 31.3%;
+  border: 18px solid transparent;
   margin: 1%;
   transition: .2s ease;
   -webkit-transition: all 200ms ease-in;
@@ -16,13 +17,6 @@
   transition: all 200ms ease-in;
   transform: scale(1);
 
-  &-overlay {
-    z-index: 5000;
-    background-color: red;
-    width: 100%;
-    height: 100%;
-  }
-
   &-title {
     z-index: 1000;
     font-family: $titles;
@@ -32,7 +26,8 @@
     color: $color-primary;
     text-align: center;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px #000;
   }
 
   &-category {
@@ -43,6 +38,7 @@
     bottom:30px;
     color: $color-primary;
     font-size: 22px;
+    text-shadow: 1px 1px #000;
   }
 
   &-image {
@@ -51,9 +47,6 @@
     width: 100%;
     cursor: pointer;
     height: auto;
-  }
-  &-image:hover {
-
   }
 }
 .new-item:hover {
@@ -65,24 +58,24 @@
   -moz-transform: scale(1.01);
   transition: all 200ms ease-in;
   transform: scale(1.01);
+  border: 18px solid $color-accent;
 }
-
-.new-item:nth-child(4) {
-  width: 48%;
-}
-.new-item:nth-child(5) {
-  width: 48%;
-}
-.new-item:last-child {
-  width: 98%;
-}
+.new-item:nth-child(1) {width: 31.3%}
+.new-item:nth-child(2) {width: 31.3%}
+.new-item:nth-child(3) {width: 31.3%}
+.new-item:nth-child(4) {width: 48%}
+.new-item:nth-child(5) {width: 48%}
+.new-item:nth-child(6) {width: 98%}
 
 //mobile style
 @media only screen and (max-device-width : 768px) {
   .new-item {width: 100%; margin: 0}
+  .new-item:nth-child(1) {width: 100%; margin: 0}
+  .new-item:nth-child(2) {width: 100%; margin: 0}
+  .new-item:nth-child(3) {width: 100%; margin: 0}
   .new-item:nth-child(4) {width: 100%; margin: 0}
   .new-item:nth-child(5) {width: 100%; margin: 0}
-  .new-item:last-child {width: 100%; margin: 0}
+  .new-item:nth-child(6) {width: 100%; margin: 0}
 
   .new-item-title {
     font-family: $titles;

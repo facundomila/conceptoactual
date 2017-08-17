@@ -9,9 +9,9 @@ var NewItem = React.createClass({
         return (
             <div className="new-item">
               <a href={this.getLocation(news)}>
-                  {this.renderTitle(news)}
-                  {this.renderSubtitle(news)}
-                  {this.renderImg(news)}
+                {this.renderTitle(news)}
+                {this.renderSubtitle(news)}
+                {this.renderImg(news)}
               </a>
             </div>
         );
@@ -32,7 +32,7 @@ var NewItem = React.createClass({
     renderImg: function (news) {
         var dynamicPath = "http://conceptoactual.com/cpanel/";
 
-        return <img className="new-item-image" src={dynamicPath+news.ruta_miniatura}/>;
+        return <img className="new-item-image" src={dynamicPath+news.ruta_miniatura}/>
     },
 
     renderShareItemBar: function (news) {

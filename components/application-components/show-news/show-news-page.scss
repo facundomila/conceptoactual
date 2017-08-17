@@ -4,9 +4,14 @@
   color: $color-tertiary;
   padding: 2px;
 
+  &-recomended {
+    position: relative;
+    top: 120px;
+  }
+
   &-ads2 {
     position: relative;
-    top: 180px;
+    top: 200px;
     width: 100%;
     z-index: 900
   }

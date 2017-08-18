@@ -6,7 +6,7 @@
 
   &-recomended {
     position: relative;
-    top: 120px;
+    top: 200px;
   }
 
   &-ads2 {
@@ -25,19 +25,5 @@
     top: 180px;
     width: 100%;
     background-color: $background-color-accent;
-  }
-}
-
-@media only screen and (max-device-width : 768px) {
-  .notice-header {
-      top: 100px;
-      height: 340px;
-  }
-  .notice-title {
-    font-size: 30px;
-  }
-  .notice-subtitle {
-    margin-top: 15px;
-    font-size: 18px;
   }
 }

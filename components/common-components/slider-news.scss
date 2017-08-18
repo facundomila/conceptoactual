@@ -4,7 +4,7 @@
   background-color: $background-color;
   max-width: 1200px;
   position: relative;
-  top: 100px;
+  top: 56px;
   margin: auto;
 
   &-container {
@@ -39,6 +39,7 @@
     padding: 50px 180px;
     color: $color-primary;
     text-shadow: 1px 1px #000;
+    width: 100%;
   }
 }
 .carousel-indicators {

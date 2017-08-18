@@ -1,14 +1,28 @@
 @import 'styles/globals';
 
 .footer-concepto {
-  height: 140px;
+  height: auto;
   padding: 30px 10%;
 
+  &-logo {
+    width: 340px;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
   &-social {
-    margin: 24px 34%;
+    margin: 40px 33%;
     cursor: pointer;
     position: relative;
-    width: 32%;
+    width: 44%;
+  }
+
+  &-copyright {
+    font-family: $noticia;
+    font-size: 12px;
+    color: $color-primary;
+    width: 226px;
+    margin: 20px auto;
   }
 }
 
@@ -20,4 +34,7 @@
     margin: 24px 27%;
     width: 54%;
   }
+  .footer-concepto-logo {display: none}
+  .footer-concepto-copyright {display: none}
+  hr {display: none}
 }

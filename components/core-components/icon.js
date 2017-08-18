@@ -10,6 +10,7 @@ var IconInstagram = require('react-icons/lib/fa/instagram');
 var IconYoutube = require('react-icons/lib/fa/youtube');
 var IconLinkedin = require('react-icons/lib/fa/linkedin');
 var IconBars = require('react-icons/lib/fa/bars');
+var IconClose = require('react-icons/lib/fa/close');
 
 var Icon = React.createClass({
 
@@ -33,7 +34,8 @@ var Icon = React.createClass({
             twitter: <IconTwitter />,
             instagram: <IconInstagram />,
             youtube: <IconYoutube />,
-            bars: <IconBars />
+            bars: <IconBars />,
+            close: <IconClose />
         };
 
         return icons[this.props.type];

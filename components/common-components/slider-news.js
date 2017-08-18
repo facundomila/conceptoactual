@@ -49,9 +49,9 @@ var SliderNews = React.createClass({
                 </a>
                 </div>
                 <div className="item">
-                <a href={"news.html?id="+news[4].id}>
-                  <div className="slider-news-title">{news[4].title}</div>
-                  <img src={dynamicPath+news[4].ruta} />
+                <a href={"news.html?id="+news[5].id}>
+                  <div className="slider-news-title">{news[5].title}</div>
+                  <img src={dynamicPath+news[5].ruta} />
                 </a>
                 </div>
               </div>

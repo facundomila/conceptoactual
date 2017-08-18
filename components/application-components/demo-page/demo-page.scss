@@ -6,12 +6,13 @@
 
   &-highlighted {
     position: relative;
+    top: -24px;
     width: 100%;
   }
 
   &-ads {
     position: relative;
-    top: 180px;
+    top: 156px;
     width: 100%;
   }
 
@@ -21,13 +22,13 @@
 
   &-main {
     position: relative;
-    top: 180px;
+    top: 156px;
     width: 100%;
   }
 
   &-ads2 {
     position: relative;
-    top: 180px;
+    top: 156px;
     width: 100%;
     z-index: 900
   }
@@ -38,7 +39,7 @@
 
   &-footer {
     position: relative;
-    top: 180px;
+    top: 156px;
     width: 100%;
     background: $background-gradient;
   }

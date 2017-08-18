@@ -77,10 +77,38 @@
       }
     }
   }
+
+  &-social {
+    position: relative;
+    cursor: pointer;
+    top: 140px;
+    width: 200px;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-device-width : 768px) {
   .notice-header {
       top: 140px;
+      height: auto;
+  }
+  .notice-title {
+    font-size: 30px;
+  }
+  .notice-subtitle {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  .notice-category_name {
+    top: 140px;
+  }
+  .notice-img {
+    top: 140px;
+  }
+  .notice-epigraph {
+    top: 140px;
+  }
+  .notice-main {
+    top: 140px;
   }
 }

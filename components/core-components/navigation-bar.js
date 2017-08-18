@@ -5,7 +5,8 @@ var NavigationBar = React.createClass({
 
     getInitialState: function() {
         return {
-          mobileNav: 'navigation-bar'
+          mobileNav: 'navigation-bar',
+          burguerButton: 'open'
         }
     },
 
@@ -13,13 +14,17 @@ var NavigationBar = React.createClass({
         return (
             <div className="navigation">
               <button {...this.getBurgerButtonProps()}>
-                <Icon type="bars" />
+                {this.getIcon()}
               </button>
               <nav>
                   {this.getLinks()}
               </nav>
             </div>
         );
+    },
+
+    getIcon: function () {
+      return (this.state.burguerButton === 'open') ? <Icon type="bars" /> : <Icon type="close" />;
     },
 
     getBurgerButtonProps: function () {
@@ -52,6 +57,10 @@ var NavigationBar = React.createClass({
       (this.state.mobileNav === 'navigation-bar') ?
       this.setState({ mobileNav: 'navigation-bar--opened' }) :
       this.setState({ mobileNav: 'navigation-bar'});
+
+      (this.state.mobileNav === 'navigation-bar') ?
+      this.setState({ burguerButton: 'close' }) :
+      this.setState({ burguerButton: 'open'});
     }
 });
 

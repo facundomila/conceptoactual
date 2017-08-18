@@ -4,8 +4,8 @@ if(!isset($_SESSION["user"])){
   header("location:login.php");
 }
 
-echo '<div class="bienvenido">Bienvenido:'.$_SESSION["user"].'</div>';
-echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
+echo '<div class="header-bar"><div class="bienvenido">Bienvenido:'.$_SESSION["user"].'</div>';
+echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
 
 ?>
 <!DOCTYPE html>
@@ -19,13 +19,14 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
     <script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
     <style>
       table {
-        border-collapse: collapse;
         width: 100%;
+        border-collapse: collapse;
       }
       td, th {
         border: 1px solid #dddddd;
         text-align: left;
-        padding: 8px;
+        padding: 12px;
+        font-size: 14px;
       }
       tr:nth-child(even) {
         background-color: #dddddd;
@@ -34,32 +35,37 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
   </head>
   <body>
         <div class="form-container">
+          <h1>Crear Noticia</h1>
+          <hr>
           <form action="insert.php" method="POST" enctype="multipart/form-data">
-              <div class="first-part">
+            <div class="first-part">
               <label>Titulo:</label>
-                <input name="title" type="text" size="100" required/>
-              <label>Ubicacion:</label>
+                  <input name="title" type="text" size="100" required/>
+              <label>Subtitulo:</label>
+                  <input name="subtitle" type="text" size="100" required/>
+            </div>
+            <div class="second-part">
+              <div class="half">
+                <label>Ubicacion:</label>
                   <select name="ubicacion" type="text">
                     <option value="0">Destacadas</option>
                     <option value="1">Portal</option>
                   </select>
+              </div><div class="half">
+              <label>Categoria:</label>
+                  <select name="category_id" type="text">
+                    <option value="1">Novedades</option>
+                    <option value="2">Deportes</option>
+                    <option value="3">Life Style</option>
+                    <option value="4">Turismo</option>
+                    <option value="5">Ocio</option>
+                    <option value="6">Tecno</option>
+                    <option value="19">Sociales</option>
+                    <option value="20">Concepto Actual TV</option>
+                  </select>
               </div>
-              <div class="second-part">
-              <label>Subtitulo:</label>
-                <input name="subtitle" type="text" size="100" required/>
-                <label>Categoria:</label>
-                    <select name="category_id" type="text">
-                        <option value="1">Novedades</option>
-                        <option value="2">Deportes</option>
-                        <option value="3">Life Style</option>
-                        <option value="4">Turismo</option>
-                        <option value="5">Ocio</option>
-                        <option value="6">Tecno</option>
-                        <option value="19">Sociales</option>
-                        <option value="20">Concepto Actual TV</option>
-                    </select>
-              </div>
-              <div class="third-part">
+            </div>
+            <div class="third-part">
               <label>Bajada:</label><br>
                 <textarea name="description" rows="3" cols="30" required></textarea>
               </div>
@@ -69,21 +75,22 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
               </div>
               <div class="fifth-part">
               <span><label>Adjuntar Imagen [ Las imagenes deben ser en formato JPG y tamaño 1920 px x 1080 px ]</label>
-                <input name="archivo" type="file" size="100" required/>
+                <input name="archivo" type="file" size="100" class="btn btn-default" required/>
                 <input name="action" type="hidden" value="upload" /></span><br>
               <label>Pie de imagen:</label>
                 <input name="epigraph" type="text" size="100" required/>
+                <div class="separator"></div>
+                <button type="submit" class="btn btn-success">Enviar noticia</button>
               </div>
-              <button type="submit" class="btn btn-default">Enviar noticia</button>
               </form>
     </div>
-    <div class="form-container" id="news-list">
-      <h1>Noticias</h1>
-      <table>
+    <div class="form-container">
+      <h1>Noticias</h1><hr>
+      <table id="news-list">
         <tr>
           <th>Titulo</th>
-          <th>Categoria</th>
-          <th>Accion</th>
+          <th>Categroria</th>
+          <th>Acciones</th>
         </tr>
       <script>
         var news;
@@ -109,9 +116,12 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div>';
         }
 
         function deleteItem(id) {
+          var x = confirm("Esta seguro que desea Eliminar esta noticia?");
+          if (x == true) {
           xmlhttp.open("POST", "http://conceptoactual.com/api/news/delete.php", true);
           xmlhttp.send(JSON.stringify({id: id}));
           location.reload();
+          }
         }
       </script>
       </table>

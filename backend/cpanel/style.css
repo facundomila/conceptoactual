@@ -49,3 +49,42 @@ div {
   padding: 25px;
   margin: 30px auto;
 }
+body {
+  background-color: #286090;
+}
+hr {
+  border-top: 1px solid #286090;
+}
+
+.separator {
+  height: 20px;
+}
+
+.half {
+  width: 50%;
+  margin: 0;
+  float: left;
+}
+#thumb {
+  float: left;
+}
+.mensaje {
+  margin: 200px 30%;
+  width: 40%;
+  text-align: center;
+}
+.nueva-img {
+  float:left;
+  padding: 15px
+}
+
+.logout,.menu {
+  float: right;
+}
+.bienvenido {
+  float: left
+}
+.header-bar {
+  height: 80px;
+  border-radius: 0
+}

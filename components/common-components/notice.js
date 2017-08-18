@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('components/core-components/link')
 
 var Notice = React.createClass({
 
@@ -20,6 +21,11 @@ var Notice = React.createClass({
                 <div className="notice-main">
                   <div className="notice-main-description">{item[0].description}</div>
                   <div className="notice-main-paragraph">{item[0].paragraph}</div>
+                </div>
+                <div className="notice-social">
+                    <Link linkType="facebook"/>
+                    <Link linkType="twitter"/>
+                    <Link linkType="whatsapp"/>
                 </div>
             </div>
         );

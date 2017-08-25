@@ -8,12 +8,24 @@ var Placement = React.createClass({
 
     render: function () {
         return (
-            <div className="placement">
-              <img className="placement-img" src='images/lolapaloza.jpg' />
-              <img className="placement-img" src='images/santafe.jpg' />
-              <img className="placement-img" src='images/lolapaloza.jpg' />
-              <img className="placement-img" src='images/santafe.jpg' />
-            </div>
+          <div className="placement">
+            <section className="regular slider">
+              <div><img src="images/lolapaloza.jpg"/></div>
+              <div><img src="images/santafe.jpg"/></div>
+              <div><img src="images/lolapaloza.jpg"/></div>
+              <div><img src="images/santafe.jpg"/></div>
+              <div><img src="images/lolapaloza.jpg"/></div>
+              <div><img src="images/santafe.jpg"/></div>
+              <div><img src="images/lolapaloza.jpg"/></div>
+              <div><img src="images/santafe.jpg"/></div>
+              <div><img src="images/lolapaloza.jpg"/></div>
+              <div><img src="images/santafe.jpg"/></div>
+              <div><img src="images/lolapaloza.jpg"/></div>
+              <div><img src="images/santafe.jpg"/></div>
+              <div><img src="images/lolapaloza.jpg"/></div>
+              <div><img src="images/santafe.jpg"/></div>
+            </section>
+          </div>
         );
     },
 

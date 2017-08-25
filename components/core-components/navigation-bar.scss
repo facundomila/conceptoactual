@@ -2,20 +2,64 @@
 
 .navigation {
   width: 100%;
-  padding: 2px;
+  padding: 0;
   z-index: 1002;
   position: fixed;
-  top: 100px;
-  height: 56px;
-  background-color: $color-primary;
+  top: 0px;
+  height: 80px;
+  background-color: $background-color-secondary;
   -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.50);
   -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.50);
   box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.50);
 
+  &-logo-container {
+    position: relative;
+    float: left;
+    left: -50px;
+    background-color: $background-color-primary;
+    width: 400px;
+    height: 80px;
+    -ms-transform: skewX(-20deg); /* IE 9 */
+    -webkit-transform: skewX(-20deg); /* Safari */
+    transform: skewX(-20deg); /* Standard syntax */
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.70);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.70);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.70);
+  }
+
+  &-networks-container {
+    position: relative;
+    float: right;
+    right: -50px;
+    background-color: $background-color-terciary;
+    width: 170px;
+    height: 80px;
+    -ms-transform: skewX(-20deg); /* IE 9 */
+    -webkit-transform: skewX(-20deg); /* Safari */
+    transform: skewX(-20deg); /* Standard syntax */
+  }
+
+  &-logo {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 320px
+  }
+
+  &-networks {
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 20px;
+  }
+
   &-bar {
-  width: 922px;
-  margin: 0 auto;
+  float: left;
+  width: 600px;
+  margin: 24px auto;
   color: $color-secondary;
+  font-family: $titles;
+  font-weight: lighter;
   overflow: hidden;
 
     &-burger-btn {
@@ -31,16 +75,22 @@
     }
 
     &-links {
-      color: #333;
-      padding: 16px;
+      position: relative;
+      float: left;
+      color: #daa520;
+      border-bottom: 2px solid transparent;
+      padding: 5px 13px;
       font-size: 14px;
       text-decoration: none;
     }
+    &-links a {
+      text-decoration: none;
+      color: $color-primary;
+    }
 
     &-links:hover {
-      text-decoration: none;
       -webkit-animation-name: coolbtn; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
     }
 
     &-img {
@@ -113,10 +163,8 @@
 }
 
 @-webkit-keyframes coolbtn {
-    0%   {color:red; transform: translateY(0px)}
-    50%  {color:blue; transform: translateY(10px)}
-    75%  {color:green; transform: translateY(20px)}
-    100% {color:red; transform: translateY(10px)}
+    0%   {border-bottom: 0px solid #fff}
+    30%  {border-bottom: 2px solid #fff}
 }
 
 @-webkit-keyframes creazyloop {

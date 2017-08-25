@@ -6,42 +6,29 @@
 
   &-highlighted {
     position: relative;
-    top: -24px;
     width: 100%;
   }
 
   &-ads {
     position: relative;
-    top: 156px;
-    width: 100%;
-  }
-
-  &-ads img {
     width: 100%;
   }
 
   &-main {
     position: relative;
-    top: 156px;
+    height: auto;
     width: 100%;
   }
 
   &-ads2 {
     position: relative;
-    top: 156px;
-    width: 100%;
-    z-index: 900
-  }
-
-  &-ads2 img {
     width: 100%;
   }
 
   &-footer {
     position: relative;
-    top: 156px;
+    float: left;
     width: 100%;
-    background: $background-gradient;
   }
 }
 

@@ -1,12 +1,23 @@
 @import 'styles/globals';
 
 .placement {
-  background-color: #FFF;
   position: relative;
-  margin-top: 100px;
-
-  &-img {
-    width: 23%;
-    margin: 1%;
-  }
 }
+
+.slider {
+      width: 100%;
+      margin: 10px auto;
+}
+
+.slick-slide {
+    margin: 0px 5px;
+  }
+
+.slick-slide img {
+    width: 100%;
+  }
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+  }

@@ -74,7 +74,7 @@ var SliderNews = React.createClass({
           className: 'container',
           style: {
             position: 'relative',
-            top: '180px',
+            top: '0',
             width: '100%',
             padding: 0
           }

@@ -67,6 +67,16 @@ function buildView () {
         .pipe(gulp.dest('./build/'));
 }
 
+function jquery () {
+    return gulp.src('./jquery/**/*.js')
+        .pipe(gulp.dest('./build/jquery'));
+}
+
+function jquerycss () {
+    return gulp.src('./jquery/**/*.css')
+        .pipe(gulp.dest('./build/jquery'));
+}
+
 function buildImages () {
     return gulp.src('./images/**/*')
         .pipe(gulp.dest('./build/images'))
@@ -95,6 +105,14 @@ gulp.task('build-view', function () {
 
 gulp.task('build-images', function () {
     return buildImages();
+});
+
+gulp.task('build-jquery', function () {
+    return jquery();
+});
+
+gulp.task('build-jquerycss', function () {
+    return jquerycss();
 });
 
 gulp.task('build-style', function () {
@@ -168,13 +186,13 @@ gulp.task('browsersync-proxy' ,function () {
 
 gulp.task('default', function () {
     return runSequence([
-        'build-script', 'build-view', 'build-images', 'build-style', 'watch-style'
+        'build-script', 'build-view', 'build-images', 'build-style', 'watch-style', 'build-jquery', 'build-jquerycss'
     ]);
 });
 
 gulp.task('server', function() {
     return runSequence('clean-build', [
-        'build-script', 'build-view', 'build-images', 'build-style', 'watch-style', 'watch-server', 'nodemon'
+        'build-script', 'build-view', 'build-images', 'build-style', 'watch-style', 'watch-server', 'nodemon', 'build-jquery', 'build-jquerycss'
     ], 'browsersync-proxy');
 });
 

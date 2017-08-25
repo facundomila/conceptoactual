@@ -10,16 +10,16 @@ var Footer = React.createClass({
                 <div className="footer-concepto-logo">
                   <img src="images/completo_footer.png" />
                 </div>
-                <hr />
                 <div className="footer-concepto-social">
+                  <div className="footer-concepto-social-container">
                     <Link linkType="facebook"/>
                     <Link linkType="twitter"/>
                     <Link linkType="linkedin"/>
                     <Link linkType="instagram"/>
                     <Link linkType="whatsapp"/>
                     <Link linkType="youtube"/>
+                  </div>  
                 </div>
-                <hr />
                 <div className="footer-concepto-copyright">
                   2017 WWW.CONCEPTOACTUAL.COM
                 </div>

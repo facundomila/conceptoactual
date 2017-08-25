@@ -1,5 +1,6 @@
 var React = require('react');
-var Icon = require('components/core-components/icon')
+var Icon = require('components/core-components/icon');
+var Link = require('components/core-components/link');
 
 var NavigationBar = React.createClass({
 
@@ -13,12 +14,22 @@ var NavigationBar = React.createClass({
     render: function () {
         return (
             <div className="navigation">
-              <button {...this.getBurgerButtonProps()}>
-                {this.getIcon()}
-              </button>
+            <div className="navigation-logo-container"></div>
+            <button {...this.getBurgerButtonProps()}>
+              {this.getIcon()}
+            </button>
+            <a href="demo.html">
+              <img className="navigation-logo" src="images/iso_blanco.png" />
+            </a>
               <nav>
                   {this.getLinks()}
               </nav>
+            <div className="navigation-networks-container"></div>
+            <div className="navigation-networks">
+                <Link kind="no_bubble" linkType="facebook"/>
+                <Link kind="no_bubble" linkType="twitter"/>
+                <Link kind="no_bubble" linkType="instagram"/>
+            </div>
             </div>
         );
     },
@@ -38,17 +49,14 @@ var NavigationBar = React.createClass({
     getLinks: function () {
         return (
           <div className={this.state.mobileNav}>
-            <a href="#" className="navigation-bar-links">NOVEDADES</a>
-            <a href="#" className="navigation-bar-links">DEPORTES</a>
-            <a href="#" className="navigation-bar-links">LIFE STYLE</a>
-            <a href="#" className="navigation-bar-links">TURISMO</a>
-            <a href="demo.html">
-            <img className="navigation-bar-img" src="images/small-logo.png" />
-            </a>
-            <a href="#" className="navigation-bar-links">OCIO</a>
-            <a href="#" className="navigation-bar-links">TECNO</a>
-            <a href="#" className="navigation-bar-links">SOCIALES</a>
-            <a href="#" className="navigation-bar-links">CONCEPTO TV</a>
+            <div className="navigation-bar-links"><a href="#">NOVEDADES</a></div>
+            <div className="navigation-bar-links"><a href="#">DEPORTES</a></div>
+            <div className="navigation-bar-links"><a href="#">LIFE STYLE</a></div>
+            <div className="navigation-bar-links"><a href="#">TURISMO</a></div>
+            <div className="navigation-bar-links"><a href="#">OCIO</a></div>
+            <div className="navigation-bar-links"><a href="#">TECNO</a></div>
+            <div className="navigation-bar-links"><a href="#">SOCIALES</a></div>
+            <div className="navigation-bar-links"><a href="#">CONCEPTO TV</a></div>
           </div>
         );
     },

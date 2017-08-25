@@ -37,21 +37,18 @@ var DemoPage = React.createClass({
 
         return (
             <div className="demo-page">
-              <Header>
-                <Logo />
-              </Header>
               <NavigationBar />
               <div className="demo-page-highlighted">
                 <SliderNews>{HighlightedNews}</SliderNews>
               </div>
               <div className="demo-page-ads">
-                <img src='images/lolla.png' />
+                <Placement />
               </div>
               <div className="demo-page-main">
                 <NewsGrid>{NewsStore}</NewsGrid>
               </div>
               <div className="demo-page-ads2">
-                <img src='images/stafecultura.jpg' />
+                <Placement />
               </div>
               <div className="demo-page-footer">
                 <Footer />

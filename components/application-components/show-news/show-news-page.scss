@@ -2,7 +2,6 @@
 
 .show-news-page {
   color: $color-tertiary;
-  padding: 2px;
 
   &-recomended {
     position: relative;
@@ -16,14 +15,15 @@
     z-index: 900
   }
 
-  &-ads2 img {
-    width: 100%;
-  }
-
   &-footer {
     position: relative;
-    top: 180px;
+    top: 200px;
     width: 100%;
-    background-color: $background-color-accent;
+    float: left;
   }
+}
+
+@media only screen and (max-device-width : 1180px) {
+
+  .show-news-page-footer {top: 190px}
 }

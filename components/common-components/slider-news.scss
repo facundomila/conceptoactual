@@ -48,9 +48,9 @@
   width: 100%
 }
 //mobile style
-@media only screen and (max-device-width : 768px) {
+@media only screen and (max-device-width : 1180px) {
   div.container {
-    top: 140px !important;
+    top: 120px !important;
   }
   .slider-news-title {
     padding: 100px 100px;

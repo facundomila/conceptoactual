@@ -2,7 +2,6 @@
 
 .footer-concepto {
   background-color: $background-color-primary;
-  height: auto;
   position: relative;
 
   &-logo {
@@ -37,15 +36,13 @@
   }
 }
 
-@media only screen and (max-device-width : 768px) {
-  .demo-page-main {top: 140px}
-  .demo-page-ads2 {top: 140px}
-  .demo-page-footer {top: 140px}
+@media only screen and (max-device-width : 1180px) {
+
   .footer-concepto-social {
-    margin: 24px 27%;
-    width: 54%;
+    width: 100%;
   }
-  .footer-concepto-logo {display: none}
+  .footer-concepto-social-container {
+    width: 408px;
+  }
   .footer-concepto-copyright {display: none}
-  hr {display: none}
 }

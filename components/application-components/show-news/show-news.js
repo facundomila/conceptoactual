@@ -8,6 +8,7 @@ var Logo = require('components/core-components/logo');
 var NavigationBar = require('components/core-components/navigation-bar');
 var Placement = require('components/core-components/placement');
 var Notice = require('components/common-components/notice');
+var Placement = require('components/core-components/placement');
 
 var ShowNews = React.createClass({
 
@@ -30,7 +31,7 @@ var ShowNews = React.createClass({
         var NewsStore = this.state.news.records;
         var handleItem = this.props.location.query.id;
         var itemToRender = [];
-        
+
         NewsStore.forEach(function (item) {
           if (item.id === handleItem) {
             itemToRender.push(item);
@@ -45,16 +46,13 @@ var ShowNews = React.createClass({
 
         return (
             <div className="show-news-page">
-              <Header>
-                <Logo />
-              </Header>
               <NavigationBar />
               <Notice>{itemToRender}</Notice>
+              <div className="show-news-page-ads2">
+                <Placement />
+              </div>
               <div className="show-news-page-recomended">
                 <NewsGrid>{recomended}</NewsGrid>
-              </div>
-              <div className="show-news-page-ads2">
-                <img src='images/lolla.png' />
               </div>
               <div className="show-news-page-footer">
                 <Footer />

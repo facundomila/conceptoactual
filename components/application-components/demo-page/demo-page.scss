@@ -2,7 +2,6 @@
 
 .demo-page {
   color: $color-tertiary;
-  padding: 2px;
 
   &-highlighted {
     position: relative;
@@ -32,9 +31,9 @@
   }
 }
 
-@media only screen and (max-device-width : 768px) {
-  .demo-page-ads {top: 140px}
-  .demo-page-main {top: 140px}
-  .demo-page-ads2 {top: 140px}
-  .demo-page-footer {top: 140px}
+@media only screen and (max-device-width : 1180px) {
+  .demo-page-ads {top: 120px}
+  .demo-page-main {top: 120px}
+  .demo-page-ads2 {top: 120px}
+  .demo-page-footer {top: 100px}
 }

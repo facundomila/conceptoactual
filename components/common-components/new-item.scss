@@ -69,8 +69,8 @@
 .new-item:nth-child(6) {width: 98%;}
 
 //mobile style
-@media only screen and (max-device-width : 768px) {
-  .new-item {width: 100%; margin: 0}
+@media only screen and (max-device-width : 1180px) {
+  .new-item {width: 100%; margin: 0; border: 0}
   .new-item:nth-child(1) {width: 100%; margin: 0}
   .new-item:nth-child(2) {width: 100%; margin: 0}
   .new-item:nth-child(3) {width: 100%; margin: 0}

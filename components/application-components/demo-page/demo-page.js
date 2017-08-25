@@ -44,11 +44,11 @@ var DemoPage = React.createClass({
               <div className="demo-page-ads">
                 <Placement />
               </div>
+              <div className="demo-page-ads">
+                <Placement />
+              </div>
               <div className="demo-page-main">
                 <NewsGrid>{NewsStore}</NewsGrid>
-              </div>
-              <div className="demo-page-ads2">
-                <Placement />
               </div>
               <div className="demo-page-footer">
                 <Footer />

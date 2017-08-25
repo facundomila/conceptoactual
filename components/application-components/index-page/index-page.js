@@ -8,7 +8,9 @@ var IndexPage = React.createClass({
     render: function () {
         return (
             <div className="index-page">
+              <div className="index-page-top-block"></div>
                 <Home />
+              <div className="index-page-bottom-block"></div>  
             </div>
         );
     }

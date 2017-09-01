@@ -1,6 +1,7 @@
 @import 'styles/globals';
 
 .demo-page {
+  overflow: hidden;
   color: $color-tertiary;
 
   &-highlighted {

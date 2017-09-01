@@ -2,6 +2,12 @@
 
 .placement {
   position: relative;
+
+  &-large-ad {
+    width: 100%;
+    height: auto;
+    float: left;
+  }
 }
 
 .slider {

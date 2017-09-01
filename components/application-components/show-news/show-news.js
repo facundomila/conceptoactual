@@ -49,7 +49,7 @@ var ShowNews = React.createClass({
               <NavigationBar />
               <Notice>{itemToRender}</Notice>
               <div className="show-news-page-ads2">
-                <Placement />
+                <Placement type="small"/>
               </div>
               <div className="show-news-page-recomended">
                 <NewsGrid>{recomended}</NewsGrid>

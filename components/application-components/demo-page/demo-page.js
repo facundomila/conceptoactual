@@ -42,10 +42,7 @@ var DemoPage = React.createClass({
                 <SliderNews>{HighlightedNews}</SliderNews>
               </div>
               <div className="demo-page-ads">
-                <Placement />
-              </div>
-              <div className="demo-page-ads">
-                <Placement />
+                <Placement type="small"/>
               </div>
               <div className="demo-page-main">
                 <NewsGrid>{NewsStore}</NewsGrid>

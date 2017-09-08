@@ -36,6 +36,7 @@ var DemoPage = React.createClass({
         });
 
         return (
+            // <div className="demo-page" scroll={this.handleScroll()}>
             <div className="demo-page">
               <NavigationBar />
               <div className="demo-page-highlighted">
@@ -53,6 +54,7 @@ var DemoPage = React.createClass({
             </div>
         );
     }
+
 });
 
 module.exports = DemoPage;

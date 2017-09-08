@@ -7,7 +7,6 @@ var NewsGrid = React.createClass({
 
     render: function () {
         var news = this.props.children;
-        console.log(news.length)
 
         return (
             <div className="news-grid">

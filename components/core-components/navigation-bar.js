@@ -7,31 +7,52 @@ var NavigationBar = React.createClass({
     getInitialState: function() {
         return {
           mobileNav: 'navigation-bar',
-          burguerButton: 'open'
+          burguerButton: 'open',
+          stickyBar: 'navigation-sticky--hidden'
         }
     },
 
     render: function () {
         return (
-            <div className="navigation">
-            <div className="navigation-logo-container"></div>
-            <button {...this.getBurgerButtonProps()}>
-              {this.getIcon()}
-            </button>
-            <a href="demo.html">
-              <img className="navigation-logo" src="images/iso_blanco.png" />
-            </a>
-              <nav>
-                  {this.getLinks()}
-              </nav>
-            <div className="navigation-networks-container"></div>
-            <div className="navigation-networks">
-                <Link kind="no_bubble" linkType="facebook"/>
-                <Link kind="no_bubble" linkType="twitter"/>
-                <Link kind="no_bubble" linkType="instagram"/>
-            </div>
+            <div className="navigation" scroll={this.handleScroll()}>
+              {this.renderStickyBar()}
+              <div className="navigation-logo-container"></div>
+              <button {...this.getBurgerButtonProps()}>
+                {this.getIcon()}
+              </button>
+              <a href="demo.html">
+                <img className="navigation-logo" src="images/iso_blanco.png" />
+              </a>
+                <nav>
+                    {this.getLinks()}
+                </nav>
+              <div className="navigation-networks-container"></div>
+              <div className="navigation-networks">
+                  <Link kind="no_bubble" linkType="facebook"/>
+                  <Link kind="no_bubble" linkType="twitter"/>
+                  <Link kind="no_bubble" linkType="instagram"/>
+              </div>
             </div>
         );
+    },
+
+    renderStickyBar: function () {
+        return <div className={this.state.stickyBar}>hola stickyBar</div>;
+    },
+
+    handleScroll: function () {
+        window.addEventListener('scroll', this.getStickyBar)
+    },
+
+    getStickyBar: function (e) {
+        var scrollY = e.path[1].scrollY;
+        if (scrollY <= 60) {
+          this.setState({ stickyBar: 'navigation-sticky--hidden'})
+        } else {
+          this.setState({ stickyBar: 'navigation-sticky--shown'})
+        }
+
+        return scrollY;
     },
 
     getIcon: function () {

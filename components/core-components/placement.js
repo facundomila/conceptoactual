@@ -29,24 +29,23 @@ var Placement = React.createClass({
     },
 
     getPlacement: function() {
-      placementConfig = {
-        small: this.renderSlider,
-        large: this.renderImg
-      };
+        placementConfig = {
+          small: this.renderSlider,
+          large: this.renderImg
+        };
 
-      return placementConfig[this.props.type]() || null;
+        return placementConfig[this.props.type]() || null;
     },
 
     renderSlider: function () {
-      console.log('small', smallAds.nike)
-      return (
-        <section className="regular slider">
-          {_.map(smallAds, function(key , imgPath) {
-                return <div><img src={smallAds[imgPath]} /></div>
-              })
-          }
-        </section>
-      );
+        return (
+          <section className="regular slider">
+            {_.map(smallAds, function(key , imgPath) {
+                  return <div><img src={smallAds[imgPath]} /></div>
+                })
+            }
+          </section>
+        );
     },
 
     renderImg: function () {

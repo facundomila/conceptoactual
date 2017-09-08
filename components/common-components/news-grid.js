@@ -36,7 +36,11 @@ var NewsGrid = React.createClass({
     },
 
     renderAds: function (largeAdIndex) {
-      return <Placement type="large" index={largeAdIndex} />;
+      return (
+        <div>
+          <Placement type="large" index={largeAdIndex} />
+        </div>
+      );
     }
 });
 

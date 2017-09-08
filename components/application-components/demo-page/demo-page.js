@@ -36,15 +36,12 @@ var DemoPage = React.createClass({
         });
 
         return (
-            // <div className="demo-page" scroll={this.handleScroll()}>
             <div className="demo-page">
               <NavigationBar />
               <div className="demo-page-highlighted">
                 <SliderNews>{HighlightedNews}</SliderNews>
               </div>
-              <div className="demo-page-ads">
-                <Placement type="small"/>
-              </div>
+              <Placement type="fixed" />
               <div className="demo-page-main">
                 <NewsGrid>{NewsStore}</NewsGrid>
               </div>

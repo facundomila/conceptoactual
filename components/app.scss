@@ -3,4 +3,6 @@
 body {
   background-color: $background-color;
   font-family: $font-primary;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }

@@ -37,7 +37,21 @@ var NavigationBar = React.createClass({
     },
 
     renderStickyBar: function () {
-        return <div className={this.state.stickyBar}>hola stickyBar</div>;
+        return (
+            <div className={this.state.stickyBar}>
+              <div className="navigation-logo-container--sticky">
+                <a href="demo.html">
+                  <img className="navigation-logo--sticky" src="images/iso_blanco-small.png" />
+                </a>
+              </div>
+              {this.getLinks()}
+              <div className="navigation-networks--sticky">
+                  <Link kind="no_bubble" linkType="facebook"/>
+                  <Link kind="no_bubble" linkType="twitter"/>
+                  <Link kind="no_bubble" linkType="instagram"/>
+              </div>
+            </div>
+        );
     },
 
     handleScroll: function () {
@@ -70,14 +84,14 @@ var NavigationBar = React.createClass({
     getLinks: function () {
         return (
           <div className={this.state.mobileNav}>
-            <div className="navigation-bar-links"><a href="#">NOVEDADES</a></div>
-            <div className="navigation-bar-links"><a href="#">DEPORTES</a></div>
-            <div className="navigation-bar-links"><a href="#">LIFE STYLE</a></div>
-            <div className="navigation-bar-links"><a href="#">TURISMO</a></div>
-            <div className="navigation-bar-links"><a href="#">OCIO</a></div>
-            <div className="navigation-bar-links"><a href="#">TECNO</a></div>
-            <div className="navigation-bar-links"><a href="#">SOCIALES</a></div>
-            <div className="navigation-bar-links"><a href="#">CONCEPTO TV</a></div>
+            <div className="navigation-bar-links"><a href="#">Novedades</a></div>
+            <div className="navigation-bar-links"><a href="#">Deportes</a></div>
+            <div className="navigation-bar-links"><a href="#">Life Style</a></div>
+            <div className="navigation-bar-links"><a href="#">Turismo</a></div>
+            <div className="navigation-bar-links"><a href="#">Ocio</a></div>
+            <div className="navigation-bar-links"><a href="#">Tecno</a></div>
+            <div className="navigation-bar-links"><a href="#">Sociales</a></div>
+            <div className="navigation-bar-links"><a href="#">Concepto Tv</a></div>
           </div>
         );
     },

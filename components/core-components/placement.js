@@ -30,6 +30,7 @@ var Placement = React.createClass({
 
     getPlacement: function() {
         placementConfig = {
+          fixed: this.renderFixed,
           small: this.renderSlider,
           large: this.renderImg
         };
@@ -51,7 +52,18 @@ var Placement = React.createClass({
     renderImg: function () {
         return (
           <div className="placement-large-ad">
-            <img width="100%" src={largeAds[Object.keys(largeAds)[this.props.index]]} />
+            <img width="33.3%" src={largeAds[Object.keys(largeAds)[this.props.index]]} />
+            <img width="33.3%" src={largeAds[Object.keys(largeAds)[this.props.index]]} />
+            <img width="33.3%" src={largeAds[Object.keys(largeAds)[this.props.index]]} />
+          </div>)
+    },
+
+    renderFixed: function () {
+        return (
+          <div className="placement-large-ad">
+            <img width="33.3%" src={largeAds.lolapallozza} />
+            <img width="33.3%" src={largeAds.lolapallozza} />
+            <img width="33.3%" src={largeAds.lolapallozza} />
           </div>)
     }
 });

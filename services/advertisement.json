@@ -1,0 +1,32 @@
+{
+  "ads": {
+    "place_0": [
+      {
+        "name": "lolapallozza",
+        "ad": "images/ads/small/lolapaloza.jpg"
+      },
+      {
+        "name": "santafe",
+        "ad": "images/ads/small/santafe.jpg"
+      },
+      {
+        "name": "hipotecario",
+        "ad": "images/ads/small/hipotecario.jpg"
+      }
+    ],
+    "place_1": [
+      {
+        "name": "hoyts",
+        "ad": "images/ads/small/hoyts.jpg"
+      },
+      {
+        "name": "mercadolibre",
+        "ad": "images/ads/small/mercadolibre.jpg"
+      },
+      {
+        "name": "carrefour",
+        "ad": "images/ads/small/carrefour.jpg"
+      }
+    ]
+  }
+}  

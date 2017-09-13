@@ -7,41 +7,85 @@ var NewsGrid = React.createClass({
 
     render: function () {
         var news = this.props.children;
+        var ads = this.props.advertisment.ads;
+
+        var place_0 = ads.place_0;
+        var place_1 = ads.place_1;
+
+        console.log('news: ',news)
 
         return (
             <div className="news-grid">
-                {this.getProcessedNews()}
+                {this.renderAds(place_0)}
+                {this.renderNewsXthree()}
+                {this.renderAds(place_1)}
+                {this.renderNewsXone()}
+                {this.renderAds(place_0)}
+                {this.renderNewsXtwo()}
+                {this.renderNewsXone()}
+                {this.renderAds(place_1)}
+                {this.renderNewsXthree()}
+                {this.renderNewsXone()}
+                {this.renderAds(place_0)}
+                {this.renderNewsXtwo()}
+                {this.renderNewsXone()}
+                {this.renderAds(place_1)}
+                {this.renderNewsXthree()}
+                {this.renderNewsXone()}
+                {this.renderAds(place_0)}
+                {this.renderNewsXtwo()}
+                {this.renderNewsXone()}
+                {this.renderAds(place_1)}
+                {this.renderNewsXthree()}
+                {this.renderNewsXone()}
+                {this.renderAds(place_0)}
             </div>
         );
     },
 
-    renderItems: function (item, key) {
-      return <NewItem key={key}>{item}</NewItem>;
+    renderAds: function (ads) {
+        console.log(ads)
     },
 
-    getProcessedNews: function () {
-      var processedNews = [];
-      var largeAdIndex = 0;
-
-      this.props.children.map(function (item, key) {
-        processedNews.push(this.renderItems(item, key));
-
-        if (key % 3 == 2) {
-          processedNews.push(this.renderAds(largeAdIndex));
-          largeAdIndex++;
-        }
-      }, this);
-
-      return processedNews;
+    renderNewsXthree: function () {
+        console.log()
     },
 
-    renderAds: function (largeAdIndex) {
-      return (
-        <div>
-          <Placement type="large" index={largeAdIndex} />
-        </div>
-      );
+    renderNewsXtwo: function () {
+        console.log()
+    },
+
+    renderNewsXone: function () {
+      console.log()
     }
+
+    // renderItems: function (item, key) {
+    //   return <NewItem key={key}>{item}</NewItem>;
+    // },
+
+    // getProcessedNews: function () {
+    //   var processedNews = [];
+    //   var largeAdIndex = 0;
+    //
+    //   this.props.children.map(function (item, key) {
+    //     processedNews.push(this.renderItems(item, key));
+    //
+    //     if (key % 3 == 2) {
+    //       processedNews.push(this.renderAds(largeAdIndex));
+    //       largeAdIndex++;
+    //     }
+    //   }, this);
+    //
+    //   return processedNews;
+    // },
+
+    // renderAds: function (largeAdIndex) {
+    //   return (
+    //     <div>
+    //       <Placement type="large" index={largeAdIndex} />
+    //     </div>
+    //   );
+    // }
 });
 
 module.exports = NewsGrid;

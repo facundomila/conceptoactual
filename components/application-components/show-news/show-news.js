@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var ads = require('services/advertisement.json');
 var React = require('react');
 var Footer = require('components/core-components/footer');
 var Header = require('components/core-components/header');
@@ -8,7 +9,6 @@ var Logo = require('components/core-components/logo');
 var NavigationBar = require('components/core-components/navigation-bar');
 var Placement = require('components/core-components/placement');
 var Notice = require('components/common-components/notice');
-var Placement = require('components/core-components/placement');
 
 var ShowNews = React.createClass({
 
@@ -48,12 +48,6 @@ var ShowNews = React.createClass({
             <div className="show-news-page">
               <NavigationBar />
               <Notice>{itemToRender}</Notice>
-              <div className="show-news-page-ads2">
-                <Placement type="small"/>
-              </div>
-              <div className="show-news-page-recomended">
-                <NewsGrid>{recomended}</NewsGrid>
-              </div>
               <div className="show-news-page-footer">
                 <Footer />
               </div>

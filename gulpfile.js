@@ -72,6 +72,11 @@ function jquery () {
         .pipe(gulp.dest('./build/jquery'));
 }
 
+function advertisments () {
+    return gulp.src('./services/**/*.json')
+        .pipe(gulp.dest('./build/services'));
+}
+
 function jquerycss () {
     return gulp.src('./jquery/**/*.css')
         .pipe(gulp.dest('./build/jquery'));
@@ -109,6 +114,10 @@ gulp.task('build-images', function () {
 
 gulp.task('build-jquery', function () {
     return jquery();
+});
+
+gulp.task('build-ads', function () {
+    return advertisments();
 });
 
 gulp.task('build-jquerycss', function () {
@@ -186,13 +195,13 @@ gulp.task('browsersync-proxy' ,function () {
 
 gulp.task('default', function () {
     return runSequence([
-        'build-script', 'build-view', 'build-images', 'build-style', 'watch-style', 'build-jquery', 'build-jquerycss'
+        'build-script', 'build-view', 'build-images', 'build-style', 'watch-style', 'build-jquery', 'build-jquerycss', 'build-ads'
     ]);
 });
 
 gulp.task('server', function() {
     return runSequence('clean-build', [
-        'build-script', 'build-view', 'build-images', 'build-style', 'watch-style', 'watch-server', 'nodemon', 'build-jquery', 'build-jquerycss'
+        'build-script', 'build-view', 'build-images', 'build-style', 'watch-style', 'watch-server', 'nodemon', 'build-jquery', 'build-jquerycss', 'build-ads'
     ], 'browsersync-proxy');
 });
 

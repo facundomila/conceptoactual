@@ -14,7 +14,8 @@ var NavigationBar = React.createClass({
 
     render: function () {
         return (
-            <div className="navigation" scroll={this.handleScroll()}>
+            <div className="navigation">
+              {this.handleScroll()}
               {this.renderStickyBar()}
               <div className="navigation-logo-container"></div>
               <button {...this.getBurgerButtonProps()}>

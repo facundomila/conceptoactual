@@ -1,4 +1,4 @@
-var ads = require('services/advertisement.json')
+var ads = require('services/advertisement.json');
 var React = require('react');
 var Footer = require('components/core-components/footer');
 var Header = require('components/core-components/header');
@@ -42,7 +42,6 @@ var DemoPage = React.createClass({
               <div className="demo-page-highlighted">
                 <SliderNews>{HighlightedNews}</SliderNews>
               </div>
-              <Placement type="fixed" />
               <div className="demo-page-main">
                 <NewsGrid advertisment={ads}>{NewsStore}</NewsGrid>
               </div>

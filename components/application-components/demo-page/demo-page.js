@@ -8,6 +8,7 @@ var SliderNews = require('components/common-components/slider-news');
 var Logo = require('components/core-components/logo');
 var NavigationBar = require('components/core-components/navigation-bar');
 var Placement = require('components/core-components/placement');
+var NewsGridMobile = require('components/common-components/news-grid-mobile');
 
 var DemoPage = React.createClass({
 
@@ -51,7 +52,6 @@ var DemoPage = React.createClass({
             </div>
         );
     }
-
 });
 
 module.exports = DemoPage;

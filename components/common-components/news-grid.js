@@ -17,7 +17,6 @@ var NewsGrid = React.createClass({
         var place_5 = ads.place_1;
         var place_6 = ads.place_0;
         var place_7 = ads.place_1;
-        var place_8 = ads.place_0;
 
         var news_0 = [news[1] || null, news[2] || null, news[3] || null];
         var news_1 = news[4] || null;
@@ -38,27 +37,26 @@ var NewsGrid = React.createClass({
             <div className="news-grid">
                 <PlacementBlock>{place_0}</PlacementBlock>
                 {_.map(news_0, this.renderNewsXthree)}
-                <PlacementBlock>{place_1}</PlacementBlock>
                 {this.renderNewsXone(news_1)}
-                <PlacementBlock>{place_2}</PlacementBlock>
-                {_.map(news_2, this.renderNewsXtwo)}
+                <PlacementBlock>{place_1}</PlacementBlock>
                 {this.renderNewsXone(news_3)}
-                <PlacementBlock>{place_3}</PlacementBlock>
-                {_.map(news_4, this.renderNewsXthree)}
+                {_.map(news_2, this.renderNewsXtwo)}
+                <PlacementBlock>{place_2}</PlacementBlock>
                 {this.renderNewsXone(news_5)}
-                <PlacementBlock>{place_4}</PlacementBlock>
-                {_.map(news_6, this.renderNewsXtwo)}
+                {_.map(news_4, this.renderNewsXthree)}
+                <PlacementBlock>{place_3}</PlacementBlock>
                 {this.renderNewsXone(news_7)}
-                <PlacementBlock>{place_5}</PlacementBlock>
-                {_.map(news_8, this.renderNewsXthree)}
+                {_.map(news_6, this.renderNewsXtwo)}
+                <PlacementBlock>{place_4}</PlacementBlock>
                 {this.renderNewsXone(news_9)}
-                <PlacementBlock>{place_6}</PlacementBlock>
-                {_.map(news_10, this.renderNewsXtwo)}
+                {_.map(news_8, this.renderNewsXthree)}
+                <PlacementBlock>{place_5}</PlacementBlock>
                 {this.renderNewsXone(news_11)}
-                <PlacementBlock>{place_7}</PlacementBlock>
-                {_.map(news_12, this.renderNewsXthree)}
+                {_.map(news_10, this.renderNewsXtwo)}
+                <PlacementBlock>{place_6}</PlacementBlock>
                 {this.renderNewsXone(news_13)}
-                <PlacementBlock>{place_8}</PlacementBlock>
+                {_.map(news_12, this.renderNewsXthree)}
+                <PlacementBlock>{place_7}</PlacementBlock>
             </div>
         );
     },

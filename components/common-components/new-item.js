@@ -22,7 +22,8 @@ var NewItem = React.createClass({
         return classNames({
             'new-item-xthree': (this.props.type === 'xthree'),
             'new-item-xtwo': (this.props.type === 'xtwo'),
-            'new-item-xone': (this.props.type === 'xone')
+            'new-item-xone': (this.props.type === 'xone'),
+            'new-item-xone--mobile': (this.props.type === 'xone--mobile'),
         })
     },
 
@@ -58,8 +59,9 @@ var NewItem = React.createClass({
         }
 
         var size = (this.props.type == "xone") ? ruta : rutaMini;
+        var width = (this.props.type === "xone--mobile") ? "200%" : "100%";
 
-        return <img width="100%" className={imgClass} src={"http://conceptoactual.com/cpanel/"+size}/>;
+        return <img width={width} className={imgClass} src={"http://conceptoactual.com/cpanel/"+size}/>;
     },
 
     renderShareItemBar: function (news) {

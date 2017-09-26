@@ -1,14 +1,14 @@
 var ads = require('services/advertisement.json');
-var React = require('react');
 var Footer = require('components/core-components/footer');
 var Header = require('components/core-components/header');
-var storeProductApi = require('services/store-product/store-product-api');
-var NewsGrid = require('components/common-components/news-grid');
-var SliderNews = require('components/common-components/slider-news');
 var Logo = require('components/core-components/logo');
 var NavigationBar = require('components/core-components/navigation-bar');
-var Placement = require('components/core-components/placement');
+var NewsGrid = require('components/common-components/news-grid');
 var NewsGridMobile = require('components/common-components/news-grid-mobile');
+var Placement = require('components/core-components/placement');
+var React = require('react');
+var SliderNews = require('components/common-components/slider-news');
+var storeProductApi = require('services/store-product/store-product-api');
 
 var DemoPage = React.createClass({
 
@@ -26,8 +26,8 @@ var DemoPage = React.createClass({
 
         return this.setState({news: JSON.parse(newsObj)})
     },
-
     render: function () {
+        var isMobile = (window.screen.width < 1180);
         var NewsStore = this.state.news.records;
         var HighlightedNews = [];
 
@@ -44,13 +44,19 @@ var DemoPage = React.createClass({
                 <SliderNews>{HighlightedNews}</SliderNews>
               </div>
               <div className="demo-page-main">
-                <NewsGrid advertisment={ads}>{NewsStore}</NewsGrid>
+                {this.renderNewsGrid(ads, NewsStore, isMobile)}
               </div>
               <div className="demo-page-footer">
                 <Footer />
               </div>
             </div>
         );
+    },
+
+    renderNewsGrid: function (ads, NewsStore, isMobile) {
+      var grid = (isMobile) ? <NewsGridMobile advertisment={ads}>{NewsStore}</NewsGridMobile> : <NewsGrid advertisment={ads}>{NewsStore}</NewsGrid>;
+
+      return grid;
     }
 });
 

@@ -1,6 +1,5 @@
 {
-  "ads": {
-    "place_0": [
+  "ads": [
       {
         "name": "lolapallozza",
         "ad": "images/ads/small/lolapaloza.jpg"
@@ -12,9 +11,7 @@
       {
         "name": "hipotecario",
         "ad": "images/ads/small/hipotecario.jpg"
-      }
-    ],
-    "place_1": [
+      },
       {
         "name": "hoyts",
         "ad": "images/ads/small/hoyts.jpg"
@@ -27,6 +24,5 @@
         "name": "carrefour",
         "ad": "images/ads/small/carrefour.jpg"
       }
-    ]
-  }
-}  
+  ]
+}

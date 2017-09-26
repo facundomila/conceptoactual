@@ -1,7 +1,7 @@
 var _ = require('lodash');
 var NewItem = require('components/common-components/new-item');
-var React = require('react');
 var PlacementBlock = require('components/common-components/placement-block');
+var React = require('react');
 
 var NewsGrid = React.createClass({
 
@@ -9,14 +9,15 @@ var NewsGrid = React.createClass({
         var news = this.props.children;
         var ads = this.props.advertisment.ads;
 
-        var place_0 = ads.place_0;
-        var place_1 = ads.place_1;
-        var place_2 = ads.place_0;
-        var place_3 = ads.place_1;
-        var place_4 = ads.place_0;
-        var place_5 = ads.place_1;
-        var place_6 = ads.place_0;
-        var place_7 = ads.place_1;
+
+        var place_0 = [ads[0].ad, ads[1].ad, ads[2].ad];
+        var place_1 = [ads[3].ad, ads[4].ad, ads[5].ad];
+        var place_2 = [ads[0].ad, ads[1].ad, ads[2].ad];
+        var place_3 = [ads[3].ad, ads[4].ad, ads[5].ad];
+        var place_4 = [ads[0].ad, ads[1].ad, ads[2].ad];
+        var place_5 = [ads[3].ad, ads[4].ad, ads[5].ad];
+        var place_6 = [ads[0].ad, ads[1].ad, ads[2].ad];
+        var place_7 = [ads[3].ad, ads[4].ad, ads[5].ad];
 
         var news_0 = [news[1] || null, news[2] || null, news[3] || null];
         var news_1 = news[4] || null;

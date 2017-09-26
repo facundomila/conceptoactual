@@ -1,8 +1,9 @@
 var _ = require('lodash');
+var classNames = require('classnames');
 var React = require('react');
-//TODO: create placement type for swicheables ads
 var PlacementBlock = React.createClass({
 
+  //TODO: create placement type for swicheables ads
     render: function () {
         var ads = this.props.children;
 
@@ -15,8 +16,15 @@ var PlacementBlock = React.createClass({
 
     renderPlacement: function (ads) {
         return <div className="placement-block-image">
-                  <img src={ads.ad} />
+                  <img src={ads} />
               </div>
+    },
+
+    getClass: function () {
+        return classNames({
+            'placement-block-image': (!this.props.type),
+            'placement-block-full': (this.props.type === 'full')
+        })
     }
 });
 

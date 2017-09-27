@@ -60,7 +60,7 @@ var NavigationBar = React.createClass({
     },
 
     getStickyBar: function (e) {
-        var scrollY = e.path[1].scrollY;
+        var scrollY = e.path[0].scrollY || e.path[1].scrollY;
         if (scrollY <= 60) {
           this.setState({ stickyBar: 'navigation-sticky--hidden'})
         } else {

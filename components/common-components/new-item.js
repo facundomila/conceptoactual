@@ -58,10 +58,9 @@ var NewItem = React.createClass({
             'No Image'
         }
 
-        var size = (this.props.type == "xone") ? ruta : rutaMini;
-        var width = (this.props.type === "xone--mobile") ? "200%" : "100%";
+        var size = (this.props.type === "xone") ? ruta : rutaMini;
 
-        return <img width={width} className={imgClass} src={"http://conceptoactual.com/cpanel/"+size}/>;
+        return <img width="100%" className={imgClass} src={"http://conceptoactual.com/cpanel/"+size}/>;
     },
 
     renderShareItemBar: function (news) {

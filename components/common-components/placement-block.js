@@ -15,15 +15,16 @@ var PlacementBlock = React.createClass({
     },
 
     renderPlacement: function (ads) {
-        return <div className="placement-block-image">
+      console.log(ads)
+        return <div className={this.getClass()}>
                   <img src={ads} />
               </div>
     },
 
     getClass: function () {
         return classNames({
-            'placement-block-image': (!this.props.type),
-            'placement-block-full': (this.props.type === 'full')
+            'placement-block-image': (this.props.type === 'third'),
+            'placement-block-full': (this.props.type === 'full'),
         })
     }
 });

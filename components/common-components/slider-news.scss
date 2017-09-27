@@ -42,7 +42,7 @@
   }
 }
 .carousel-indicators {
-  bottom: 100px
+  bottom: 100px;
 }
 .carousel img {
   width: 100%
@@ -53,10 +53,21 @@
     top: 120px !important;
   }
   .slider-news-title {
+    z-index: 1500;
     padding: 100px 100px;
     font-family: $titles;
-    font-size: 56px;
-    top: 5px;
+    font-size: 66px;
+    top: 15px;
+  }
+  .slider-news li {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .slider-news-img {
+    max-width: 200% !important;
+    width: 200% !important;
+    position: relative;
+    left: -50%;
   }
   .carousel-indicators {
     bottom: 100px;

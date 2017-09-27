@@ -1,27 +1,57 @@
 {
   "ads": [
       {
-        "name": "lolapallozza",
         "ad": "images/ads/small/lolapaloza.jpg"
       },
       {
-        "name": "santafe",
         "ad": "images/ads/small/santafe.jpg"
       },
       {
-        "name": "hipotecario",
         "ad": "images/ads/small/hipotecario.jpg"
       },
       {
-        "name": "hoyts",
         "ad": "images/ads/small/hoyts.jpg"
       },
       {
-        "name": "mercadolibre",
         "ad": "images/ads/small/mercadolibre.jpg"
       },
       {
-        "name": "carrefour",
+        "ad": "images/ads/small/carrefour.jpg"
+      },
+      {
+        "ad": "images/ads/small/lolapaloza.jpg"
+      },
+      {
+        "ad": "images/ads/small/santafe.jpg"
+      },
+      {
+        "ad": "images/ads/small/hipotecario.jpg"
+      },
+      {
+        "ad": "images/ads/small/hoyts.jpg"
+      },
+      {
+        "ad": "images/ads/small/mercadolibre.jpg"
+      },
+      {
+        "ad": "images/ads/small/carrefour.jpg"
+      },
+      {
+        "ad": "images/ads/small/lolapaloza.jpg"
+      },
+      {
+        "ad": "images/ads/small/santafe.jpg"
+      },
+      {
+        "ad": "images/ads/small/hipotecario.jpg"
+      },
+      {
+        "ad": "images/ads/small/hoyts.jpg"
+      },
+      {
+        "ad": "images/ads/small/mercadolibre.jpg"
+      },
+      {
         "ad": "images/ads/small/carrefour.jpg"
       }
   ]

@@ -21,37 +21,37 @@ var SliderNews = React.createClass({
                 <div className="item active">
                 <a href={"news.html?id="+news[0].id}>
                   <div className="slider-news-title">{news[0].title}</div>
-                  <img src={dynamicPath+news[0].ruta} />
+                  <img className="slider-news-img" src={dynamicPath+news[0].ruta} />
                 </a>
                 </div>
                 <div className="item">
                 <a href={"news.html?id="+news[1].id}>
                   <div className="slider-news-title">{news[1].title}</div>
-                  <img src={dynamicPath+news[1].ruta} />
+                  <img className="slider-news-img" src={dynamicPath+news[1].ruta} />
                 </a>
                 </div>
                 <div className="item">
                 <a href={"news.html?id="+news[2].id}>
                   <div className="slider-news-title">{news[2].title}</div>
-                  <img src={dynamicPath+news[2].ruta} />
+                  <img className="slider-news-img" src={dynamicPath+news[2].ruta} />
                 </a>
                 </div>
                 <div className="item">
                 <a href={"news.html?id="+news[3].id}>
                   <div className="slider-news-title">{news[3].title}</div>
-                  <img src={dynamicPath+news[3].ruta} />
+                  <img className="slider-news-img" src={dynamicPath+news[3].ruta} />
                 </a>
                 </div>
                 <div className="item">
                 <a href={"news.html?id="+news[4].id}>
                   <div className="slider-news-title">{news[4].title}</div>
-                  <img src={dynamicPath+news[4].ruta} />
+                  <img className="slider-news-img" src={dynamicPath+news[4].ruta} />
                 </a>
                 </div>
                 <div className="item">
                 <a href={"news.html?id="+news[5].id}>
                   <div className="slider-news-title">{news[5].title}</div>
-                  <img src={dynamicPath+news[5].ruta} />
+                  <img className="slider-news-img" src={dynamicPath+news[5].ruta} />
                 </a>
                 </div>
               </div>

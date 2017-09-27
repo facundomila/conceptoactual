@@ -226,6 +226,7 @@
     font-weight: bold;
     font-size: 50px;
     text-shadow: 1px 1px #000;
+    z-index: 1600;
   }
 
   &--category {
@@ -241,13 +242,16 @@
     color: $color-primary;
     font-size: 26px;
     text-shadow: 1px 1px #000;
+    z-index: 1600;
   }
 
-  &--image {
+  &--img {
     opacity: 1;
     display: block;
     cursor: pointer;
-    width: 200% !important;
+    width: 200%;
+    position: relative;
+    left: -50%;
   }
 }
 .new-item-xone--mobile:hover {

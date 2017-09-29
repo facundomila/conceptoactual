@@ -8,11 +8,17 @@ var NavigationBar = React.createClass({
         return {
           mobileNav: 'navigation-bar',
           burguerButton: 'open',
-          stickyBar: 'navigation-sticky--hidden'
+          stickyBarClass: 'navigation-sticky--hidden',
+          stickyBarState: false
         }
     },
 
     render: function () {
+      // <div className="navigation-networks">
+      //     <Link kind="no_bubble" linkType="facebook"/>
+      //     <Link kind="no_bubble" linkType="twitter"/>
+      //     <Link kind="no_bubble" linkType="instagram"/>
+      // </div>
         return (
             <div className="navigation">
               {this.handleScroll()}
@@ -27,32 +33,28 @@ var NavigationBar = React.createClass({
                 <nav>
                     {this.getLinks()}
                 </nav>
-              <div className="navigation-networks-container"></div>
-              <div className="navigation-networks">
-                  <Link kind="no_bubble" linkType="facebook"/>
-                  <Link kind="no_bubble" linkType="twitter"/>
-                  <Link kind="no_bubble" linkType="instagram"/>
-              </div>
             </div>
         );
     },
 
     renderStickyBar: function () {
-        return (
-            <div className={this.state.stickyBar}>
-              <div className="navigation-logo-container--sticky">
-                <a href="demo.html">
-                  <img className="navigation-logo--sticky" src="images/iso_blanco-small.png" />
-                </a>
-              </div>
-              {this.getLinks()}
-              <div className="navigation-networks--sticky">
-                  <Link kind="no_bubble" linkType="facebook"/>
-                  <Link kind="no_bubble" linkType="twitter"/>
-                  <Link kind="no_bubble" linkType="instagram"/>
-              </div>
-            </div>
-        );
+        var sticky = <div className={this.state.stickyBarClass}>
+                      <div className="navigation-logo-container--sticky">
+                        <a href="demo.html">
+                          <img className="navigation-logo--sticky" src="images/iso_blanco-small.png" />
+                        </a>
+                      </div>
+                      {this.getLinks()}
+                      <div className="navigation-networks--sticky">
+                        <Link kind="no_bubble" linkType="facebook"/>
+                        <Link kind="no_bubble" linkType="twitter"/>
+                        <Link kind="no_bubble" linkType="instagram"/>
+                      </div>
+                    </div>;
+
+        var renderStiky = (this.state.stickyBarState) ? sticky : null;
+
+        return renderStiky;
     },
 
     handleScroll: function () {
@@ -61,10 +63,16 @@ var NavigationBar = React.createClass({
 
     getStickyBar: function (e) {
         var scrollY = e.path[0].scrollY || e.path[1].scrollY;
-        if (scrollY <= 60) {
-          this.setState({ stickyBar: 'navigation-sticky--hidden'})
-        } else {
-          this.setState({ stickyBar: 'navigation-sticky--shown'})
+        console.log(scrollY)
+        if (scrollY >= 50) {
+          this.setState({ stickyBarState: true })
+          this.setState({ stickyBarClass: 'navigation-sticky--hidden'})
+        } if (scrollY >= 120) {
+          this.setState({ stickyBarClass: 'navigation-sticky--shown'})
+        } if (scrollY <= 120) {
+          this.setState({ stickyBarClass: 'navigation-sticky--hidden'})
+        } if (scrollY <= 120) {
+          this.setState({ stickyBarState: false})
         }
 
         return scrollY;
@@ -89,6 +97,7 @@ var NavigationBar = React.createClass({
             <div className="navigation-bar-links"><a href="#">Deportes</a></div>
             <div className="navigation-bar-links"><a href="#">Life Style</a></div>
             <div className="navigation-bar-links"><a href="#">Turismo</a></div>
+            {this.renderLogoBar()}
             <div className="navigation-bar-links"><a href="#">Ocio</a></div>
             <div className="navigation-bar-links"><a href="#">Tecno</a></div>
             <div className="navigation-bar-links"><a href="#">Sociales</a></div>
@@ -105,6 +114,14 @@ var NavigationBar = React.createClass({
       (this.state.mobileNav === 'navigation-bar') ?
       this.setState({ burguerButton: 'close' }) :
       this.setState({ burguerButton: 'open'});
+    },
+
+    renderLogoBar: function () {
+      console.log(this.state.mobileNav);
+      var img = <div className={this.state.stickyBarClass+"--logo"}><img className={this.state.stickyBarClass+"--img"} src="images/logo_blanco_bar.png"/></div>;
+      var renderlogo = (this.state.mobileNav === "navigation-bar") ? img : null;
+
+      return renderlogo;
     }
 });
 

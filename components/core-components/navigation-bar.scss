@@ -2,7 +2,6 @@
 
 .navigation {
   width: 100%;
-  padding-top: 20px;
   z-index: 1002;
   position: absolute;
   top: 0px;
@@ -13,19 +12,20 @@
   box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.50);
 
   &-logo-container {
-    position: relative;
-    float: left;
-    top: -20px;
-    left: -50px;
-    background-color: $background-color-primary;
-    width: 400px;
-    height: 80px;
-    -ms-transform: skewX(-20deg); /* IE 9 */
-    -webkit-transform: skewX(-20deg); /* Safari */
-    transform: skewX(-20deg); /* Standard syntax */
-    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.70);
-    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.70);
-    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.70);
+    display: none;
+    // position: relative;
+    // float: left;
+    // top: -20px;
+    // left: -50px;
+    // background-color: $background-color-primary;
+    // width: 400px;
+    // height: 80px;
+    // -ms-transform: skewX(-20deg); /* IE 9 */
+    // -webkit-transform: skewX(-20deg); /* Safari */
+    // transform: skewX(-20deg); /* Standard syntax */
+    // -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.70);
+    // -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.70);
+    // box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.70);
 
     &--sticky {
       position: relative;
@@ -50,10 +50,11 @@
   }
 
   &-logo {
-    position: absolute;
-    top: 7px;
-    left: 10px;
-    width: 320px;
+    display: none;
+    // position: absolute;
+    // top: 7px;
+    // left: 10px;
+    // width: 320px;
 
     &--sticky {
       position: absolute;
@@ -79,12 +80,12 @@
 
   &-bar {
     float: left;
-    width: 674px;
-    margin: 6px auto;
+    width: 60%;
+    margin: 0 20%;
     color: $color-secondary;
     font-family: $nav-bar;
     font-weight: lighter;
-    overflow: hidden;
+    //overflow: hidden;
 
     &-burger-btn {
       display: none;
@@ -103,7 +104,7 @@
       position: relative;
       float: left;
       color: #daa520;
-      padding: 5px 13px;
+      padding: 26px 20px;
       font-size: 14px;
       text-decoration: none;
       transition: all 0.2s;
@@ -138,8 +139,24 @@
       background-color: $background-color-primary !important;
       width: 100%;
       position: fixed;
-      top: -100px;
+      top: -120px;
       height: 40px;
+
+      &--logo {
+        width: 220px;
+        height: 220px;
+        position: relative;
+        float: left;
+        top: -110px;
+        background-color: $background-color-terciary;
+        border-radius: 110px;
+        //box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.50);
+      }
+
+      &--img {
+        width: 80px;
+        margin: 120px 72px;
+      }
     }
     &--shown {
       z-index: 1050;
@@ -150,6 +167,10 @@
       top: 0;
       height: 40px;
       opacity: 0.8;
+
+      &--logo {
+        display: none;
+      }
     }
   }
 }

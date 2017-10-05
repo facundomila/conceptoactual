@@ -15,7 +15,6 @@ var PlacementBlock = React.createClass({
     },
 
     renderPlacement: function (ads) {
-      console.log(ads)
         return <div className={this.getClass()}>
                   <img src={ads} />
               </div>

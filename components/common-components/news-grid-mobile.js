@@ -32,7 +32,6 @@ var NewsGridMobile = React.createClass({
     },
 
     renderNewsItem: function (mobileGridData, key) {
-      console.log(mobileGridData);
         return <NewItemMobile key={key}>{mobileGridData}</NewItemMobile>;
     }
 });

@@ -34,7 +34,7 @@ var NavigationSticky = React.createClass({
 
     getStickyBar: function (e) {
         var scrollY = e.path[0].scrollY || e.path[1].scrollY;
-        console.log(scrollY)
+
         if (scrollY >= 120) {
           this.setState({ stickyBarClass: 'navigation-sticky--shown'})
         } else {

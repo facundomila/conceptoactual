@@ -1,0 +1,69 @@
+@import 'styles/globals';
+
+.navigation-sticky-bar {
+
+  &--hidden {
+      z-index: 1050;
+      -webkit-transition: top 0.5s;
+      background-color: $background-color-primary;
+      width: 100%;
+      position: fixed;
+      top: -120px;
+      height: 40px;
+  }
+
+  &--shown {
+      z-index: 1050;
+      -webkit-transition: top 0.5s;
+      background-color: $background-color-primary;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      height: 40px;
+      opacity: 0.8;
+  }
+
+  &-logo-container {
+      position: relative;
+      width: 220px;
+      float: left;
+      left: 0;
+      height: 40px;
+  }
+
+  &-logo {
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    width: 220px;
+  }
+
+  &-networks {
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 20px;
+  }
+
+  &-link {
+    position: relative;
+    float: left;
+    color: #daa520;
+    padding: 26px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s;
+    transform: rotate(0deg);
+    background-color: transparent;
+  }
+  &-link a {
+    text-decoration: none;
+    color: $color-primary;
+  }
+
+  &-link:hover {
+    padding: 15px 20px;
+    transform: rotate(25deg);
+    background-color: $background-color-primary
+  }
+}

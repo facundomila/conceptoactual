@@ -9,16 +9,16 @@ var NavigationBar = React.createClass({
 
     getInitialState: function () {
         return {
-          mobileNav: false,
+          mobileNav: this.switchBar,
         }
     },
 
     componentDidMount: function () {
-        window.addEventListener('resize', this.swichBar);
+        window.addEventListener('resize', this.switchBar);
     },
 
     componentWillUnmount: function () {
-        window.removeEventListener('resize', this.swichBar);
+        window.removeEventListener('resize', this.switchBar);
     },
 
     render: function () {
@@ -29,7 +29,7 @@ var NavigationBar = React.createClass({
         );
     },
 
-    swichBar: function () {
+    switchBar: function () {
         if (window.outerWidth < 768) {
             this.setState({ mobileNav: true })
         } else {

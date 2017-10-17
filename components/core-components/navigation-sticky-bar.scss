@@ -49,7 +49,7 @@
     position: relative;
     float: left;
     color: #daa520;
-    padding: 26px 20px;
+    padding: 8px 20px;
     font-size: 14px;
     text-decoration: none;
     transition: all 0.2s;
@@ -62,7 +62,7 @@
   }
 
   &-link:hover {
-    padding: 15px 20px;
+    padding: 5px 20px;
     transform: rotate(25deg);
     background-color: $background-color-primary
   }

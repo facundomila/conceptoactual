@@ -8,8 +8,9 @@ var NavigationDefaultBar = require('components/core-components/navigation-defaul
 var NavigationBar = React.createClass({
 
     getInitialState: function () {
+        var state = (window.outerWidth < 768) ? true : false;
         return {
-          mobileNav: this.switchBar,
+          mobileNav: state,
         }
     },
 
@@ -24,7 +25,8 @@ var NavigationBar = React.createClass({
     render: function () {
         return (
             <div className="navigation">
-              {this.renderCurrentBar()}
+              {this.renderWebAppBar()}
+              {this.renderMobileBar()}
             </div>
         );
     },
@@ -44,6 +46,7 @@ var NavigationBar = React.createClass({
     },
 
     renderWebAppBar: function () {
+      console.log('web', this.state.mobileNav)
         var navigationDefault = (
           <div className="navigation-default-bar">
             <NavigationSticky links={this.getLinks()} />
@@ -57,6 +60,7 @@ var NavigationBar = React.createClass({
     },
 
     renderMobileBar: function () {
+      console.log('phone', this.state.mobileNav)
         var mobileBar = (this.state.mobileNav) ? <NavigationMobileBar links={this.getLinks()} /> : null;
 
         return mobileBar;
@@ -64,13 +68,38 @@ var NavigationBar = React.createClass({
 
     getLinks: function () {
         var links = [
-          'novedades',
-          'deportes',
-          'life style',
-          'turismo',
-          'ocio',
-          'sociales',
-          'concepto tv'
+          {
+            title: 'Novedades',
+            href: ''
+          },
+          {
+            title: 'Deportes',
+            href: ''
+          },
+          {
+            title: 'Life Style',
+            href: ''
+          },
+          {
+            title: 'Turismo',
+            href: ''
+          },
+          {
+            title: 'Ocio',
+            href: ''
+          },
+          {
+            title: 'Tecno',
+            href: ''
+          },
+          {
+            title: 'Sociales',
+            href: ''
+          },
+          {
+            title: 'Concepto TV',
+            href: ''
+          }
         ]
 
         return links;

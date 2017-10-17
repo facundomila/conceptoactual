@@ -7,7 +7,7 @@ var NavigationDefaultBar = React.createClass({
 
     render: function () {
         var links = this.props.links;
-
+        console.log(links)
         return (
             <div className="navigation-default-bar">
               {this.renderLogoBar()}

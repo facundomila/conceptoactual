@@ -39,9 +39,9 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
           <hr>
           <form action="insert.php" method="POST" enctype="multipart/form-data">
             <div class="first-part">
-              <label>Titulo:</label>
+              <label>Titulo: *</label>
                   <input name="title" type="text" size="100" required/>
-              <label>Subtitulo:</label>
+              <label>Subtitulo: *</label>
                   <input name="subtitle" type="text" size="100" required/>
             </div>
             <div class="second-part">
@@ -67,10 +67,10 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
             </div>
             <div class="third-part">
               <label>Bajada:</label><br>
-                <textarea name="description" rows="3" cols="30" required></textarea>
+                <textarea name="description" rows="3" cols="30"></textarea>
               </div>
               <div class="fourth-part">
-              <label>Cuerpo de noticia:</label><br>
+              <label>Cuerpo de noticia: *</label><br>
                 <textarea name="paragraph" rows="30" cols="50" required></textarea>
               </div>
               <div class="fifth-part">
@@ -78,7 +78,7 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
                 <input name="archivo" type="file" size="100" class="btn btn-default" required/>
                 <input name="action" type="hidden" value="upload" /></span><br>
               <label>Pie de imagen:</label>
-                <input name="epigraph" type="text" size="100" required/>
+                <input name="epigraph" type="text" size="100"/>
                 <div class="separator"></div>
                 <button type="submit" class="btn btn-success">Enviar noticia</button>
               </div>

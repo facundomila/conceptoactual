@@ -99,7 +99,7 @@ var NavigationBar = React.createClass({
             href: '#'
           }
         ]
-
+        
         return links;
     }
 });

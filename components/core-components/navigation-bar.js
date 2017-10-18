@@ -10,7 +10,7 @@ var NavigationBar = React.createClass({
     getInitialState: function () {
         var state = (window.outerWidth < 768) ? true : false;
         return {
-          mobileNav: state,
+          mobileNav: state
         }
     },
 
@@ -24,7 +24,7 @@ var NavigationBar = React.createClass({
 
     render: function () {
         return (
-            <div className="navigation">
+            <div className="navigation-bar">
               {this.renderWebAppBar()}
               {this.renderMobileBar()}
             </div>

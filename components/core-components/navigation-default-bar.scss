@@ -1,0 +1,37 @@
+@import 'styles/globals';
+
+.navigation-default-bar {
+
+  &-link {
+    position: relative;
+    float: left;
+    color: #daa520;
+    padding: 26px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s;
+    transform: rotate(0deg);
+    background-color: transparent;
+  }
+  &-link a {
+    text-decoration: none;
+    color: $color-primary;
+  }
+
+  &-link:hover {
+    padding: 15px 20px;
+    transform: rotate(25deg);
+    background-color: $background-color-primary
+  }
+
+  &-logo {
+    display: none;
+  }
+
+  &-networks {
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 20px;
+  }
+}

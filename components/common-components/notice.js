@@ -17,9 +17,9 @@ var Notice = React.createClass({
                 <div className="notice-img">
                   <img src={dynamicPath+item[0].ruta} />
                 </div>
-                <div className="notice-epigraph">{item[0].epigraph}</div>
+                  {this.renderEpigraph(item[0].epigraph)}
                 <div className="notice-main">
-                  <div className="notice-main-description">{item[0].description}</div>
+                  {this.renderDescription(item[0].description)}
                   <div className="notice-main-paragraph">{item[0].paragraph}</div>
                 </div>
                 <div className="notice-social">
@@ -29,6 +29,18 @@ var Notice = React.createClass({
                 </div>
             </div>
         );
+    },
+
+    renderDescription: function (item) {
+      var layoutDesc = <div className="notice-main-description">{item}</div>;
+
+      return (item) ? layoutDesc : null;
+    },
+
+    renderEpigraph: function (item) {
+      var layoutEpi = <div className="notice-epigraph">{item}</div>;
+
+      return (item) ? layoutEpi : null;
     }
 });
 

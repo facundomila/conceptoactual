@@ -7,7 +7,7 @@ var NavigationDefaultBar = React.createClass({
 
     render: function () {
         var links = this.props.links;
-        console.log(links)
+
         return (
             <div className="navigation-default-bar">
               {this.renderLogoBar()}
@@ -20,7 +20,7 @@ var NavigationDefaultBar = React.createClass({
     renderLinks: function (link, key) {
         return (
           <div className="navigation-default-bar-link" key={key}>
-            <a href="#">{link}</a>
+            <a href={link.href}>{link.title}</a>
           </div>
         );
     },

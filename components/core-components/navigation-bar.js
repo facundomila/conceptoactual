@@ -46,7 +46,6 @@ var NavigationBar = React.createClass({
     },
 
     renderWebAppBar: function () {
-      console.log('web', this.state.mobileNav)
         var navigationDefault = (
           <div className="navigation-default-bar">
             <NavigationSticky links={this.getLinks()} />
@@ -60,7 +59,6 @@ var NavigationBar = React.createClass({
     },
 
     renderMobileBar: function () {
-      console.log('phone', this.state.mobileNav)
         var mobileBar = (this.state.mobileNav) ? <NavigationMobileBar links={this.getLinks()} /> : null;
 
         return mobileBar;
@@ -70,35 +68,35 @@ var NavigationBar = React.createClass({
         var links = [
           {
             title: 'Novedades',
-            href: ''
+            href: '#'
           },
           {
             title: 'Deportes',
-            href: ''
+            href: '#'
           },
           {
             title: 'Life Style',
-            href: ''
+            href: '#'
           },
           {
             title: 'Turismo',
-            href: ''
+            href: '#'
           },
           {
             title: 'Ocio',
-            href: ''
+            href: '#'
           },
           {
             title: 'Tecno',
-            href: ''
+            href: '#'
           },
           {
             title: 'Sociales',
-            href: ''
+            href: '#'
           },
           {
             title: 'Concepto TV',
-            href: ''
+            href: '#'
           }
         ]
 

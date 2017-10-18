@@ -7,7 +7,7 @@ var MobileNavBar = React.createClass({
 
     getInitialState: function() {
         return {
-          mobileNavClass: 'navigation-mobile-bar',
+          mobileNavClass: 'navigation-mobile-bar--closed',
           burguerButton: 'open'
         }
     },
@@ -16,11 +16,18 @@ var MobileNavBar = React.createClass({
         var links = this.props.links;
 
         return (
-            <div className={this.state.mobileNavClass}>
-              <button {...this.getBurgerButtonProps()}>
-                {this.getIcon()}
-              </button>
-              {_.map(links, this.renderLinks)}
+            <div className="navigation-mobile-bar">
+              <div className="navigation-mobile-bar-top">
+                <button {...this.getBurgerButtonProps()}>
+                  {this.getIcon()}
+                </button>
+                <div className="navigation-mobile-bar-logo-container">
+                  <img className="navigation-mobile-bar-logo" src="images/iso_blanco.png" />
+                </div>
+              </div>
+              <div className={this.state.mobileNavClass}>
+                {_.map(links, this.renderLinks)}
+              </div>
             </div>
         );
     },
@@ -28,7 +35,7 @@ var MobileNavBar = React.createClass({
     renderLinks: function (link, key) {
         return (
           <div className="navigation-mobile-bar-link" key={key}>
-            <a href="#">{link}</a>
+            <a href={link.href}>{link.title}</a>
           </div>
         );
     },
@@ -56,11 +63,11 @@ var MobileNavBar = React.createClass({
     },
 
     handleClick: function() {
-        (this.state.mobileNavClass === 'navigation-mobile-bar') ?
+        (this.state.mobileNavClass === 'navigation-mobile-bar--closed') ?
         this.setState({ mobileNavClass: 'navigation-mobile-bar--opened' }) :
-        this.setState({ mobileNavClass: 'navigation-mobile-bar'});
+        this.setState({ mobileNavClass: 'navigation-mobile-bar--closed'});
 
-        (this.state.mobileNavClass === 'navigation-mobile-bar') ?
+        (this.state.mobileNavClass === 'navigation-mobile-bar--closed') ?
         this.setState({ burguerButton: 'close' }) :
         this.setState({ burguerButton: 'open'});
     }

@@ -39,7 +39,7 @@ var NewItemMobile = React.createClass({
     // renderTitle: function (gridContent) {
     //     var titleClass = "new-item-"+this.props.type+"--title";
     //     var title = (gridContent) ? <div className={titleClass}>{news.title}</div> : 'No Title';
-    //     console.log(title);
+    //     
     //     return title;
     // },
     //

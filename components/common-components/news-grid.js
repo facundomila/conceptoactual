@@ -9,7 +9,6 @@ var NewsGrid = React.createClass({
         var news = this.props.children;
         var ads = this.props.advertisment.ads;
 
-
         var place_0 = [ads[0].ad, ads[1].ad, ads[2].ad];
         var place_1 = [ads[3].ad, ads[4].ad, ads[5].ad];
         var place_2 = [ads[0].ad, ads[1].ad, ads[2].ad];

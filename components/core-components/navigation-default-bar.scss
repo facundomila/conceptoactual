@@ -1,6 +1,18 @@
 @import 'styles/globals';
 
 .navigation-default-bar {
+  width: 100%;
+  z-index: 1002;
+  position: absolute;
+  top: 0px;
+  height: 80px;
+  background-color: $background-color-primary;
+
+  &-links {
+    width: 900px;
+    position: relative;
+    float: left;
+  }
 
   &-link {
     position: relative;
@@ -13,6 +25,7 @@
     transform: rotate(0deg);
     background-color: transparent;
   }
+
   &-link a {
     text-decoration: none;
     color: $color-primary;
@@ -21,11 +34,18 @@
   &-link:hover {
     padding: 15px 20px;
     transform: rotate(25deg);
-    background-color: $background-color-primary
+    background-color: $background-color-primary;
+  }
+
+  &-logo-container {
+    width: 120px;
+    float: left;
   }
 
   &-logo {
-    display: none;
+    display: block;
+    width: 60px;
+    margin: 10px 0 5px 30px;
   }
 
   &-networks {

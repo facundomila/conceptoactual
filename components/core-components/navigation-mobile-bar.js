@@ -22,7 +22,7 @@ var MobileNavBar = React.createClass({
                   {this.getIcon()}
                 </button>
                 <div className="navigation-mobile-bar-logo-container">
-                  <img className="navigation-mobile-bar-logo" src="images/iso_blanco.png" />
+                  <a href="demo.html"><img className="navigation-mobile-bar-logo" src="images/iso_blanco.png" /></a>
                 </div>
               </div>
               <div className={this.state.mobileNavClass}>

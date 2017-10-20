@@ -10,9 +10,13 @@ var NavigationDefaultBar = React.createClass({
 
         return (
             <div className="navigation-default-bar">
-              {this.renderLogoBar()}
-              {_.map(links, this.renderLinks)}
-              {this.renderNetworks()}
+              <div className="navigation-default-bar-logo-container">
+                {this.renderLogoBar()}
+              </div>
+              <div className="navigation-default-bar-links">
+                {_.map(links, this.renderLinks)}
+              </div>
+                {this.renderNetworks()}
             </div>
         );
     },
@@ -26,7 +30,7 @@ var NavigationDefaultBar = React.createClass({
     },
 
     renderLogoBar: function () {
-      var logo = <div><img className="navigation-default-bar-logo" src="images/logo_blanco_bar.png"/></div>;
+      var logo = <a href="demo.html"><img className="navigation-default-bar-logo" src="images/logo_blanco_bar.png"/></a>;
 
       return logo;
     },

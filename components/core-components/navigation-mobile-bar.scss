@@ -4,15 +4,13 @@
 
     &-top {
       padding: 0;
-      position: fixed;
       width: 100%;
       z-index: 1002;
-      position: absolute;
+      position: fixed;
       top: 0px;
       height: 130px;
       background-color: $background-color-primary;
       border-bottom: solid 2px #000;
-
     }
 
     &--closed {

@@ -45,7 +45,7 @@ var DemoPage = React.createClass({
             <div className="demo-page">
               <NavigationBar />
               <div className="demo-page-highlighted">
-                {this.renderSlider(HighlightedNews)}
+                <SliderNews>{HighlightedNews}</SliderNews>
               </div>
               <div className="demo-page-main">
                 {this.renderNewsGrid(ads, NewsStore, isMobile)}
@@ -55,13 +55,6 @@ var DemoPage = React.createClass({
               </div>
             </div>
         );
-    },
-
-    renderSlider: function (HighlightedNews) {
-        var slider = <SliderNews>{HighlightedNews}</SliderNews>;
-        var loading = <div>test</div>;
-
-        return ;
     },
 
     renderNewsGrid: function (ads, NewsStore, isMobile) {

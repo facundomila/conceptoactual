@@ -22,8 +22,9 @@ var Notice = React.createClass({
                   {this.renderDescription(item[0].description)}
                   <div className="notice-main-paragraph">{item[0].paragraph}</div>
                 </div>
+                  {this.renderVideo(item[0].vide)}
                 <div className="notice-social">
-                    <Link linkType="facebook"/>
+                    <Link linkType="facebook" onClick={this.facebookShare} />
                     <Link linkType="twitter"/>
                     <Link linkType="whatsapp"/>
                 </div>
@@ -41,6 +42,21 @@ var Notice = React.createClass({
       var layoutEpi = <div className="notice-epigraph">{item}</div>;
 
       return (item) ? layoutEpi : null;
+    },
+
+    renderVideo: function (video) {
+      var videoComponent = <iframe className="notice-video" width="420" height="315"
+        src={video}></iframe>
+      var renderVideo = (video) ? videoComponent : null
+      
+      return  renderVideo;
+    },
+
+    facebookShare: function () {
+      FB.ui({
+        method: 'share',
+        href: 'http://conceptoactual.com/news.html?id=47',
+      }, function(response){});
     }
 });
 

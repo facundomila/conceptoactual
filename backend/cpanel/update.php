@@ -24,8 +24,9 @@ if ($_POST["action"] == "upload") {
   $description = $_POST["description"];
   $paragraph = $_POST["paragraph"];
   $epigraph = $_POST["epigraph"];
+  $video = $_POST["video"];
 
-  $sql = "UPDATE `news` SET `title`='$titulo',`subtitle`='$subtitulo',`description`='$description',`paragraph`='$paragraph' ,`ubicacion`='$ubicacion',`epigraph`='$epigraph',`category_id`='$category_id' WHERE `id`='$id'";
+  $sql = "UPDATE `news` SET `title`='$titulo',`subtitle`='$subtitulo',`description`='$description',`paragraph`='$paragraph' ,`ubicacion`='$ubicacion',`epigraph`='$epigraph',`video`='$video',`category_id`='$category_id' WHERE `id`='$id'";
 
   $res=mysql_query($sql,$conexion);
 
@@ -74,8 +75,9 @@ if ($_POST["action"] == "upload") {
   $description = $_POST["description"];
   $paragraph = $_POST["paragraph"];
   $epigraph = $_POST["epigraph"];
+  $video = $_POST["video"];
 
-  $sql = "UPDATE `news` SET `title`='$titulo',`subtitle`='$subtitulo',`description`='$description', `paragraph`='$paragraph',`ubicacion`='$ubicacion',`epigraph`='$epigraph',`category_id`='$category_id',`ruta`='$destino',`ruta_miniatura`='$destmini' WHERE `id`='$id'";
+  $sql = "UPDATE `news` SET `title`='$titulo',`subtitle`='$subtitulo',`description`='$description', `paragraph`='$paragraph',`ubicacion`='$ubicacion',`epigraph`='$epigraph',`video`='$video',`category_id`='$category_id',`ruta`='$destino',`ruta_miniatura`='$destmini' WHERE `id`='$id'";
 
   $res=mysql_query($sql,$conexion);
 

@@ -77,6 +77,9 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
               <span><label>Adjuntar Imagen [ Las imagenes deben ser en formato JPG y tamaño 1920 px x 1080 px ]</label>
                 <input name="archivo" type="file" size="100" class="btn btn-default" required/>
                 <input name="action" type="hidden" value="upload" /></span><br>
+                <div class="fifth-part">
+                <span><label>Enlace de video</label>
+                  <input name="video" type="text" size="200" class="btn btn-default"/>
               <label>Pie de imagen:</label>
                 <input name="epigraph" type="text" size="100"/>
                 <div class="separator"></div>

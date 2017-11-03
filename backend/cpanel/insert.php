@@ -56,10 +56,11 @@ mysql_set_charset("utf8");
 					$category_id = $_POST["category_id"];
 					$description = $_POST["description"];
 					$paragraph = $_POST["paragraph"];
-					$epigraph = $_POST["epigraph"];
+          $epigraph = $_POST["epigraph"];
+          $video = $_POST["video"];
 
 //insertamos los datos en la db
-$sql="INSERT INTO  news (title,subtitle,ubicacion,category_id,description,paragraph,epigraph,ruta,ruta_miniatura) values('$titulo','$subtitulo','$ubicacion','$category_id','$description','$paragraph','$epigraph','".$destino."','".$destmini."')";
+$sql="INSERT INTO  news (title,subtitle,ubicacion,category_id,description,paragraph,epigraph,video,ruta,ruta_miniatura) values('$titulo','$subtitulo','$ubicacion','$category_id','$description','$paragraph','$epigraph','$video','".$destino."','".$destmini."')";
 $res=mysql_query($sql,$conexion);
 
 echo '<div class="mensaje">Se ha ingresado: '.$titulo.' correctamente.<div class="separador"><a href="index.php">Menu principal</a></div>"';

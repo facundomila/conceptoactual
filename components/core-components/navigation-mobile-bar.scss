@@ -16,7 +16,7 @@
     &--closed {
       width: 100%;
       z-index: 1002;
-      position: absolute;
+      position: fixed;
       top: 130px;
       height: 5px;
       opacity: 0;
@@ -28,12 +28,13 @@
     }
 
     &--opened {
-      position: relative;
+      position: fixed;
       top: 130px;
       height: 1040px;
       overflow: hidden;
       font-family: $nav-bar;
       background-color: $background-color-secondary;
+      z-index: 5000;
       -webkit-animation-name: opening; /* Safari 4.0 - 8.0 */
       -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
       -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */

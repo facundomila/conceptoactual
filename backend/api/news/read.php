@@ -44,6 +44,7 @@ if($num>0){
             "ruta_miniatura" => $ruta_miniatura,
             "ubicacion" => $ubicacion,
             "epigraph" => $epigraph,
+            "video" => $video,
             "category_id" => $category_id,
             "category_name" => $category_name,
             "modificated" => $modificated

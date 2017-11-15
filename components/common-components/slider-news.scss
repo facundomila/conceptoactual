@@ -17,8 +17,8 @@
 
     &-dot {
       cursor:pointer;
-      height: 13px;
-      width: 13px;
+      height: 18px;
+      width: 18px;
       margin: 0 2px;
       background-color: #bbb;
       border-radius: 50%;
@@ -50,14 +50,14 @@
 //mobile style
 @media only screen and (max-device-width : 1180px) {
   div.container {
-    top: 120px !important;
+    top: 0 !important;
   }
   .slider-news-title {
     z-index: 1500;
     padding: 100px 100px;
     font-family: $titles;
     font-size: 66px;
-    top: 15px;
+    top: 300px;
   }
   .slider-news li {
     width: 24px !important;

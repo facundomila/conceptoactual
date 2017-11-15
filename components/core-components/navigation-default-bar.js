@@ -30,7 +30,7 @@ var NavigationDefaultBar = React.createClass({
     },
 
     renderLogoBar: function () {
-      var logo = <a href="demo.html"><img className="navigation-default-bar-logo" src="images/logo_blanco_bar.png"/></a>;
+      var logo = <a href="demo.html"><img className="navigation-default-bar-logo" src="images/iso_blanco-small.png"/></a>;
 
       return logo;
     },

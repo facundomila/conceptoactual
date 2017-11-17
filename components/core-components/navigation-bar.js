@@ -68,35 +68,43 @@ var NavigationBar = React.createClass({
         var links = [
           {
             title: 'Novedades',
-            href: '#'
+            href: '#',
+            modifier: 'novedades' 
           },
           {
             title: 'Deportes',
-            href: '#'
+            href: '#',
+            modifier: 'deportes'
           },
           {
             title: 'Life Style',
-            href: '#'
+            href: '#',
+            modifier: 'lifestyle'
           },
           {
             title: 'Turismo',
-            href: '#'
+            href: '#',
+            modifier: 'turismo'
           },
           {
             title: 'Ocio',
-            href: '#'
+            href: '#',
+            modifier: 'ocio'
           },
           {
             title: 'Tecno',
-            href: '#'
+            href: '#',
+            modifier: 'tecno'
           },
           {
             title: 'Sociales',
-            href: '#'
+            href: '#',
+            modifier: 'sociales'
           },
           {
             title: 'Concepto TV',
-            href: '#'
+            href: '#',
+            modifier: 'conceptotv'
           }
         ]
         

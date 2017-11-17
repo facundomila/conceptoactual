@@ -22,8 +22,10 @@ var NavigationDefaultBar = React.createClass({
     },
 
     renderLinks: function (link, key) {
+        var modifier = "navigation-default-bar-link--"+link.modifier;
+          
         return (
-          <div className="navigation-default-bar-link" key={key}>
+          <div className={modifier} key={key}>
             <a href={link.href}>{link.title}</a>
           </div>
         );

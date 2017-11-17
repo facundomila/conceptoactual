@@ -51,8 +51,10 @@ var NavigationStickyBar = React.createClass({
     },
 
     renderLinks: function (link, key) {
+        var modifier = "navigation-sticky-bar-link--"+link.modifier;
+        
         return (
-          <div className="navigation-sticky-bar-link" key={key}>
+          <div className={modifier} key={key}>
               <a href={link.href}>{link.title}</a>
           </div>
         );

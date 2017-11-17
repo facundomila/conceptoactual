@@ -6,23 +6,24 @@ var NewItem = React.createClass({
 
     render: function () {
         var news = this.props.children;
+        var category = (news) ? news.category_id : null;
 
         return (
-            <div className={this.getClass()}>
+            <div className={this.getClass(news)+category}>
               <a href={this.getLocation(news)}>
                 {this.renderTitle(news)}
-                {this.renderSubtitle(news)}
+                {this.renderCategory(news)}
                 {this.renderImg(news)}
               </a>
             </div>
         );
     },
 
-    getClass: function () {
+    getClass: function (news) {
         return classNames({
-            'new-item-xthree': (this.props.type === 'xthree'),
-            'new-item-xtwo': (this.props.type === 'xtwo'),
-            'new-item-xone': (this.props.type === 'xone'),
+            'new-item-xthree--': (this.props.type === 'xthree'),
+            'new-item-xtwo--': (this.props.type === 'xtwo'),
+            'new-item-xone--': (this.props.type === 'xone'),
             'new-item-xone--mobile': (this.props.type === 'xone--mobile'),
         })
     },
@@ -40,9 +41,9 @@ var NewItem = React.createClass({
         return title;
     },
 
-    renderSubtitle: function (news) {
-        var categoryClass = "new-item-"+this.props.type+"--category";
-        var category = (news) ? <div className={categoryClass}>{news.category_name}</div> : null;
+    renderCategory: function (news) {
+        var categoryClass = "new-item-"+this.props.type+"-category--";
+        var category = (news) ? <div className={categoryClass+news.category_id}>{news.category_name}</div> : null;
 
         return category;
     },

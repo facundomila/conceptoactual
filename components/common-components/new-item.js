@@ -24,7 +24,7 @@ var NewItem = React.createClass({
             'new-item-xthree--': (this.props.type === 'xthree'),
             'new-item-xtwo--': (this.props.type === 'xtwo'),
             'new-item-xone--': (this.props.type === 'xone'),
-            'new-item-xone--mobile': (this.props.type === 'xone--mobile'),
+            'new-item-xone--mobile--': (this.props.type === 'xone--mobile'),
         })
     },
 

@@ -5,7 +5,6 @@ var Logo = require('components/core-components/logo');
 var NavigationBar = require('components/core-components/navigation-bar');
 var NewsGrid = require('components/common-components/news-grid');
 var NewsGridMobile = require('components/common-components/news-grid-mobile');
-var Placement = require('components/core-components/placement');
 var React = require('react');
 var SliderNews = require('components/common-components/slider-news');
 var storeProductApi = require('services/store-product/store-product-api');

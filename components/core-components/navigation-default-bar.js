@@ -40,9 +40,9 @@ var NavigationDefaultBar = React.createClass({
     renderNetworks: function () {
       var networks = (
         <div className="navigation-default-bar-networks">
-            <Link kind="no_bubble" linkType="facebook"/>
-            <Link kind="no_bubble" linkType="twitter"/>
-            <Link kind="no_bubble" linkType="instagram"/>
+           <Link kind="no_bubble" linkType="facebook" href="https://www.facebook.com/ConceptoActual/" />
+           <Link kind="no_bubble" linkType="twitter" href="https://twitter.com/ConceptoActual" />
+           <Link kind="no_bubble" linkType="instagram" href="https://www.instagram.com/conceptoactual/" />
         </div>
       );
 

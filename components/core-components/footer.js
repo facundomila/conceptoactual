@@ -12,12 +12,12 @@ var Footer = React.createClass({
                 </div>
                 <div className="footer-concepto-social">
                   <div className="footer-concepto-social-container">
-                    <Link linkType="facebook"/>
-                    <Link linkType="twitter"/>
-                    <Link linkType="linkedin"/>
-                    <Link linkType="instagram"/>
+                    <Link linkType="facebook" href="https://www.facebook.com/ConceptoActual/" />
+                    <Link linkType="twitter" href="https://twitter.com/ConceptoActual" />
+                    <Link linkType="linkedin" href="https://www.linkedin.com/in/concepto-actual-05589b146/" />
+                    <Link linkType="instagram" href="https://www.instagram.com/conceptoactual/" />
                     <Link linkType="whatsapp"/>
-                    <Link linkType="youtube"/>
+                    <Link linkType="youtube" href="https://www.youtube.com/channel/UCjty9yGSJ-s1EDPlP1j95Ng?view_as=subscriber"/>
                   </div>  
                 </div>
                 <div className="footer-concepto-copyright">

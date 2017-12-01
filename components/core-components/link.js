@@ -29,7 +29,8 @@ var Link = React.createClass({
     getProps: function () {
         return {
             className: this.getClass(),
-            href: this.props.href
+            href: this.props.href,
+            target: '_blank',
         };
     },
 

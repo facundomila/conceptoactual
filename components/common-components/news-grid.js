@@ -8,13 +8,14 @@ var NewsGrid = React.createClass({
     render: function () {
         var news = this.props.children;
         var ads = this.props.advertisment.ads;
+        console.log(ads)
 
         var place_0 = [ads[0].ad, ads[1].ad, ads[2].ad];
         var place_1 = [ads[3].ad, ads[4].ad, ads[5].ad];
-        var place_2 = [ads[0].ad, ads[1].ad, ads[2].ad];
-        var place_3 = [ads[3].ad, ads[4].ad, ads[5].ad];
-        var place_4 = [ads[0].ad, ads[1].ad, ads[2].ad];
-        var place_5 = [ads[3].ad, ads[4].ad, ads[5].ad];
+        var place_2 = [ads[6].ad, ads[7].ad, ads[8].ad];
+        var place_3 = [ads[0].ad, ads[1].ad, ads[2].ad];
+        var place_4 = [ads[3].ad, ads[4].ad, ads[5].ad];
+        var place_5 = [ads[6].ad, ads[7].ad, ads[8].ad];
         var place_6 = [ads[0].ad, ads[1].ad, ads[2].ad];
         var place_7 = [ads[3].ad, ads[4].ad, ads[5].ad];
 
@@ -72,34 +73,6 @@ var NewsGrid = React.createClass({
     renderNewsXone: function (news) {
         return <NewItem type="xone">{news}</NewItem>
     }
-
-    // renderItems: function (item, key) {
-    //   return <NewItem key={key}>{item}</NewItem>;
-    // },
-
-    // getProcessedNews: function () {
-    //   var processedNews = [];
-    //   var largeAdIndex = 0;
-    //
-    //   this.props.children.map(function (item, key) {
-    //     processedNews.push(this.renderItems(item, key));
-    //
-    //     if (key % 3 == 2) {
-    //       processedNews.push(this.renderAds(largeAdIndex));
-    //       largeAdIndex++;
-    //     }
-    //   }, this);
-    //
-    //   return processedNews;
-    // },
-
-    // renderAds: function (largeAdIndex) {
-    //   return (
-    //     <div>
-    //       <Placement type="large" index={largeAdIndex} />
-    //     </div>
-    //   );
-    // }
 });
 
 module.exports = NewsGrid;

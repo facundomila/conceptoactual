@@ -1,7 +1,7 @@
 @import 'styles/globals';
 
 .new-item-xthree {
-  &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7 { 
+  &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8 { 
     z-index: 1000;
     position: relative;
     float: left;
@@ -20,7 +20,7 @@
     overflow: hidden;
   }
 
-&--0:hover, &--1:hover, &--2:hover, &--3:hover, &--4:hover, &--5:hover, &--6:hover, &--7:hover { 
+&--0:hover, &--1:hover, &--2:hover, &--3:hover, &--4:hover, &--5:hover, &--6:hover, &--7:hover, &--8:hover { 
   -webkit-transition: all 200ms ease-in;
   -webkit-transform: scale(1.01);
   -ms-transition: all 200ms ease-in;
@@ -32,28 +32,31 @@
 }
 
 &--0:hover {
-  border: 18px solid orangered;
+  border: 18px solid $novedades-color;
 }
 &--1:hover {
-  border: 18px solid deepskyblue;
+  border: 18px solid $deportes-color;
 }
 &--2:hover {
-  border: 18px solid lightgreen;
+  border: 18px solid $life-style-color;
 }
 &--3:hover {
-  border: 18px solid tomato;
+  border: 18px solid $viajes-color;
 }
 &--4:hover {
-  border: 18px solid olive;
+  border: 18px solid $ocio-color;
 }
 &--5:hover {
-  border: 18px solid teal;
+  border: 18px solid $tecno-color;
 }
 &--6:hover {
-  border: 18px solid saddlebrown;
+  border: 18px solid $sociales-color;
 }
 &--7:hover {
-  border: 18px solid coral;
+  border: 18px solid $moda-color;
+}
+&--8:hover {
+  border: 18px solid $concepto-tv-color;
 }
 
   &--title {
@@ -69,7 +72,7 @@
   }
 
   &-category {
-    &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7  {
+    &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8  {
       height: 40px;
       padding-top: 8px;
       width: 28%;
@@ -84,28 +87,31 @@
     }
 
     &--0 {
-      background-color: orangered;
+      background-color: $novedades-color;
     }
     &--1 {
-      background-color: deepskyblue;
+      background-color: $deportes-color;
     }
     &--2 {
-      background-color: lightgreen;
+      background-color: $life-style-color;
     }
     &--3 {
-      background-color: tomato;
+      background-color: $viajes-color;
     }
     &--4 {
-      background-color: olive;
+      background-color: $ocio-color;
     }
     &--5 {
-      background-color: teal;
+      background-color: $tecno-color;
     }
     &--6 {
-      background-color: saddlebrown;
+      background-color: $sociales-color;
     }
     &--7 {
-      background-color: coral;
+      background-color: $moda-color;
+    }
+    &--8 {
+      background-color: $concepto-tv-color;
     }
   }
 
@@ -119,7 +125,7 @@
 }
 
 .new-item-xtwo {
-  &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7 { 
+  &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8 { 
     z-index: 1000;
     position: relative;
     float: left;
@@ -138,7 +144,7 @@
     overflow: hidden;
   }
 
-  &--0:hover, &--1:hover, &--2:hover, &--3:hover, &--4:hover, &--5:hover, &--6:hover, &--7:hover { 
+  &--0:hover, &--1:hover, &--2:hover, &--3:hover, &--4:hover, &--5:hover, &--6:hover, &--7:hover, &--8:hover { 
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.01);
     -ms-transition: all 200ms ease-in;
@@ -150,28 +156,31 @@
   }
   
   &--0:hover {
-    border: 18px solid orangered;
+    border: 18px solid $novedades-color;
   }
   &--1:hover {
-    border: 18px solid deepskyblue;
+    border: 18px solid $deportes-color;
   }
   &--2:hover {
-    border: 18px solid lightgreen;
+    border: 18px solid $life-style-color;
   }
   &--3:hover {
-    border: 18px solid tomato;
+    border: 18px solid $viajes-color;
   }
   &--4:hover {
-    border: 18px solid olive;
+    border: 18px solid $ocio-color;
   }
   &--5:hover {
-    border: 18px solid teal;
+    border: 18px solid $tecno-color;
   }
   &--6:hover {
-    border: 18px solid saddlebrown;
+    border: 18px solid $sociales-color;
   }
   &--7:hover {
-    border: 18px solid coral;
+    border: 18px solid $moda-color;
+  }
+  &--8:hover {
+    border: 18px solid $concepto-tv-color;
   }
 
   &--title {
@@ -188,7 +197,7 @@
   }
 
   &-category {
-    &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7  {
+    &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8 {
       height: 40px;
       padding-top: 8px;
       width: 28%;
@@ -203,28 +212,31 @@
     }
 
     &--0 {
-      background-color: orangered;
+      background-color: $novedades-color;
     }
     &--1 {
-      background-color: deepskyblue;
+      background-color: $deportes-color;
     }
     &--2 {
-      background-color: lightgreen;
+      background-color: $life-style-color;
     }
     &--3 {
-      background-color: tomato;
+      background-color: $viajes-color;
     }
     &--4 {
-      background-color: olive;
+      background-color: $ocio-color;
     }
     &--5 {
-      background-color: teal;
+      background-color: $tecno-color;
     }
     &--6 {
-      background-color: saddlebrown;
+      background-color: $sociales-color;
     }
     &--7 {
-      background-color: coral;
+      background-color: $moda-color;
+    }
+    &--8 {
+      background-color: $concepto-tv-color;
     }
   }
 
@@ -238,7 +250,7 @@
 }
 
 .new-item-xone {
-  &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7 { 
+  &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8 { 
     z-index: 1000;
     position: relative;
     float: left;
@@ -256,7 +268,7 @@
     transform: scale(1);
   }
 
-  &--0:hover, &--1:hover, &--2:hover, &--3:hover, &--4:hover, &--5:hover, &--6:hover, &--7:hover { 
+  &--0:hover, &--1:hover, &--2:hover, &--3:hover, &--4:hover, &--5:hover, &--6:hover, &--7:hover, &--8:hover { 
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.01);
     -ms-transition: all 200ms ease-in;
@@ -268,28 +280,31 @@
   }
   
   &--0:hover {
-    border: 18px solid orangered;
+    border: 18px solid $novedades-color;
   }
   &--1:hover {
-    border: 18px solid deepskyblue;
+    border: 18px solid $deportes-color;
   }
   &--2:hover {
-    border: 18px solid lightgreen;
+    border: 18px solid $life-style-color;
   }
   &--3:hover {
-    border: 18px solid tomato;
+    border: 18px solid $viajes-color;
   }
   &--4:hover {
-    border: 18px solid olive;
+    border: 18px solid $ocio-color;
   }
   &--5:hover {
-    border: 18px solid teal;
+    border: 18px solid $tecno-color;
   }
   &--6:hover {
-    border: 18px solid saddlebrown;
+    border: 18px solid $sociales-color;
   }
   &--7:hover {
-    border: 18px solid coral;
+    border: 18px solid $moda-color;
+  }
+  &--8:hover {
+    border: 18px solid $concepto-tv-color;
   }
 
   &--title {
@@ -306,7 +321,7 @@
   }
 
   &-category {
-    &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7  {
+    &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8 {
       height: 40px;
       padding-top: 8px;
       width: 28%;
@@ -321,28 +336,31 @@
     }
 
     &--0 {
-      background-color: orangered;
+      background-color: $novedades-color;
     }
     &--1 {
-      background-color: deepskyblue;
+      background-color: $deportes-color;
     }
     &--2 {
-      background-color: lightgreen;
+      background-color: $life-style-color;
     }
     &--3 {
-      background-color: tomato;
+      background-color: $viajes-color;
     }
     &--4 {
-      background-color: olive;
+      background-color: $ocio-color;
     }
     &--5 {
-      background-color: teal;
+      background-color: $tecno-color;
     }
     &--6 {
-      background-color: saddlebrown;
+      background-color: $sociales-color;
     }
     &--7 {
-      background-color: coral;
+      background-color: $moda-color;
+    }
+    &--8 {
+      background-color: $concepto-tv-color;
     }
   }
 
@@ -355,7 +373,7 @@
 }
 
 .new-item-xone--mobile {
-  &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7 { 
+  &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8 { 
     z-index: 1000;
     position: relative;
     float: left;
@@ -373,7 +391,7 @@
     transform: scale(1);
   }
 
-  &--0:hover, &--1:hover, &--2:hover, &--3:hover, &--4:hover, &--5:hover, &--6:hover, &--7:hover { 
+  &--0:hover, &--1:hover, &--2:hover, &--3:hover, &--4:hover, &--5:hover, &--6:hover, &--7:hover, &--8:hover { 
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.01);
     -ms-transition: all 200ms ease-in;
@@ -385,28 +403,31 @@
   }
   
   &--0:hover {
-    border: 18px solid orangered;
+    border: 18px solid $novedades-color;
   }
   &--1:hover {
-    border: 18px solid deepskyblue;
+    border: 18px solid $deportes-color;
   }
   &--2:hover {
-    border: 18px solid lightgreen;
+    border: 18px solid $life-style-color;
   }
   &--3:hover {
-    border: 18px solid tomato;
+    border: 18px solid $viajes-color;
   }
   &--4:hover {
-    border: 18px solid olive;
+    border: 18px solid $ocio-color;
   }
   &--5:hover {
-    border: 18px solid teal;
+    border: 18px solid $tecno-color;
   }
   &--6:hover {
-    border: 18px solid saddlebrown;
+    border: 18px solid $sociales-color;
   }
   &--7:hover {
-    border: 18px solid coral;
+    border: 18px solid $moda-color;
+  }
+  &--8:hover {
+    border: 18px solid $concepto-tv-color;
   }
 
   &--title {
@@ -425,7 +446,7 @@
   }
 
   &-category {
-    &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7  {
+    &--0, &--1, &--2, &--3, &--4, &--5, &--6, &--7, &--8  {
       height: 80px;
       padding-top: 20px;
       width: 20%;
@@ -441,28 +462,31 @@
     }
 
     &--0 {
-      background-color: orangered;
+      background-color: $novedades-color;
     }
     &--1 {
-      background-color: deepskyblue;
+      background-color: $deportes-color;
     }
     &--2 {
-      background-color: lightgreen;
+      background-color: $life-style-color;
     }
     &--3 {
-      background-color: tomato;
+      background-color: $viajes-color;
     }
     &--4 {
-      background-color: olive;
+      background-color: $ocio-color;
     }
     &--5 {
-      background-color: teal;
+      background-color: $tecno-color;
     }
     &--6 {
-      background-color: saddlebrown;
+      background-color: $sociales-color;
     }
     &--7 {
-      background-color: coral;
+      background-color: $moda-color;
+    }
+    &--8 {
+      background-color: $concepto-tv-color;
     }
   }
 

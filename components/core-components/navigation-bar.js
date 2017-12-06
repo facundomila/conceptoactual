@@ -82,9 +82,9 @@ var NavigationBar = React.createClass({
             modifier: 'lifestyle'
           },
           {
-            title: 'Turismo',
+            title: 'Viajes',
             href: '#',
-            modifier: 'turismo'
+            modifier: 'viajes'
           },
           {
             title: 'Ocio',
@@ -100,6 +100,11 @@ var NavigationBar = React.createClass({
             title: 'Sociales',
             href: '#',
             modifier: 'sociales'
+          },
+          {
+            title: 'Moda',
+            href: '#',
+            modifier: 'moda'
           },
           {
             title: 'Concepto TV',

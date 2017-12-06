@@ -51,14 +51,14 @@
   }
 
   &-link {
-    &--novedades, &--deportes, &--lifestyle, &--turismo, &--ocio, &--tecno, &--sociales, &--conceptotv {
-      padding: 8px 0 6px 0;      
+    &--novedades, &--deportes, &--lifestyle, &--viajes, &--ocio, &--tecno, &--sociales, &--moda, &--conceptotv {
+      padding: 8px 0 6px 0; 
       width: 7%;
       position: relative;
       float: left;
       color: #daa520;
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
       text-decoration: none;
       border-bottom: solid 0 orange;
     }
@@ -66,116 +66,122 @@
 
   &-link {  
     &--novedades:hover {
-      border-bottom: solid 3px orangered;
-      -webkit-animation-name: swing-orange; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+      border-bottom: solid 5px $novedades-color;
+      -webkit-animation-name: swing-novedades; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
       -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
     }
     &--deportes:hover {
-      border-bottom: solid 3px deepskyblue;
-      -webkit-animation-name: swing-blue; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+      border-bottom: solid 5px $deportes-color;
+      -webkit-animation-name: swing-deportes; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
       -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
     }
     &--lifestyle:hover {
-      border-bottom: solid 3px lightgreen;
-      -webkit-animation-name: swing-green; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+      border-bottom: solid 5px $life-style-color;
+      -webkit-animation-name: swing-life; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
       -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
     }
-    &--turismo:hover {
-      border-bottom: solid 3px tomato;
-      -webkit-animation-name: swing-tomato; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    &--viajes:hover {
+      border-bottom: solid 5px $viajes-color;
+      -webkit-animation-name: swing-viajes; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
       -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
     }
     &--ocio:hover {
-      border-bottom: solid 3px olive;
-      -webkit-animation-name: swing-olive; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+      border-bottom: solid 5px $ocio-color;
+      -webkit-animation-name: swing-ocio; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
       -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
     }
     &--tecno:hover {
-      border-bottom: solid 3px teal;
-      -webkit-animation-name: swing-teal; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+      border-bottom: solid 5px $tecno-color;
+      -webkit-animation-name: swing-tecno; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
       -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
     }
     &--sociales:hover {
-      border-bottom: solid 3px saddlebrown;
-      -webkit-animation-name: swing-brown; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+      border-bottom: solid 5px $sociales-color;
+      -webkit-animation-name: swing-sociales; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
+      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+    }
+    &--moda:hover {
+      border-bottom: solid 5px $moda-color;
+      -webkit-animation-name: swing-moda; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
       -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
     }
     &--conceptotv:hover {
-      border-bottom: solid 3px coral;
-      -webkit-animation-name: swing-coral; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+      border-bottom: solid 5px $concepto-tv-color;
+      -webkit-animation-name: swing-concepto; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
       -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
     }
   }
 }
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes swing-orange {
-  0%   {font-size: 13px; border-bottom: solid 2px orangered;}
-  20%  {font-size: 10px; border-bottom: solid 6px orange;}
-  60%  {font-size: 16px; border-bottom: solid 2px white;}
-  100% {font-size: 14px; border-bottom: solid 3px orangered;}
+@-webkit-keyframes swing-novedades {
+  0%   {font-size: 13px; border-bottom: solid 2px $novedades-color;}
+  25%  {font-size: 12px; border-bottom: solid 5px white;}
+  60%  {font-size: 15px; border-bottom: solid 2px white;}
+  100% {font-size: 13px; border-bottom: solid 5px $novedades-color;}
 }
 
-@-webkit-keyframes swing-blue {
-  0%   {font-size: 13px; border-bottom: solid 2px deepskyblue;}
-  20%  {font-size: 10px; border-bottom: solid 6px cyan;}
-  60%  {font-size: 16px; border-bottom: solid 2px white;}
-  100% {font-size: 14px; border-bottom: solid 3px deepskyblue;}
+@-webkit-keyframes swing-deportes {
+  0%   {font-size: 13px; border-bottom: solid 2px $deportes-color;}
+  25%  {font-size: 12px; border-bottom: solid 5px white;}
+  60%  {font-size: 15px; border-bottom: solid 2px white;}
+  100% {font-size: 13px; border-bottom: solid 5px $deportes-color;}
 }
 
-@-webkit-keyframes swing-brown {
-  0%   {font-size: 13px; border-bottom: solid 2px saddlebrown;}
-  20%  {font-size: 10px; border-bottom: solid 6px goldenrod;}
-  60%  {font-size: 16px; border-bottom: solid 2px white;}
-  100% {font-size: 14px; border-bottom: solid 3px saddlebrown;}
+@-webkit-keyframes swing-life {
+  0%   {font-size: 13px; border-bottom: solid 2px $life-style-color;}
+  25%  {font-size: 12px; border-bottom: solid 5px white;}
+  60%  {font-size: 15px; border-bottom: solid 2px white;}
+  100% {font-size: 13px; border-bottom: solid 5px $life-style-color;}
 }
 
-@-webkit-keyframes swing-coral {
-  0%   {font-size: 13px; border-bottom: solid 2px coral;}
-  20%  {font-size: 10px; border-bottom: solid 6px peachpuff;}
-  60%  {font-size: 16px; border-bottom: solid 2px white;}
-  100% {font-size: 14px; border-bottom: solid 3px coral;}
+@-webkit-keyframes swing-viajes {
+  0%   {font-size: 13px; border-bottom: solid 2px $viajes-color;}
+  25%  {font-size: 12px; border-bottom: solid 5px white;}
+  60%  {font-size: 15px; border-bottom: solid 2px white;}
+  100% {font-size: 13px; border-bottom: solid 5px $viajes-color;}
 }
 
-@-webkit-keyframes swing-green {
-  0%   {font-size: 13px; border-bottom: solid 2px green;}
-  20%  {font-size: 10px; border-bottom: solid 6px greenyellow;}
-  60%  {font-size: 16px; border-bottom: solid 2px white;}
-  100% {font-size: 14px; border-bottom: solid 3px green;}
+@-webkit-keyframes swing-ocio {
+  0%   {font-size: 13px; border-bottom: solid 2px $ocio-color;}
+  25%  {font-size: 12px; border-bottom: solid 5px white;}
+  60%  {font-size: 15px; border-bottom: solid 2px white;}
+  100% {font-size: 13px; border-bottom: solid 5px $ocio-color;}
 }
 
-@-webkit-keyframes swing-olive {
-  0%   {font-size: 13px; border-bottom: solid 2px olive;}
-  20%  {font-size: 10px; border-bottom: solid 6px greenyellow;}
-  60%  {font-size: 16px; border-bottom: solid 2px white;}
-  100% {font-size: 14px; border-bottom: solid 3px olive;}
+@-webkit-keyframes swing-tecno {
+  0%   {font-size: 13px; border-bottom: solid 2px $tecno-color;}
+  25%  {font-size: 12px; border-bottom: solid 5px white;}
+  60%  {font-size: 15px; border-bottom: solid 2px white;}
+  100% {font-size: 13px; border-bottom: solid 5px $tecno-color;}
 }
 
-@-webkit-keyframes swing-orange {
-  0%   {font-size: 13px; border-bottom: solid 2px orange;}
-  20%  {font-size: 10px; border-bottom: solid 6px yellow;}
-  60%  {font-size: 16px; border-bottom: solid 2px white;}
-  100% {font-size: 14px; border-bottom: solid 3px orange;}
+@-webkit-keyframes swing-sociales {
+  0%   {font-size: 13px; border-bottom: solid 2px $sociales-color;}
+  25%  {font-size: 12px; border-bottom: solid 5px white;}
+  60%  {font-size: 15px; border-bottom: solid 2px white;}
+  100% {font-size: 13px; border-bottom: solid 5px $sociales-color;}
 }
 
-@-webkit-keyframes swing-teal {
-  0%   {font-size: 13px; border-bottom: solid 2px teal;}
-  20%  {font-size: 10px; border-bottom: solid 6px cyan;}
-  60%  {font-size: 16px; border-bottom: solid 2px white;}
-  100% {font-size: 14px; border-bottom: solid 3px teal;}
+@-webkit-keyframes swing-moda {
+  0%   {font-size: 13px; border-bottom: solid 2px $moda-color;}
+  25%  {font-size: 12px; border-bottom: solid 5px white;}
+  60%  {font-size: 15px; border-bottom: solid 2px white;}
+  100% {font-size: 13px; border-bottom: solid 5px $moda-color;}
 }
 
-@-webkit-keyframes swing-tomato {
-  0%   {font-size: 13px; border-bottom: solid 2px tomato;}
-  20%  {font-size: 10px; border-bottom: solid 6px orange;}
-  60%  {font-size: 16px; border-bottom: solid 2px white;}
-  100% {font-size: 14px; border-bottom: solid 3px tomato;}
+@-webkit-keyframes swing-concepto {
+  0%   {font-size: 13px; border-bottom: solid 2px $concepto-tv-color;}
+  25%  {font-size: 12px; border-bottom: solid 5px white;}
+  60%  {font-size: 14px; border-bottom: solid 2px white;}
+  100% {font-size: 13px; border-bottom: solid 5px $concepto-tv-color;}
 }

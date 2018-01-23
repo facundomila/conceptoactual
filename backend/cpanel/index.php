@@ -34,7 +34,7 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
     </style>
   </head>
   <body>
-        <div class="form-container">
+      <div class="form-container">
           <h1>Crear Noticia</h1>
           <hr>
           <form action="insert.php" method="POST" enctype="multipart/form-data">
@@ -54,14 +54,15 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
               </div><div class="half">
               <label>Categoria:</label>
                   <select name="category_id" type="text">
-                    <option value="1">Novedades</option>
-                    <option value="2">Deportes</option>
-                    <option value="3">Life Style</option>
-                    <option value="4">Turismo</option>
-                    <option value="5">Ocio</option>
-                    <option value="6">Tecno</option>
-                    <option value="19">Sociales</option>
-                    <option value="20">Concepto Actual TV</option>
+                    <option value="0">Novedades</option>
+                    <option value="1">Deportes</option>
+                    <option value="2">Life Style</option>
+                    <option value="3">Viajes</option>
+                    <option value="4">Ocio</option>
+                    <option value="5">Tecno</option>
+                    <option value="6">Sociales</option>
+                    <option value="7">Moda</option>
+                    <option value="8">Concepto Actual TV</option>
                   </select>
               </div>
             </div>
@@ -77,6 +78,7 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
               <span><label>Adjuntar Imagen [ Las imagenes deben ser en formato JPG y tamaño 1920 px x 1080 px ]</label>
                 <input name="archivo" type="file" size="100" class="btn btn-default" required/>
                 <input name="action" type="hidden" value="upload" /></span><br>
+                </div>
                 <div class="fifth-part">
                 <span><label>Enlace de video</label>
                   <input name="video" type="text" size="200" class="btn btn-default"/>
@@ -86,8 +88,8 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
                 <button type="submit" class="btn btn-success">Enviar noticia</button>
               </div>
               </form>
-    </div>
-    <div class="form-container">
+      </div>
+      <div class="form-container">
       <h1>Noticias</h1><hr>
       <table id="news-list">
         <tr>
@@ -95,7 +97,7 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
           <th>Categroria</th>
           <th>Acciones</th>
         </tr>
-      <script>
+        <script>
         var news;
 
         var xmlhttp = new XMLHttpRequest();
@@ -126,7 +128,7 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
           location.reload();
           }
         }
-      </script>
+        </script>
       </table>
       </div>
   </body>

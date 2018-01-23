@@ -14,7 +14,7 @@ $conexion= mysql_connect ("localhost","c0780297_data","35LAmafebi") or die ("no 
 mysql_select_db ("c0780297_data") or die ("no existe la base de datos");
 mysql_set_charset("utf8");
 
-if ($_POST["action"] == "upload") {
+if ($_POST["action"] !== "upload") {
 
   $id = $_POST["id"];
   $titulo = $_POST["title"];
@@ -30,11 +30,11 @@ if ($_POST["action"] == "upload") {
 
   $res=mysql_query($sql,$conexion);
 
-  echo '<div class="mensaje">Se ha modificado: '.$titulo.' correctamente.<div class="separador"></div><a href="index.php">Menu principal</a></div>"';
+  echo '<div class="mensaje">Se ha modificado: '.$titulo.' correctamente.<div class="separador"></div><a href="index.php">Menu principal</a></div>';
 
 } else {
   $status = "";
-  ($_POST["action"] == "upload") or die ("Error al subir la imagen.");
+  ($_POST["action"] === "upload") or die ("Error al subir la imagen.");
   $tamano = $_FILES["archivo"]['size'];
   $tipo = $_FILES["archivo"]['type'];
   $archivo = $_FILES["archivo"]['name'];
@@ -47,10 +47,10 @@ if ($_POST["action"] == "upload") {
   //subimos la imagen original
   $destino =  "imagenes/originales/".$prefijo."_".$archivo; //ruta de la imagen original
   (copy($_FILES['archivo']['tmp_name'],$destino)) or die ("Error al subir la imagen ".$archivo);
-  $status = "La imagen <b>".$archivo."</b> se a subido correctamente!";
+  //$status = "La imagen <b>".$archivo."</b> se a subido correctamente!";
   $post=$destino;
 
-  echo $status;
+  //echo $status;
 
   //creamos la miniaturas
   $source=$destino;

@@ -30,10 +30,10 @@ mysql_set_charset("utf8");
           //subimos la imagen original
           $destino =  "imagenes/originales/".$prefijo."_".$archivo; //ruta de la imagen original
           (copy($_FILES['archivo']['tmp_name'],$destino)) or die ("Error al subir la imagen ".$archivo);
-          $status = "La imagen <b>".$archivo."</b> se a subido correctamente!";
+          //$status = "La imagen <b>".$archivo."</b> se a subido correctamente!";
 	      	$post=$destino;
 
-		  		echo $status;
+		  		//echo $status;
 
           //creamos la miniaturas
           $source=$destino;
@@ -63,7 +63,7 @@ mysql_set_charset("utf8");
 $sql="INSERT INTO  news (title,subtitle,ubicacion,category_id,description,paragraph,epigraph,video,ruta,ruta_miniatura) values('$titulo','$subtitulo','$ubicacion','$category_id','$description','$paragraph','$epigraph','$video','".$destino."','".$destmini."')";
 $res=mysql_query($sql,$conexion);
 
-echo '<div class="mensaje">Se ha ingresado: '.$titulo.' correctamente.<div class="separador"><a href="index.php">Menu principal</a></div>"';
+echo '<div class="mensaje">Se ha ingresado: '.$titulo.' correctamente.<br> Imagen: '.$archivo.'<br>Video: '.$video.'<div class="separador"><a href="index.php">Menu principal</a></div>';
 ?>
 </body>
 </html>

@@ -23,7 +23,7 @@ echo '<div class="menu"><a href="index.php">Menu principal</a></div></div>';
     <div class="form-container">
       <h1>Editar Noticia</h1>
       <hr>
-      <form action="update.php" method="POST" enctype="multipart/form-data">
+      <form id="formAction"action="update.php" method="POST" enctype="multipart/form-data">
         <div class="first-part">
           <input id="idnews" name="id" type="hidden"/>
           <label>Titulo:</label>
@@ -65,13 +65,13 @@ echo '<div class="menu"><a href="index.php">Menu principal</a></div></div>';
           <img width="220px" id="thumb" />
           <div class="nueva-img">
               <label>Adjuntar Imagen [ Las imagenes deben ser en formato JPG y tamaño 1920 px x 1080 px ]</label>
-                <input name="archivo" type="file" size="300"/>
+                <input id="img" name="archivo" type="file" size="300" onchange="setPath(this.value)"/>
                 <input name="action" type="hidden" value="upload" /></span><br>
           </div>
         </div>
         <div class="fifth-part">
             <input id="epigraph" name="epigraph" type="text" size="100" />
-        </div> 
+        </div>
         <div class="fifth-part">
         <label>Video:</label><br>
           <input id="video" name="video" type="text" size="300" />
@@ -110,16 +110,31 @@ echo '<div class="menu"><a href="index.php">Menu principal</a></div></div>';
             document.getElementById("paragraph").value=textParr;  
           var thumb = document.getElementById("thumb");
             thumb.setAttribute("src", news[0].ruta_miniatura);
+          var img = news[0].ruta;
+            document.getElementById("img").value=img;
           var epi = document.getElementById("epigraph");
             epi.setAttribute("value", news[0].epigraph);
           var video = document.getElementById("video");
             video.setAttribute("value", news[0].video);
+
+          console.log('2');
+          var update = (news[0].ruta === document.getElementById("img").value);
+            console.log(update, document.getElementById("img").value, news[0].ruta);
+
+          var form = document.getElmentById("formAction");
+            form.setAttribute("action", getAction);
         }
+
+        function setPath (event) {
+          //var path = document.getElementById("img");
+          console.log(event);
+        } 
 
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 myObj = JSON.parse(this.responseText);
                 collection = myObj.records;
+                console.log('1');
                 populateValues(collection);
             }
         };

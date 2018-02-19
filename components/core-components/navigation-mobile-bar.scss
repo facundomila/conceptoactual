@@ -1,104 +1,116 @@
 @import 'styles/globals';
-
 .navigation-mobile-bar {
-
     &-top {
-      padding: 0;
-      width: 100%;
-      z-index: 1002;
-      position: fixed;
-      top: 0px;
-      height: 120px;
-      background-color: $background-color-primary;
-      opacity: 0.9;
+        background-color: $background-color-primary;
+        height: 160px;
+        opacity: 1;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1002;
     }
-
     &--closed {
-      width: 100%;
-      z-index: 1002;
-      position: fixed;
-      top: 120px;
-      height: 5px;
-      opacity: 0;
-      overflow: hidden;
-      background-color: $background-color-primary;
-      opacity: 0.96;
-      -webkit-animation-name: closing; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+        width: 100%;
+        z-index: 1002;
+        position: fixed;
+        top: 160px;
+        height: 5px;
+        opacity: 0;
+        overflow: hidden;
+        background-color: $background-color-primary;
+        opacity: 0.96;
+        -webkit-animation-name: closing;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 2s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-iteration-count: 1;
+        /* Safari 4.0 - 8.0 */
     }
-
     &--opened {
-      position: fixed;
-      top: 120px;
-      height: 1040px;
-      overflow: hidden;
-      font-family: $nav-bar;
-      background-color: $background-color-primary;
-      opacity: 0.96;
-      z-index: 5000;
-      -webkit-animation-name: opening; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+        position: fixed;
+        top: 160px;
+        height: 1040px;
+        overflow: hidden;
+        font-family: $nav-bar;
+        background-color: $background-color-primary;
+        opacity: 0.96;
+        z-index: 5000;
+        -webkit-animation-name: opening;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 2s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-iteration-count: 1;
+        /* Safari 4.0 - 8.0 */
     }
-
     &-burger-btn {
-      border: none;
-      background: none;
-      position: fixed;
-      font-size: 50px;
-      color: #fff;
-      top: 20px;
-      left: 34px;
-      outline: none;
-      z-index: 1500;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 50px;
+        left: 40px;
+        outline: none;
+        position: fixed;
+        top: 40px;
+        z-index: 1500;
     }
-
     &-link {
-      width: 100%;
-      height: 130px;
-      text-align: center;
-      cursor: pointer;
-      position: relative;
-      float: left;
-      color: #daa520;
-      padding: 26px 20px;
-      font-size: 38px;
-      text-decoration: none;
-      transition: all 0.2s;
-      transform: rotate(0deg);
-      background-color: transparent;
+        width: 100%;
+        height: 130px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        float: left;
+        color: #daa520;
+        padding: 26px 20px;
+        font-size: 38px;
+        text-decoration: none;
+        transition: all 0.2s;
+        transform: rotate(0deg);
+        background-color: transparent;
     }
     &-link a {
-      text-decoration: none;
-      color: $color-primary;
+        text-decoration: none;
+        color: $color-primary;
     }
-
     &-link:hover {
-      background-color: $background-color-primary;
+        background-color: $background-color-primary;
     }
-
     &-logo-container {
-      width: 100%;
-      left: 0;
-      height: 120px;
+        width: 100%;
+        left: 0;
+        height: 120px;
     }
-
     &-logo {
-      width: 500px;
-      margin: 8px 25%;
-      z-index: 1200;
+        margin: 20px 25%;
+        width: 560px;
+        z-index: 1200;
     }
 }
 
 @-webkit-keyframes opening {
-    0%  {height: 0px}
-    6%  {height: 700px}
-    10% {height: 1040px}
+    0% {
+        height: 0px
+    }
+    6% {
+        height: 700px
+    }
+    10% {
+        height: 1040px
+    }
 }
 
 @-webkit-keyframes closing {
-    0%  {height: 1040px; opacity: 1}
-    10% {height: 80px; opacity: 1}
-    15% {height: 0; opacity: 0}
+    0% {
+        height: 1040px;
+        opacity: 1
+    }
+    10% {
+        height: 80px;
+        opacity: 1
+    }
+    15% {
+        height: 0;
+        opacity: 0
+    }
 }

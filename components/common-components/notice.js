@@ -9,15 +9,13 @@ var Notice = React.createClass({
 
         return (
             <div className="notice">
-                <div className="notice-header">
-                  <div className="notice-header-title">{item[0].title}</div>
-                  <div className="notice-header-subtitle">{item[0].subtitle}</div>
-                </div>
                 <div className="notice-category_name">{item[0].category_name}</div>
                 <div className="notice-img">
+                  <div className="notice-title">{item[0].title}</div>
                   <img src={dynamicPath+item[0].ruta} />
                 </div>
                   {this.renderEpigraph(item[0].epigraph)}
+                <div className="notice-subtitle">{item[0].subtitle}</div>  
                 <div className="notice-main">
                   {this.renderDescription(item[0].description)}
                   <div className="notice-main-paragraph">{item[0].paragraph}</div>

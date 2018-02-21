@@ -1,70 +1,68 @@
 @import 'styles/globals';
 
 .notice {
-
-  &-header {
-    padding: 5%;
-    position: relative;
-    height: 300px;
-    top: 100px;
-
-    &-title {
-      font-family: $titles;
-      color: $color-accent;
-      font-size: 46px;
-      text-align: center;
-    }
-
-    &-subtitle {
-      font-family: $titles;
-      color: $color-secondary;
-      font-size: 32px;
-      padding: 20px 120px;
-      text-align: center;
-    }
-  }
-
-  &-category_name {
-    position: relative;
-    top: 180px;
-    font-family: $titles;
-    color: $color-primary;
-    background-color: $background-color-terciary;
-    font-size: 22px;
-    padding: 10px;
-    text-align: center;
-  }
-
   &-img {
     position: relative;
-    top: 180px;
+    top: 80px;
   }
 
   &-img img{
     width: 100%;
   }
-
-  &-epigraph {
-    position: relative;
-    top: 180px;
+  
+  &-title {
     font-family: $titles;
     color: $color-primary;
-    background-color: $background-color-secondary;
-    font-size: 18px;
+    font-size: 46px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  &-category_name {
+    position: relative;
+    top: 80px;
+    font-family: $titles;
+    color: $color-primary;
+    background-color: $background-color-terciary;
+    font-size: 14px;
     padding: 10px;
     text-align: center;
   }
 
+  &-epigraph {
+    position: relative;
+    top: 80px;
+    font-family: $titles;
+    color: $color-primary;
+    background-color: $background-color-secondary;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  &-subtitle {
+    font-family: $titles;
+    color: #555;
+    font-size: 28px;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    top: 80px;
+  }
+
   &-main {
     position: relative;
-    top: 180px;
+    top: 80px;
     font-family: $noticia;
     color: #555;
-    padding: 6% 20%;
+    padding: 0 20% 6%;
 
     &-description {
       font-weight: bold;
-      font-size: 24px;
+      font-size: 14px;
       margin-bottom: 30px;
     }
 

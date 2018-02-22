@@ -5,35 +5,37 @@ var React = require('react');
 
 var NewsGridMobile = React.createClass({
 
-    render: function () {
-        var news = _.cloneDeep(this.props.children);
-        var ads = _.cloneDeep(this.props.advertisment.ads);
-        var mobileGridData = [];
-        var counter = 0;
+  render: function () {
+    var news = this.props.children;
+    var ads = this.props.advertisment.ads;
+    var mobileGridData = [];
+    var counter = 0;
 
-        while(news.length || ads.length) {
-          if (counter % 2) {
-            if(news.length) {
-              mobileGridData.push(news.pop())
-            }
-          } else {
-            if(ads.length) {
-              mobileGridData.push(ads.pop())
-            }
-          }
-          counter++;
-        };
+    while (news.length || ads.length) {
+      if (counter % 2) {
+        if (news.length) {
+          mobileGridData.push(news.pop())
+        }
+      } else {
+        if (ads.length) {
+          mobileGridData.push(ads.pop())
+        }
+      }
+      counter++;
+    };
 
-        return (
-            <div className="news-grid">
-                {_.map(mobileGridData, this.renderNewsItem)}
-            </div>
-        );
-    },
+    var sortedData = mobileGridData.reverse();
+    console.log(sortedData, mobileGridData)
+    return (
+      <div className="news-grid">
+        {_.map(sortedData, this.renderNewsItem)}
+      </div>
+    );
+  },
 
-    renderNewsItem: function (mobileGridData, key) {
-        return <NewItemMobile key={key}>{mobileGridData}</NewItemMobile>;
-    }
+  renderNewsItem: function (mobileData, key) {
+    return <NewItemMobile key={key}>{mobileData}</NewItemMobile>;
+  }
 });
 
 module.exports = NewsGridMobile;

@@ -1,29 +1,26 @@
 @import 'styles/globals';
-
 .show-news-page {
-  color: $color-tertiary;
-
-  &-recomended {
-    position: relative;
-    top: 200px;
-  }
-
-  &-ads2 {
-    position: relative;
-    top: 200px;
-    width: 100%;
-    z-index: 900
-  }
-
-  &-footer {
-    position: relative;
-    top: 190px;
-    width: 100%;
-    float: left;
-  }
+    color: $color-tertiary;
+    &-recomended {
+        position: relative;
+        top: 200px;
+    }
+    &-ads2 {
+        position: relative;
+        top: 200px;
+        width: 100%;
+        z-index: 900
+    }
+    &-footer {
+        position: relative;
+        top: 180px;
+        width: 100%;
+        float: left;
+    }
 }
 
-@media only screen and (max-device-width : 1180px) {
-
-  .show-news-page-footer {top: 190px}
+@media only screen and (max-device-width: 1180px) {
+    .show-news-page-footer {
+        top: 180px
+    }
 }

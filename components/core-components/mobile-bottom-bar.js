@@ -1,30 +1,22 @@
-var _ = require('lodash');
 var React = require('react');
 var Icon = require('components/core-components/icon');
 var Link = require('components/core-components/link');
 
-var MobileNavBar = React.createClass({
-
-  getInitialState: function () {
-    return {
-      mobileNavClass: 'navigation-mobile-bar--closed',
-      burguerButton: 'open'
-    }
-  },
+var mobileBottomBar = React.createClass({
 
   render: function () {
     var links = this.props.links;
 
     return (
-      <div className="navigation-mobile-bar">
-        <div className="navigation-mobile-bar-top">
-          <button {...this.getBurgerButtonProps()}>
-            {this.getIcon()}
-          </button>
-          <a href="/demo.html">{this.renderLogoBar()}</a>
+      <div className="mobile-bottom-bar">
+        <div className="mobile-bottom-bar-date-container">21FEB</div>
+        <div className="mobile-bottom-bar-links-container">
+          <Link linkType="facebook" href="https://www.facebook.com/ConceptoActual/" />
+          <Link linkType="twitter" href="https://twitter.com/ConceptoActual" />
+          <Link linkType="instagram" href="https://www.instagram.com/conceptoactual/" />
         </div>
-        <div className={this.state.mobileNavClass}>
-          {_.map(links, this.renderLinks)}
+        <div className="mobile-bottom-bar-logo-container">
+          <a href="/demo.html">{this.renderLogoMiniBar()}</a>
         </div>
       </div>
     );
@@ -50,8 +42,8 @@ var MobileNavBar = React.createClass({
 
   renderLogoMiniBar: function () {
     var logo = (
-      <div className="navigation-mobile-bar-logo-container">
-        <img className="navigation-mobile-bar-logo" src="images/logo_blanco_bar.png" />
+      <div className="mobile-bottom-bar-logo-container">
+        <img src="images/logo_blanco_bar.png" />
       </div>
     );
 
@@ -99,4 +91,4 @@ var MobileNavBar = React.createClass({
   }
 });
 
-module.exports = MobileNavBar;
+module.exports = mobileBottomBar;

@@ -4,9 +4,9 @@ var Link = require('components/core-components/link');
 
 var NavigationStickyBar = React.createClass({
 
-    getInitialState: function() {
+    getInitialState: function () {
         return {
-          stickyBarClass: 'navigation-sticky-bar--hidden',
+            stickyBarClass: 'navigation-sticky-bar--hidden',
         }
     },
 
@@ -19,22 +19,22 @@ var NavigationStickyBar = React.createClass({
     },
 
     render: function () {
-      var links = this.props.links;
+        var links = this.props.links;
 
-      return (
-          <div className={this.state.stickyBarClass}>
-              <div className="navigation-sticky-bar-logo-container">
-                  <a href="demo.html">
-                      <img className="navigation-sticky-bar-logo" src="images/iso_blanco-small.png" />
-                  </a>
-              </div>
-                  {_.map(links, this.renderLinks)}
-              <div className="navigation-sticky-bar-networks">
-                  <Link kind="no_bubble" linkType="facebook"/>
-                  <Link kind="no_bubble" linkType="twitter"/>
-                  <Link kind="no_bubble" linkType="instagram"/>
-              </div>
-          </div>
+        return (
+            <div className={this.state.stickyBarClass}>
+                <div className="navigation-sticky-bar-logo-container">
+                    <a href="index.html">
+                        <img className="navigation-sticky-bar-logo" src="images/iso_blanco-small.png" />
+                    </a>
+                </div>
+                {_.map(links, this.renderLinks)}
+                <div className="navigation-sticky-bar-networks">
+                    <Link kind="no_bubble" linkType="facebook" />
+                    <Link kind="no_bubble" linkType="twitter" />
+                    <Link kind="no_bubble" linkType="instagram" />
+                </div>
+            </div>
         );
     },
 
@@ -42,21 +42,21 @@ var NavigationStickyBar = React.createClass({
         var scrollY = e.path[0].scrollY || e.path[1].scrollY;
 
         if (scrollY >= 120) {
-          this.setState({ stickyBarClass: 'navigation-sticky-bar--shown'})
+            this.setState({ stickyBarClass: 'navigation-sticky-bar--shown' })
         } else {
-          this.setState({ stickyBarClass: 'navigation-sticky-bar--hidden'})
+            this.setState({ stickyBarClass: 'navigation-sticky-bar--hidden' })
         }
 
         return scrollY;
     },
 
     renderLinks: function (link, key) {
-        var modifier = "navigation-sticky-bar-link--"+link.modifier;
-        
+        var modifier = "navigation-sticky-bar-link--" + link.modifier;
+
         return (
-          <div className={modifier} key={key}>
-              <a href={link.href}>{link.title}</a>
-          </div>
+            <div className={modifier} key={key}>
+                <a href={link.href}>{link.title}</a>
+            </div>
         );
     }
 });

@@ -21,7 +21,7 @@ var MobileNavBar = React.createClass({
           <button {...this.getBurgerButtonProps()}>
             {this.getIcon()}
           </button>
-          <a href="/demo.html">{this.renderLogoBar()}</a>
+          <a href="/index.html">{this.renderLogoBar()}</a>
         </div>
         <div className={this.state.mobileNavClass}>
           {_.map(links, this.renderLinks)}
@@ -73,7 +73,7 @@ var MobileNavBar = React.createClass({
   renderMiddleZone: function () {
     var logo = (
       <div className="navigation-mobile-bar-logo-container">
-        <a href="demo.html"><img className="navigation-mobile-bar-logo" src="images/iso_blanco.png" /></a>
+        <a href="index.html"><img className="navigation-mobile-bar-logo" src="images/iso_blanco.png" /></a>
       </div>
     );
 

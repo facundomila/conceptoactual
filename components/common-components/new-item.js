@@ -7,7 +7,7 @@ var NewItem = React.createClass({
     render: function () {
         var news = this.props.children;
         var category = (news) ? news.category_id : null;
-        console.log(category)
+
         return (
             <div className={this.getClass(news) + category}>
                 <a href={this.getLocation(news)}>

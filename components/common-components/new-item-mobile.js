@@ -10,7 +10,7 @@ var NewItemMobile = React.createClass({
 
         return (
             <div className="new-item-mobile">
-              {this.getComponent(gridContent)}
+                {this.getComponent(gridContent)}
             </div>
         );
     },
@@ -22,7 +22,7 @@ var NewItemMobile = React.createClass({
     },
 
     renderAds: function (gridContent) {
-        return <PlacementBlock type="full">{gridContent}</PlacementBlock>;
+        return <PlacementBlock type="full">{[gridContent]}</PlacementBlock>;
     },
 
     renderNews: function (gridContent) {

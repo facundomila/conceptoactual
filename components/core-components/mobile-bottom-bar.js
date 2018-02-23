@@ -16,7 +16,7 @@ var mobileBottomBar = React.createClass({
           <Link linkType="instagram" href="https://www.instagram.com/conceptoactual/" />
         </div>
         <div className="mobile-bottom-bar-logo-container">
-          <a href="/demo.html">{this.renderLogoMiniBar()}</a>
+          <a href="/index.html">{this.renderLogoMiniBar()}</a>
         </div>
       </div>
     );
@@ -65,7 +65,7 @@ var mobileBottomBar = React.createClass({
   renderMiddleZone: function () {
     var logo = (
       <div className="navigation-mobile-bar-logo-container">
-        <a href="demo.html"><img className="navigation-mobile-bar-logo" src="images/iso_blanco.png" /></a>
+        <a href="index.html"><img className="navigation-mobile-bar-logo" src="images/iso_blanco.png" /></a>
       </div>
     );
 

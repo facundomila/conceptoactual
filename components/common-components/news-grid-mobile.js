@@ -10,14 +10,15 @@ var NewsGridMobile = React.createClass({
     var ads = this.props.advertisment.ads;
     var mobileGridData = [];
     var counter = 0;
+    console.log('ads', ads.length);
 
-    while (news.length || ads.length) {
+    while (news.length || 13) {
       if (counter % 2) {
         if (news.length) {
           mobileGridData.push(news.pop())
         }
       } else {
-        if (ads.length) {
+        if (13) {
           mobileGridData.push(ads.pop())
         }
       }
@@ -25,7 +26,7 @@ var NewsGridMobile = React.createClass({
     };
 
     var sortedData = mobileGridData.reverse();
-    console.log(sortedData, mobileGridData)
+
     return (
       <div className="news-grid">
         {_.map(sortedData, this.renderNewsItem)}
@@ -34,6 +35,7 @@ var NewsGridMobile = React.createClass({
   },
 
   renderNewsItem: function (mobileData, key) {
+    //console.log('data', mobileData);
     return <NewItemMobile key={key}>{mobileData}</NewItemMobile>;
   }
 });

@@ -1,8 +1,12 @@
 @import 'styles/globals';
 .notice {
+    .placement-block {
+        position: relative;
+        top: 80px;
+    }
     &-img {
         position: relative;
-        top: 60px;
+        top: 80px;
     }
     &-img img {
         width: 100%;
@@ -20,7 +24,7 @@
     }
     &-baseboard {
         position: relative;
-        top: 60px;
+        top: 80px;
         font-family: $titles;
         color: $color-primary;
         background-color: $background-color-secondary;
@@ -35,11 +39,11 @@
         padding: 50px 20% 30px;
         text-align: left;
         position: relative;
-        top: 60px;
+        top: 80px;
     }
     &-main {
         position: relative;
-        top: 60px;
+        top: 80px;
         font-family: $noticia;
         color: #555;
         padding: 2% 20%;
@@ -66,28 +70,32 @@
 }
 
 @media only screen and (max-device-width: 768px) {
+    .placement-block {
+        position: relative;
+        top: 150px !important;
+    }
     .notice-title {
         font-size: 56px;
         padding: 0 5%;
     }
     .notice-subtitle {
         position: relative;
-        top: 120px;
+        top: 150px;
         font-size: 46px;
     }
     .notice-category_name {
-        top: 140px;
+        top: 150px;
         font-size: 30px;
     }
     .notice-img {
-        top: 120px;
+        top: 150px;
     }
     .notice-baseboard {
-        top: 120px;
+        top: 150px;
         font-size: 26px;
     }
     .notice-main {
-        top: 120px;
+        top: 150px;
     }
     .notice-main-description {
         font-size: 26px;
@@ -96,7 +104,7 @@
         font-size: 44px;
     }
     .notice-social {
-        top: 120px;
+        top: 150px;
         width: 204px
     }
 }

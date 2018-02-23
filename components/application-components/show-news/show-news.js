@@ -1,5 +1,4 @@
 var _ = require('lodash');
-var ads = require('services/advertisement.json');
 var React = require('react');
 var Footer = require('components/core-components/footer');
 var Header = require('components/core-components/header');

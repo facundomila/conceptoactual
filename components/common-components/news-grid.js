@@ -4,19 +4,19 @@ var PlacementBlock = require('components/common-components/placement-block');
 var React = require('react');
 
 var NewsGrid = React.createClass({
-
     render: function () {
         var news = this.props.children;
         var ads = this.props.advertisment.ads;
+        console.log(ads);
 
-        var place_0 = [ads[0].ad, ads[1].ad, ads[2].ad];
-        var place_1 = [ads[3].ad, ads[4].ad, ads[5].ad];
-        var place_2 = [ads[6].ad, ads[7].ad, ads[8].ad];
-        var place_3 = [ads[0].ad, ads[1].ad, ads[2].ad];
-        var place_4 = [ads[3].ad, ads[4].ad, ads[5].ad];
-        var place_5 = [ads[6].ad, ads[7].ad, ads[8].ad];
-        var place_6 = [ads[0].ad, ads[1].ad, ads[2].ad];
-        var place_7 = [ads[3].ad, ads[4].ad, ads[5].ad];
+        var place_0 = [ads.alto, ads.bolsa, ads.fallabela];
+        var place_1 = [ads.lacaja, ads.lasegunda, ads.municipal];
+        var place_2 = [ads.osde, ads.paladini, ads.queens];
+        var place_3 = [ads.rosental, ads.santafe, ads.showcase];
+        var place_4 = [ads.solmujer, ads.paladini, ads.municipal];
+        var place_5 = [ads.alto, ads.bolsa, ads.fallabela];
+        var place_6 = [ads.lacaja, ads.lasegunda, ads.municipal];
+        var place_7 = [ads.osde, ads.paladini, ads.queens];
 
         var news_0 = [news[1] || null, news[2] || null, news[3] || null];
         var news_1 = news[4] || null;

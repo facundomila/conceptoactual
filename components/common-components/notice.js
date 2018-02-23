@@ -1,16 +1,18 @@
+var ads = require('services/advertisement.json');
 var React = require('react');
 var Link = require('components/core-components/link');
 var MobileBottomBar = require('components/core-components/mobile-bottom-bar');
+var PlacementBlock = require('components/common-components/placement-block');
 
 var Notice = React.createClass({
 
   render: function () {
     var item = this.props.children;
     var dynamicPath = "http://conceptoactual.com/cpanel/";
-
+    
     return (
       <div className="notice">
-        <div className="notice-category_name">{item[0].category_name}</div>
+        {this.renderAds()}
         <div className="notice-img">
           <div className="notice-title">{item[0].title}</div>
           <img src={dynamicPath + item[0].ruta} />
@@ -30,6 +32,16 @@ var Notice = React.createClass({
         {this.renderMobileBottomBar()}
       </div>
     );
+  },
+
+  renderAds: function () {
+    console.log(ads.ads.queens)
+    var place_1 = [ads.ads.paladini, ads.ads.fallabela, ads.ads.showcase];
+    var mobileAd = <PlacementBlock type="full">{[ads.ads.queens]}</PlacementBlock>;;
+    var deskAds = <PlacementBlock type="third">{place_1}</PlacementBlock>;
+    var renderAds = (window.outerWidth < 768) ? mobileAd : deskAds;
+
+    return renderAds;
   },
 
   renderDescription: function (item) {

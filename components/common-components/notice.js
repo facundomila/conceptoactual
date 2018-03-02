@@ -9,7 +9,7 @@ var Notice = React.createClass({
   render: function () {
     var item = this.props.children;
     var dynamicPath = "http://conceptoactual.com/cpanel/";
-    
+
     return (
       <div className="notice">
         {this.renderAds()}
@@ -51,8 +51,9 @@ var Notice = React.createClass({
   },
 
   renderBaseboard: function (category, epigraph) {
+    var customClass = 'notice-baseboard--' + category.toLowerCase();
     var epi = (epigraph) ? epigraph : '';
-    var layoutBaseboard = <div className="notice-baseboard">{'[' + category + '] ' + epigraph}</div>;
+    var layoutBaseboard = <div className={customClass}>{'[' + category + '] ' + epigraph}</div>;
 
     return layoutBaseboard;
   },

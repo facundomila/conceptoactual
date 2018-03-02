@@ -1,78 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="iso-8859-1">
-    <title>Concepto Actual</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="jquery/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="jquery/css/slick-theme.css">
-    <style>
-      #app {
-        display: none;
-      }
-      /* preloader */
-      #preloader {
-        width: 120px;
-        height: 120px;
-        position: absolute;
-        top:0; left:0;
-        right:0; bottom:0;
-        margin: auto;
-        z-index: 1000;
-      }
-      #loader {
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 16px solid #d2266f;
-        width: 120px;
-        height: 120px;
-        -webkit-animation: spin 2s linear infinite;
-        animation: spin 2s linear infinite;
-      }
+  <meta charset="iso-8859-1">
+  <title>Concepto Actual</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="styles.css"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen"
+        rel="stylesheet">
+  <link rel="stylesheet"
+        type="text/css"
+        href="jquery/css/slick.css">
+  <link rel="stylesheet"
+        type="text/css"
+        href="jquery/css/slick-theme.css">
+  <style>
+    #app {
+      display: none;
+    }
 
-      @-webkit-keyframes spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
-      }
+    /* preloader */
 
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+    #preloader {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 1000;
+    }
+
+    #loader {
+      background-image: url('images/loading.png');
+      width: 125px;
+      height: 125px;
+      -webkit-animation: spin 2s infinite;
+      animation: spin 2s infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        transform: rotate(60deg);
       }
-    </style>
+      50% {
+        transform: rotate(-60deg);
+      }
+      100% {
+        transform: rotate(60deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(60deg);
+      }
+      50% {
+        transform: rotate(-60deg);
+      }
+      100% {
+        transform: rotate(60deg);
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div id="app"></div>
-<script src="./bundle.js"></script>
-<div id="preloader">
+  <div id="app"></div>
+  <script src="./bundle.js"></script>
+  <div id="preloader">
     <div id="loader"></div>
-</div>
-<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-<script>
-$(window).load(function() {
-  $('#preloader').fadeOut('3000');
-  $('#app').fadeIn('7000');
-})
-</script>
-<script src="jquery/js/slick.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-  var $jq = jQuery.noConflict();
-  $jq(document).on('ready', function() {
-    $jq(".regular").slick({
-      dots: false,
-      infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"
+          type="text/javascript"></script>
+  <script>
+    $(window).load(function () {
+      $('#preloader').fadeOut('3000');
+      $('#app').fadeIn('7000');
+    })
+  </script>
+  <script src="jquery/js/slick.js"
+          type="text/javascript"
+          charset="utf-8"></script>
+  <script type="text/javascript">
+    var $jq = jQuery.noConflict();
+    $jq(document).on('ready', function () {
+      $jq(".regular").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
     });
-  });
-</script>
+  </script>
 </body>
+
 </html>

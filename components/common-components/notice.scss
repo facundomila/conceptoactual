@@ -23,14 +23,96 @@
         text-shadow: 2px 2px #000;
     }
     &-baseboard {
-        position: relative;
-        top: 80px;
-        font-family: $titles;
-        color: $color-primary;
-        background-color: $background-color-secondary;
-        font-size: 16px;
-        padding: 10px;
-        text-align: center;
+        &--novedades {
+            background-color: $novedades-color;
+            position: relative;
+            top: 80px;
+            font-family: $titles;
+            color: $color-primary;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
+        &--deportes {
+            background-color: $deportes-color;
+            position: relative;
+            top: 80px;
+            font-family: $titles;
+            color: $color-primary;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
+        &--lifestyle {
+            background-color: $life-style-color;
+            position: relative;
+            top: 80px;
+            font-family: $titles;
+            color: $color-primary;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
+        &--viajes {
+            background-color: $viajes-color;
+            position: relative;
+            top: 80px;
+            font-family: $titles;
+            color: $color-primary;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
+        &--ocio {
+            background-color: $ocio-color;
+            position: relative;
+            top: 80px;
+            font-family: $titles;
+            color: $color-primary;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
+        &--tecno {
+            background-color: $tecno-color;
+            position: relative;
+            top: 80px;
+            font-family: $titles;
+            color: $color-primary;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
+        &--sociales {
+            background-color: $sociales-color;
+            position: relative;
+            top: 80px;
+            font-family: $titles;
+            color: $color-primary;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
+        &--moda {
+            background-color: $moda-color;
+            position: relative;
+            top: 80px;
+            font-family: $titles;
+            color: $color-primary;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
+        &--conceptotv {
+            background-color: $concepto-tv-color;
+            position: relative;
+            top: 80px;
+            font-family: $titles;
+            color: $color-primary;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+        }
     }
     &-subtitle {
         font-family: $titles;

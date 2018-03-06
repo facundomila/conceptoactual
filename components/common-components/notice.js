@@ -25,7 +25,7 @@ var Notice = React.createClass({
         </div>
         {this.renderVideo(item[0].vide)}
         <div className="notice-social">
-          <Link linkType="facebook" onClick={this.facebookShare} />
+          <button {...this.getFbLinkProps(item[0].id)}>Face</button>
           <Link linkType="twitter" />
           <Link linkType="whatsapp" />
         </div>
@@ -72,11 +72,19 @@ var Notice = React.createClass({
     return (device === 'mobile') ? <MobileBottomBar /> : null;
   },
 
-  facebookShare: function () {
-    FB.ui({
-      method: 'share',
-      href: 'http://conceptoactual.com/news.html?id=47',
-    }, function (response) { });
+  getFbLinkProps: function (id) {
+    var url = 'https://www.facebook.com/sharer/sharer.php?u=http%3A//conceptoactual.com/news.html?id=' + id;
+    var props = {
+      onClick: this.handleFbClick,
+      className: 'notice-social-fb'
+    };
+
+    return props;
+  },
+
+  handleFbClick: function (e) {
+    e.preventDefault();
+    window.open(url, width = "400px");
   }
 });
 

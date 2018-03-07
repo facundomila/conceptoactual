@@ -25,7 +25,7 @@ var Notice = React.createClass({
         </div>
         {this.renderVideo(item[0].vide)}
         <div className="notice-social">
-          <button {...this.getFbLinkProps(item[0].id)}>Face</button>
+          <div {...this.getFbLinkProps(item[0].id)}>Face</div>
           <Link linkType="twitter" />
           <Link linkType="whatsapp" />
         </div>
@@ -35,7 +35,6 @@ var Notice = React.createClass({
   },
 
   renderAds: function () {
-    console.log(ads.ads.queens)
     var place_1 = [ads.ads.paladini, ads.ads.fallabela, ads.ads.showcase];
     var mobileAd = <PlacementBlock type="full">{[ads.ads.queens]}</PlacementBlock>;;
     var deskAds = <PlacementBlock type="third">{place_1}</PlacementBlock>;
@@ -73,18 +72,18 @@ var Notice = React.createClass({
   },
 
   getFbLinkProps: function (id) {
-    var url = 'https://www.facebook.com/sharer/sharer.php?u=http%3A//conceptoactual.com/news.html?id=' + id;
     var props = {
-      onClick: this.handleFbClick,
+      onClick: this.handleFbClick.bind(this, id),
       className: 'notice-social-fb'
     };
 
     return props;
   },
 
-  handleFbClick: function (e) {
-    e.preventDefault();
-    window.open(url, width = "400px");
+  handleFbClick: function (id) {
+    var url = 'https://www.facebook.com/sharer/sharer.php?u=http%3A//conceptoactual.com/news.html?id=' + id;
+
+    return window.open(url, width = "300px");
   }
 });
 

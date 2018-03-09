@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <!-- <meta property="og:url"
         content="http://conceptoactual.com/news.html?id=120" /> -->
-  <meta property="og:title"
-        content="Concepto Actual" />
-  <meta property="og:description"
-        content="Empresa encarga de desarrollar aplicaciones movil y web con calidad" />
+  <!-- <meta property="og:title"
+        content="Concepto Actual" /> -->
+  <!-- <meta property="og:description"
+        content="Empresa encarga de desarrollar aplicaciones movil y web con calidad" /> -->
   <meta property="og:image"
         content="http://conceptoactual.com/cpanel/imagenes/miniaturas/f47068_Dise%C3%B1o%20sin%20t%C3%ADtulo%20(46).jpg" />
   <meta property="fb:app_id"
@@ -20,7 +20,7 @@
 
 
 
-  <title>Concepto Actual</title>
+  <title></title>
   <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -128,12 +128,19 @@
   </script>
 
   <script>
-    console.log(document.getElementsByClassName("notice-title")[0].innerHTML);
+    var title = document.getElementsByClassName("notice-title")[0].innerHTML;
 
     var meta = document.createElement('meta');
-    meta.property = "og:url";
-    meta.content = "dskjashdkajshdkjashdkjhasdkjhaskdh";
+
+
+    // function createMeta
+    meta.setAttribute('property', 'og:description');
+    meta.setAttribute('content', title);
+
     document.getElementsByTagName('head')[0].appendChild(meta);
+
+    var titleTag = document.getElementsByTagName('title')[0].innerHTML;
+    titleTag.innerHTML = 'HOLA HOLA TITILE';
   </script>
 
 </body>

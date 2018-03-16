@@ -14,20 +14,18 @@ var Notice = React.createClass({
       <div className="notice">
         {this.renderAds()}
         <div className="notice-img">
-          <div className="notice-title">{item[0].title}</div>
-          <img src={dynamicPath + item[0].ruta} />
+          <div className="notice-title" id="title">{item[0].title}</div>
+          <img id="image" src={dynamicPath + item[0].ruta} />
         </div>
         {this.renderBaseboard(item[0].category_name, item[0].epigraph)}
-        <div className="notice-subtitle">{item[0].subtitle}</div>
+        <div className="notice-subtitle" id="subtitle">{item[0].subtitle}</div>
         <div className="notice-main">
           {this.renderDescription(item[0].description)}
           <div className="notice-main-paragraph">{item[0].paragraph}</div>
         </div>
         {this.renderVideo(item[0].vide)}
         <div className="notice-social">
-          <div {...this.getFbLinkProps(item[0].id)}>Face</div>
-          <Link linkType="twitter" />
-          <Link linkType="whatsapp" />
+          <div id="fbShare">facebook</div>
         </div>
         {this.renderMobileBottomBar()}
       </div>

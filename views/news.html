@@ -2,23 +2,49 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <!-- <meta property="og:url"
-        content="http://conceptoactual.com/news.html?id=120" /> -->
-  <!-- <meta property="og:title"
-        content="Concepto Actual" /> -->
-  <!-- <meta property="og:description"
-        content="Empresa encarga de desarrollar aplicaciones movil y web con calidad" /> -->
-  <meta property="og:image"
+    <meta charset="utf-8">
+    <meta property="fb:app_id" content="472020159867506" />
+    <meta property="og:url" content="http://conceptoactual.com/news.html?id=100" >
+    <meta property="og:type" content="article" >
+    <meta property="og:title" content="Concepto Actual title" >
+    <meta property="og:description" content="Concepto actual news description" >
+    <meta property="og:image" content="http://conceptoactual.com/cpanel/imagenes/miniaturas/d9d2ae_avianca-rosario-19052017.jpg" >
+    <meta property="og:image:width" content="1200" >
+    <meta property="og:image:height" content="630" >
+    <script>
+        window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '472020159867506',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v2.10'
+        });
+        FB.AppEvents.logPageView();
+        };
+       
+        (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+  <!--<meta charset="utf-8">
+      <meta property="og:url"
+        content="http://conceptoactual.com/news.html?id=120" /> 
+      <meta property="og:title"
+        content="Concepto Actual" /> 
+      <meta property="og:description"
+        content="Empresa encarga de desarrollar aplicaciones movil y web con calidad" />
+      <meta property="og:image"
         content="http://conceptoactual.com/cpanel/imagenes/miniaturas/f47068_Dise%C3%B1o%20sin%20t%C3%ADtulo%20(46).jpg" />
-  <meta property="fb:app_id"
+      <meta property="fb:app_id"
         content="472020159867506" />
-  <meta property="og:country_name"
+      <meta property="og:country_name"
         content="Argentina" />
-  <meta property="og:type"
-        content="article" />
-
-
+      <meta property="og:type"
+        content="article" />-->
 
   <title></title>
   <link rel="stylesheet"
@@ -126,23 +152,118 @@
       });
     });
   </script>
-
   <script>
-    var title = document.getElementsByClassName("notice-title")[0].innerHTML;
+    /* function submitAndShare()
+    {
+      // get the selected answer
+      var playerName = 'George L.';
+      var val = '';
+      var form = document.getElementById('star_trek_quiz');
+      var answers = form.elements['answer'];
+      
+      for(var i=0; i<answers.length; i++)
+      {
+        if(answers[i].checked)
+        {
+          val = answers[i].value;
+          break;
+        }
+      }
+      
+      var title = '';
+      var description = '';
+      var image = '';
+      switch(val)
+      {
+        case 'Tiberius':
+            title = playerName + ' is wise like Yoda!';
+            description = 'Congratulations! ' + playerName + ' is the champion of the StarTrek geekhood - and nobody can beat him. Or ... ? Click to play and prove to the ' + playerName + ' that you are as good as  him!';
+            image = 'http://drib.tech/fbsharetest/quiz_yoda.jpg';
+          break;
+        default:
+            title = playerName + ' is wise like Jar Jar Binks!';
+            description = playerName + 'is the champion of the StarTrek geekhood - NOT! Click to play and prove to the ' + playerName + ' that anybody is better then him!';
+            image = 'http://drib.tech/fbsharetest/quiz_jar_jar_binks.jpg';
+          break;
+      } */
+      
+      
+      // and finally share it
+      
+    /*   shareOverrideOGMeta(window.location.href,
+                title,
+                description,
+                image);
+      
+      return false;
+    }
+     
+    function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
+    {
+      FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        action_properties: JSON.stringify({
+          object: {
+            'og:url': overrideLink,
+            'og:title': overrideTitle,
+            'og:description': overrideDescription,
+            'og:image': overrideImage
+          }
+        })
+      },
+      function (response) {
+      // Action after response
+      });
+    } */
+    console.log('image src', window.location);
+     
+    document.getElementById("fbShare").addEventListener("click", function() {
+      var overrideLink = window.location.href;
+      var overrideTitle = document.getElementById('title').innerHTML;
+      var overrideDescription = document.getElementById('subtitle').innerHTML;
+      var overrideImage = document.getElementById('image').src;
 
-    var meta = document.createElement('meta');
+      FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        action_properties: JSON.stringify({
+          object: {
+            'og:url': overrideLink,
+            'og:title': overrideTitle,
+            'og:description': overrideDescription,
+            'og:image': overrideImage
+          }
+        })
+      },
+      function (response) {
+      // Action after response
+      });
+});
 
+    function shareOriginal() {
+      var overrideLink = window.location.href;
+      var overrideTitle = document.getElementById('title')[0].innerHTML;
+      var overrideDescription = document.getElementById('subtitle')[0].innerHTML;
+      var overrideImage = document.getElementById('image')[0].src;
 
-    // function createMeta
-    meta.setAttribute('property', 'og:description');
-    meta.setAttribute('content', title);
+      FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        action_properties: JSON.stringify({
+          object: {
+            'og:url': overrideLink,
+            'og:title': overrideTitle,
+            'og:description': overrideDescription,
+            'og:image': overrideImage
+          }
+        })
+      },
+      function (response) {
+      // Action after response
+      });
+    }
 
-    document.getElementsByTagName('head')[0].appendChild(meta);
-
-    var titleTag = document.getElementsByTagName('title')[0].innerHTML;
-    titleTag.innerHTML = 'HOLA HOLA TITILE';
   </script>
-
 </body>
-
 </html>

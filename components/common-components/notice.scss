@@ -146,8 +146,13 @@
         position: relative;
         cursor: pointer;
         top: 140px;
-        width: 200px;
+        width: 70px;
         margin: 0 auto;
+        &-fb {
+            background-image: url('/images/logo-facebook.png');
+            height: 70px;
+            width: 70px;
+        }
     }
 }
 
@@ -172,7 +177,15 @@
     .notice-img {
         top: 150px;
     }
-    .notice-baseboard {
+    .notice-baseboard--novedades,
+    .notice-baseboard--deportes,
+    .notice-baseboard--lifestyle,
+    .notice-baseboard--viajes,
+    .notice-baseboard--ocio,
+    .notice-baseboard--tecno,
+    .notice-baseboard--sociales,
+    .notice-baseboard--moda,
+    .notice-baseboard--conceptotv {
         top: 150px;
         font-size: 26px;
     }
@@ -187,6 +200,6 @@
     }
     .notice-social {
         top: 150px;
-        width: 204px
+        width: 70px
     }
 }

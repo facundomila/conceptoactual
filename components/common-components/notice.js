@@ -25,7 +25,7 @@ var Notice = React.createClass({
         </div>
         {this.renderVideo(item[0].vide)}
         <div className="notice-social">
-          <div id="fbShare">facebook</div>
+          <div id="fbShare" className="notice-social-fb"></div>
         </div>
         {this.renderMobileBottomBar()}
       </div>

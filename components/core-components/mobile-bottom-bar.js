@@ -1,6 +1,7 @@
 var React = require('react');
 var Icon = require('components/core-components/icon');
 var Link = require('components/core-components/link');
+var months = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
 
 var mobileBottomBar = React.createClass({
 
@@ -9,7 +10,9 @@ var mobileBottomBar = React.createClass({
 
     return (
       <div className="mobile-bottom-bar">
-        <div className="mobile-bottom-bar-date-container">21FEB</div>
+        <div className="mobile-bottom-bar-date-container">
+          {this.getDate()}
+        </div>
         <div className="mobile-bottom-bar-links-container">
           <Link linkType="facebook" href="https://www.facebook.com/ConceptoActual/" />
           <Link linkType="twitter" href="https://twitter.com/ConceptoActual" />
@@ -20,6 +23,14 @@ var mobileBottomBar = React.createClass({
         </div>
       </div>
     );
+  },
+
+  getDate: function () {
+    var d = new Date();
+    var day = d.getDate().toString();
+    var month = d.getMonth();
+
+    return day + ' ' + months[month];
   },
 
   renderLinks: function (link, key) {

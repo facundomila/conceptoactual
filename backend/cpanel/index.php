@@ -72,6 +72,7 @@ echo '<div class="logout"><a href="logout.php">Cerrar Session</a></div></div>';
               </div>
               <div class="fourth-part">
               <label>Cuerpo de noticia: *</label><br>
+              <p>Para dar formato al texto ingresar <a href="https://wordtohtml.net/" target="_blank">AQUI</a>. Dar formato y copiar el resultado del HTML editor</p>
                 <textarea name="paragraph" rows="30" cols="50" required></textarea>
               </div>
               <div class="fifth-part">

@@ -21,11 +21,14 @@ var Notice = React.createClass({
         <div className="notice-subtitle" id="subtitle">{item[0].subtitle}</div>
         <div className="notice-main">
           {this.renderDescription(item[0].description)}
-          <div className="notice-main-paragraph">{item[0].paragraph}</div>
+          <div className="notice-main-paragraph" dangerouslySetInnerHTML={{ __html: item[0].paragraph }}></div>
         </div>
         {this.renderVideo(item[0].vide)}
         <div className="notice-social">
           <div id="fbShare" className="notice-social-fb"></div>
+          <div className="notice-social-tw"></div>
+          <div className="notice-social-ws"></div>
+          <div className="notice-social-insta"></div>
         </div>
         {this.renderMobileBottomBar()}
       </div>

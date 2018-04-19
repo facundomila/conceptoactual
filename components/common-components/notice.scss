@@ -145,13 +145,52 @@
     &-social {
         position: relative;
         cursor: pointer;
-        top: 140px;
-        width: 70px;
+        top: 190px;
+        width: 100%;
         margin: 0 auto;
         &-fb {
-            background-image: url('/images/logo-facebook.png');
-            height: 70px;
-            width: 70px;
+            position: relative;
+            float: left;
+            background-image: url('/images/fb-white.png');
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            background-position: center;
+            background-color: #3B5998;
+            height: 100px;
+            width: 25%;
+        }
+        &-tw {
+            position: relative;
+            float: left;
+            background-image: url('/images/tw-white.png');
+            background-repeat: no-repeat;
+            background-size: 40px 32px;
+            background-position: center;
+            background-color: #00aced;
+            height: 100px;
+            width: 25%;
+        }
+        &-ws {
+            position: relative;
+            float: left;
+            background-image: url('/images/ws-white.png');
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            background-position: center;
+            background-color: #34AF23;
+            height: 100px;
+            width: 25%;
+        }
+        &-insta {
+            position: relative;
+            float: left;
+            background-image: url('/images/insta-white.png');
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            background-position: center;
+            background-color: #cd486b;
+            height: 100px;
+            width: 25%;
         }
     }
 }

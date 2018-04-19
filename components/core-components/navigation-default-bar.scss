@@ -1,191 +1,340 @@
 @import 'styles/globals';
-
 .navigation-default-bar {
-  width: 100%;
-  z-index: 1002;
-  position: absolute;
-  top: 0px;
-  height: 80px;
-  background-color: $background-color-primary;
-  opacity: 1;
-
-  & a {
-    text-decoration: none;
-    color: $color-primary;
-  }
-
-  &-links {
-    margin-left: 140px;
-    width: 760px;
-    position: relative;
-    float: left;
-  }
-
-  &-link {
-    &--novedades, &--deportes, &--lifestyle, &--viajes, &--ocio, &--tecno, &--sociales, &--moda, &--conceptotv {
-      width: 10.8%;
-      position: relative;
-      float: left;
-      color: #daa520;
-      padding: 26px 0 10px 0;
-      text-align: center;
-      font-size: 13px;
-      text-decoration: none;
-      border-bottom: solid 0 orange;
-    }
-  }
-
-  &-link {  
-    &--novedades:hover {
-      border-bottom: solid 5px $novedades-color;
-      -webkit-animation-name: swing-novedades; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-    }
-    &--deportes:hover {
-      border-bottom: solid 5px $deportes-color;
-      -webkit-animation-name: swing-deportes; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-    }
-    &--lifestyle:hover {
-      border-bottom: solid 5px $life-style-color;
-      -webkit-animation-name: swing-life; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-    }
-    &--viajes:hover {
-      border-bottom: solid 5px $viajes-color;
-      -webkit-animation-name: swing-viajes; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-    }
-    &--ocio:hover {
-      border-bottom: solid 5px $ocio-color;
-      -webkit-animation-name: swing-ocio; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-    }
-    &--tecno:hover {
-      border-bottom: solid 5px $tecno-color;
-      -webkit-animation-name: swing-tecno; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-    }
-    &--sociales:hover {
-      border-bottom: solid 5px $sociales-color;
-      -webkit-animation-name: swing-sociales; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-    }
-    &--moda:hover {
-      border-bottom: solid 5px $moda-color;
-      -webkit-animation-name: swing-moda; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-    }
-    &--conceptotv:hover {
-      border-bottom: solid 5px $concepto-tv-color;
-      -webkit-animation-name: swing-concepto; /* Safari 4.0 - 8.0 */
-      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-      -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-    }
-  }
-
-  &-logo-container {
-    width: auto;
-    float: left;
-  }
-
-  &-logo {
-    display: block;
-    margin: 20px 0 5px 20px;
-  }
-
-  &-networks {
-    cursor: pointer;
+    width: 100%;
+    z-index: 1002;
     position: absolute;
-    top: 24px;
-    right: 20px;
-  }
+    top: 0px;
+    height: 80px;
+    background-color: $background-color-primary;
+    opacity: 1;
+    & a {
+        text-decoration: none;
+        color: $color-primary;
+    }
+    &-links {
+        margin-left: 140px;
+        width: 760px;
+        position: relative;
+        float: left;
+    }
+    &-link {
+        &--novedades,
+        &--deportes,
+        &--lifestyle,
+        &--viajes,
+        &--ocio,
+        &--tecno,
+        &--sociales,
+        &--moda,
+        &--conceptotv {
+            width: 10.8%;
+            position: relative;
+            float: left;
+            color: #daa520;
+            padding: 26px 0 10px 0;
+            text-align: center;
+            font-size: 14px;
+            text-decoration: none;
+            border-bottom: solid 0 orange;
+        }
+    }
+    &-link {
+        &--novedades:hover {
+            border-bottom: solid 5px $novedades-color;
+            -webkit-animation-name: swing-novedades;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.3s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 1;
+            /* Safari 4.0 - 8.0 */
+        }
+        &--deportes:hover {
+            border-bottom: solid 5px $deportes-color;
+            -webkit-animation-name: swing-deportes;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.3s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 1;
+            /* Safari 4.0 - 8.0 */
+        }
+        &--lifestyle:hover {
+            border-bottom: solid 5px $life-style-color;
+            -webkit-animation-name: swing-life;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.3s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 1;
+            /* Safari 4.0 - 8.0 */
+        }
+        &--viajes:hover {
+            border-bottom: solid 5px $viajes-color;
+            -webkit-animation-name: swing-viajes;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.3s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 1;
+            /* Safari 4.0 - 8.0 */
+        }
+        &--ocio:hover {
+            border-bottom: solid 5px $ocio-color;
+            -webkit-animation-name: swing-ocio;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.3s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 1;
+            /* Safari 4.0 - 8.0 */
+        }
+        &--tecno:hover {
+            border-bottom: solid 5px $tecno-color;
+            -webkit-animation-name: swing-tecno;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.3s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 1;
+            /* Safari 4.0 - 8.0 */
+        }
+        &--sociales:hover {
+            border-bottom: solid 5px $sociales-color;
+            -webkit-animation-name: swing-sociales;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.3s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 1;
+            /* Safari 4.0 - 8.0 */
+        }
+        &--moda:hover {
+            border-bottom: solid 5px $moda-color;
+            -webkit-animation-name: swing-moda;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.3s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 1;
+            /* Safari 4.0 - 8.0 */
+        }
+        &--conceptotv:hover {
+            border-bottom: solid 5px $concepto-tv-color;
+            -webkit-animation-name: swing-concepto;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.3s;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: 1;
+            /* Safari 4.0 - 8.0 */
+        }
+    }
+    &-logo-container {
+        width: auto;
+        float: left;
+    }
+    &-logo {
+        display: block;
+        margin: 20px 0 5px 20px;
+    }
+    &-networks {
+        cursor: pointer;
+        position: absolute;
+        top: 24px;
+        right: 20px;
+    }
 }
 
 //Responsive Style
 @media only screen and (max-width: 1400px) {
-  .navigation-default-bar-links { margin-left: 100px; }
+    .navigation-default-bar-links {
+        margin-left: 100px;
+    }
 }
 
 @media only screen and (max-width: 1340px) {
-  .navigation-default-bar-links { margin-left: 30px; }
+    .navigation-default-bar-links {
+        margin-left: 30px;
+    }
 }
 
 //Responsive Style
 @media only screen and (max-width: 1200px) {
-  .navigation-default-bar { height: 122px; }
-  .navigation-default-bar-links { width: 100%; margin-left: 0;}
-  .navigation-default-bar-link { width: 12.5%; font-size: 12px; padding: 10px 0; }
+    .navigation-default-bar {
+        height: 122px;
+    }
+    .navigation-default-bar-links {
+        width: 100%;
+        margin-left: 0;
+    }
+    .navigation-default-bar-link {
+        width: 12.5%;
+        font-size: 12px;
+        padding: 10px 0;
+    }
 }
 
 /* Safari 4.0 - 8.0 */
+
 @-webkit-keyframes swing-novedades {
-  0%   {font-size: 13px; border-bottom: solid 2px $novedades-color;}
-  25%  {font-size: 12px; border-bottom: solid 5px white;}
-  60%  {font-size: 15px; border-bottom: solid 2px white;}
-  100% {font-size: 13px; border-bottom: solid 5px $novedades-color;}
+    0% {
+        font-size: 13px;
+        border-bottom: solid 2px $novedades-color;
+    }
+    25% {
+        font-size: 12px;
+        border-bottom: solid 5px white;
+    }
+    60% {
+        font-size: 15px;
+        border-bottom: solid 2px white;
+    }
+    100% {
+        font-size: 13px;
+        border-bottom: solid 5px $novedades-color;
+    }
 }
 
 @-webkit-keyframes swing-deportes {
-  0%   {font-size: 13px; border-bottom: solid 2px $deportes-color;}
-  25%  {font-size: 12px; border-bottom: solid 5px white;}
-  60%  {font-size: 15px; border-bottom: solid 2px white;}
-  100% {font-size: 13px; border-bottom: solid 5px $deportes-color;}
+    0% {
+        font-size: 13px;
+        border-bottom: solid 2px $deportes-color;
+    }
+    25% {
+        font-size: 12px;
+        border-bottom: solid 5px white;
+    }
+    60% {
+        font-size: 15px;
+        border-bottom: solid 2px white;
+    }
+    100% {
+        font-size: 13px;
+        border-bottom: solid 5px $deportes-color;
+    }
 }
 
 @-webkit-keyframes swing-life {
-  0%   {font-size: 13px; border-bottom: solid 2px $life-style-color;}
-  25%  {font-size: 12px; border-bottom: solid 5px white;}
-  60%  {font-size: 15px; border-bottom: solid 2px white;}
-  100% {font-size: 13px; border-bottom: solid 5px $life-style-color;}
+    0% {
+        font-size: 13px;
+        border-bottom: solid 2px $life-style-color;
+    }
+    25% {
+        font-size: 12px;
+        border-bottom: solid 5px white;
+    }
+    60% {
+        font-size: 15px;
+        border-bottom: solid 2px white;
+    }
+    100% {
+        font-size: 13px;
+        border-bottom: solid 5px $life-style-color;
+    }
 }
 
 @-webkit-keyframes swing-viajes {
-  0%   {font-size: 13px; border-bottom: solid 2px $viajes-color;}
-  25%  {font-size: 12px; border-bottom: solid 5px white;}
-  60%  {font-size: 15px; border-bottom: solid 2px white;}
-  100% {font-size: 13px; border-bottom: solid 5px $viajes-color;}
+    0% {
+        font-size: 13px;
+        border-bottom: solid 2px $viajes-color;
+    }
+    25% {
+        font-size: 12px;
+        border-bottom: solid 5px white;
+    }
+    60% {
+        font-size: 15px;
+        border-bottom: solid 2px white;
+    }
+    100% {
+        font-size: 13px;
+        border-bottom: solid 5px $viajes-color;
+    }
 }
 
 @-webkit-keyframes swing-ocio {
-  0%   {font-size: 13px; border-bottom: solid 2px $ocio-color;}
-  25%  {font-size: 12px; border-bottom: solid 5px white;}
-  60%  {font-size: 15px; border-bottom: solid 2px white;}
-  100% {font-size: 13px; border-bottom: solid 5px $ocio-color;}
+    0% {
+        font-size: 13px;
+        border-bottom: solid 2px $ocio-color;
+    }
+    25% {
+        font-size: 12px;
+        border-bottom: solid 5px white;
+    }
+    60% {
+        font-size: 15px;
+        border-bottom: solid 2px white;
+    }
+    100% {
+        font-size: 13px;
+        border-bottom: solid 5px $ocio-color;
+    }
 }
 
 @-webkit-keyframes swing-tecno {
-  0%   {font-size: 13px; border-bottom: solid 2px $tecno-color;}
-  25%  {font-size: 12px; border-bottom: solid 5px white;}
-  60%  {font-size: 15px; border-bottom: solid 2px white;}
-  100% {font-size: 13px; border-bottom: solid 5px $tecno-color;}
+    0% {
+        font-size: 13px;
+        border-bottom: solid 2px $tecno-color;
+    }
+    25% {
+        font-size: 12px;
+        border-bottom: solid 5px white;
+    }
+    60% {
+        font-size: 15px;
+        border-bottom: solid 2px white;
+    }
+    100% {
+        font-size: 13px;
+        border-bottom: solid 5px $tecno-color;
+    }
 }
 
 @-webkit-keyframes swing-sociales {
-  0%   {font-size: 13px; border-bottom: solid 2px $sociales-color;}
-  25%  {font-size: 12px; border-bottom: solid 5px white;}
-  60%  {font-size: 15px; border-bottom: solid 2px white;}
-  100% {font-size: 13px; border-bottom: solid 5px $sociales-color;}
+    0% {
+        font-size: 13px;
+        border-bottom: solid 2px $sociales-color;
+    }
+    25% {
+        font-size: 12px;
+        border-bottom: solid 5px white;
+    }
+    60% {
+        font-size: 15px;
+        border-bottom: solid 2px white;
+    }
+    100% {
+        font-size: 13px;
+        border-bottom: solid 5px $sociales-color;
+    }
 }
 
 @-webkit-keyframes swing-moda {
-  0%   {font-size: 13px; border-bottom: solid 2px $moda-color;}
-  25%  {font-size: 12px; border-bottom: solid 5px white;}
-  60%  {font-size: 15px; border-bottom: solid 2px white;}
-  100% {font-size: 13px; border-bottom: solid 5px $moda-color;}
+    0% {
+        font-size: 13px;
+        border-bottom: solid 2px $moda-color;
+    }
+    25% {
+        font-size: 12px;
+        border-bottom: solid 5px white;
+    }
+    60% {
+        font-size: 15px;
+        border-bottom: solid 2px white;
+    }
+    100% {
+        font-size: 13px;
+        border-bottom: solid 5px $moda-color;
+    }
 }
 
 @-webkit-keyframes swing-concepto {
-  0%   {font-size: 13px; border-bottom: solid 2px $concepto-tv-color;}
-  25%  {font-size: 12px; border-bottom: solid 5px white;}
-  60%  {font-size: 14px; border-bottom: solid 2px white;}
-  100% {font-size: 13px; border-bottom: solid 5px $concepto-tv-color;}
+    0% {
+        font-size: 13px;
+        border-bottom: solid 2px $concepto-tv-color;
+    }
+    25% {
+        font-size: 12px;
+        border-bottom: solid 5px white;
+    }
+    60% {
+        font-size: 14px;
+        border-bottom: solid 2px white;
+    }
+    100% {
+        font-size: 13px;
+        border-bottom: solid 5px $concepto-tv-color;
+    }
 }

@@ -1,0 +1,41 @@
+@import 'styles/globals';
+.category-page {
+    overflow: hidden;
+    color: $color-tertiary;
+    &-highlighted {
+        position: relative;
+        width: 100%;
+        &--empty {
+            height: 80px;
+        }
+    }
+    &-ads {
+        position: relative;
+        width: 100%;
+    }
+    &-main {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+    &-ads2 {
+        position: relative;
+        width: 100%;
+    }
+    &-footer {
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-device-width: 1180px) {
+    .category-page-highlighted {
+        top: 160px
+    }
+    .category-page-footer {
+        position: relative;
+        height: 515px;
+        top: 150px;
+    }
+}

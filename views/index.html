@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Concepto Actual</title>
   <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,6 +13,14 @@
         rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway"
         rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen"
+        rel="stylesheet">
+  <link rel="stylesheet"
+        type="text/css"
+        href="jquery/css/slick.css">
+  <link rel="stylesheet"
+        type="text/css"
+        href="jquery/css/slick-theme.css">
   <style>
     #app {
       display: none;
@@ -80,6 +87,22 @@
       $('#preloader').fadeOut('3000');
       $('#app').fadeIn('7000');
     })
+  </script>
+  <script src="jquery/js/slick.js"
+          type="text/javascript"
+          charset="utf-8"></script>
+  <script type="text/javascript">
+    var $jq = jQuery.noConflict();
+    $jq(document).on('ready', function () {
+      $jq(".regular").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
+    });
   </script>
 </body>
 

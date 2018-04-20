@@ -58,7 +58,8 @@ echo '<div class="menu"><a href="index.php">Menu principal</a></div></div>';
             <textarea id="description" name="description" rows="3" cols="30" ></textarea>
         </div>
         <div class="fourth-part">
-          <label>Cuerpo de noticia:</label><br>
+          <label>Cuerpo de noticia:</label>
+          <p>Para dar formato al texto ingresar <a href="https://wordtohtml.net/" target="_blank">AQUI</a>. Dar formato y copiar el resultado del HTML editor</p>
             <textarea id="paragraph" name="paragraph" rows="30" cols="50" ></textarea>
         </div>
         <div class="fifth-part">

@@ -440,11 +440,10 @@
     &--8 {
         z-index: 1000;
         position: relative;
-        float: left;
-        border: -18px solid transparent;
+        float: left; //border: -18px solid transparent;
         width: 100%;
         margin: 0;
-        transition: .2s ease;
+        /* transition: .2s ease;
         -webkit-transition: all 200ms ease-in;
         -webkit-transform: scale(1);
         -ms-transition: all 200ms ease-in;
@@ -452,9 +451,9 @@
         -moz-transition: all 200ms ease-in;
         -moz-transform: scale(1);
         transition: all 200ms ease-in;
-        transform: scale(1);
+        transform: scale(1); */
     }
-    &--0:hover,
+    /* &--0:hover,
     &--1:hover,
     &--2:hover,
     &--3:hover,
@@ -498,7 +497,7 @@
     }
     &--8:hover {
         border: 18px solid $concepto-tv-color;
-    }
+    } */
     &--title {
         font-family: $titles;
         width: 100%;

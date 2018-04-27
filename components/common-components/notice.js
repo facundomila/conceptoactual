@@ -27,8 +27,8 @@ var Notice = React.createClass({
         <div className="notice-social">
           <div id="fbShare" className="notice-social-fb"></div>
           <div className="notice-social-tw"></div>
-          <div className="notice-social-ws"></div>
-          <div className="notice-social-insta"></div>
+          <a href={this.getWhatappLink()} target="_blank"><div className="notice-social-ws"></div></a>
+          <a href="https://www.instagram.com/conceptoactual/"><div className="notice-social-insta"></div></a>
         </div>
         {this.renderMobileBottomBar()}
       </div>
@@ -79,6 +79,10 @@ var Notice = React.createClass({
     };
 
     return props;
+  },
+
+  getWhatappLink: function () {
+    return 'whatsapp://send?text=' + window.location.href;
   },
 
   handleFbClick: function (id) {

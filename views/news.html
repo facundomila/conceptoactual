@@ -216,7 +216,6 @@
       // Action after response
       });
     } */
-    console.log('image src', window.location);
      
     document.getElementById("fbShare").addEventListener("click", function() {
       var overrideLink = window.location.href;
@@ -236,10 +235,10 @@
           }
         })
       },
-      function (response) {
-      // Action after response
-      });
-});
+        function (response) {
+          // Action after response
+        });
+    });
 
     function shareOriginal() {
       var overrideLink = window.location.href;
@@ -263,7 +262,32 @@
       // Action after response
       });
     }
+    
+    </script>
+    <script>
+      document.getElementsByTagName('body').onload(function() {
+        console.log(window);
+        var overrideLink = window.location.href;
+        var overrideTitle = document.getElementById('title').innerHTML;
+        var overrideDescription = document.getElementById('subtitle').innerHTML;
+        var overrideImage = document.getElementById('image').src;
 
+        FB.ui({
+          method: 'share_open_graph',
+          action_type: 'og.shares',
+          action_properties: JSON.stringify({
+            object: {
+              'og:url': overrideLink,
+              'og:title': overrideTitle,
+              'og:description': overrideDescription,
+              'og:image': overrideImage
+            }
+          })
+        },
+        function (response) {
+          // Action after response
+        });
+      });
   </script>
 </body>
 </html>

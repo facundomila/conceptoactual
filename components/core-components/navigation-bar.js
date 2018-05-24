@@ -1,5 +1,4 @@
 var React = require('react');
-var Icon = require('components/core-components/icon');
 var Link = require('components/core-components/link');
 var NavigationSticky = require('components/core-components/navigation-sticky-bar');
 var NavigationMobileBar = require('components/core-components/navigation-mobile-bar');

@@ -7,10 +7,12 @@ var buffer = require('vinyl-buffer');
 var concat = require('gulp-concat');
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
+var minify = require('gulp-minify');
 var minifycss = require('gulp-minify-css');
 var nodemon = require('gulp-nodemon');
 var notify = require('gulp-notify');
 var proxyMiddleware = require('http-proxy-middleware');
+var pump = require('pump');
 var reactify = require('reactify');
 var rimraf = require('gulp-rimraf');
 var runSequence = require('run-sequence');
@@ -25,7 +27,17 @@ var stylesSrc = [
     './styles/**/*.scss'
 ];
 
-function buildScript (file) {
+gulp.task('compress', function (cb) {
+    pump([
+        gulp.src('./components/*.js'),
+        uglify(),
+        gulp.dest('dist')
+    ],
+        cb
+    );
+});
+
+function buildScript(file) {
     var props = {
         entries: ['./components/' + file],
         debug: true
@@ -34,7 +46,7 @@ function buildScript (file) {
 
     bundler.transform(reactify);
 
-    function rebundle () {
+    function rebundle() {
         var stream = bundler.bundle();
 
         return stream.on('error', handleError)
@@ -51,7 +63,7 @@ function buildScript (file) {
     return rebundle();
 }
 
-function handleError () {
+function handleError() {
     var args = Array.prototype.slice.call(arguments);
 
     notify.onError({
@@ -62,32 +74,32 @@ function handleError () {
     this.emit('end');
 }
 
-function buildView () {
+function buildView() {
     return gulp.src('./views/**/*.html')
         .pipe(gulp.dest('./build/'));
 }
 
-function jquery () {
+function jquery() {
     return gulp.src('./jquery/**/*.js')
         .pipe(gulp.dest('./build/jquery'));
 }
 
-function advertisments () {
+function advertisments() {
     return gulp.src('./services/**/*.json')
         .pipe(gulp.dest('./build/services'));
 }
 
-function jquerycss () {
+function jquerycss() {
     return gulp.src('./jquery/**/*.css')
         .pipe(gulp.dest('./build/jquery'));
 }
 
-function buildImages () {
+function buildImages() {
     return gulp.src('./images/**/*')
         .pipe(gulp.dest('./build/images'))
 }
 
-function buildStyle () {
+function buildStyle() {
     return gulp.src(stylesSrc)
         .pipe(sass())
         .pipe(concat('styles.css'))
@@ -96,8 +108,8 @@ function buildStyle () {
 }
 
 gulp.task('clean-build', function () {
-    return gulp.src('./build/**/*.*', {read: false})
-        .pipe(rimraf({force: true}));
+    return gulp.src('./build/**/*.*', { read: false })
+        .pipe(rimraf({ force: true }));
 });
 
 gulp.task('build-script', function () {
@@ -169,7 +181,7 @@ gulp.task('nodemon', function (cb) {
     });
 });
 
-gulp.task('browsersync-proxy' ,function () {
+gulp.task('browsersync-proxy', function () {
     var proxyServer = 'http://localhost:3000';
     //var apiProxy;
     var browsersyncConfig = {
@@ -183,7 +195,7 @@ gulp.task('browsersync-proxy' ,function () {
     };
 
     if (argv.production) {
-        var apiProxy = proxyMiddleware('/api', {target: proxyServer});
+        var apiProxy = proxyMiddleware('/api', { target: proxyServer });
         browsersyncConfig.proxy.middleware = [apiProxy];
     }
 
@@ -199,7 +211,7 @@ gulp.task('default', function () {
     ]);
 });
 
-gulp.task('server', function() {
+gulp.task('server', function () {
     return runSequence('clean-build', [
         'build-script', 'build-view', 'build-images', 'build-style', 'watch-style', 'watch-server', 'nodemon', 'build-jquery', 'build-jquerycss', 'build-ads'
     ], 'browsersync-proxy');

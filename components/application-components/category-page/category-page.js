@@ -1,7 +1,5 @@
 var ads = require('services/advertisement.json');
 var Footer = require('components/core-components/footer');
-var Header = require('components/core-components/header');
-var Logo = require('components/core-components/logo');
 var NavigationBar = require('components/core-components/navigation-bar');
 var NewsGrid = require('components/common-components/news-grid');
 var NewsGridMobile = require('components/common-components/news-grid-mobile');
@@ -33,11 +31,8 @@ var CategoryPage = React.createClass({
         var isMobile = (window.screen.width < 1180);
         var NewsStore = this.state.news.records;
         var currentCategory = window.location.search.substr(1);
-        console.log(currentCategory);
         var filtredNews = [];
         var HighlightedNews = [];
-
-        console.log(NewsStore);
 
         NewsStore.forEach(function (item) {
             if (item.ubicacion === "0" && item.category_id === currentCategory) {
@@ -49,8 +44,6 @@ var CategoryPage = React.createClass({
                 filtredNews.push(item);
             }
         });
-
-        console.log(HighlightedNews.length);
 
         return (
             <div className="category-page">
@@ -87,7 +80,14 @@ var CategoryPage = React.createClass({
         var grid = (isMobile) ? <NewsGridMobile advertisment={ads}>{NewsStore}</NewsGridMobile> : <NewsGrid advertisment={ads}>{NewsStore}</NewsGrid>;
 
         return grid;
-    }
+    },
+
+    renderCategroryName: function (category) {
+        var customClass = 'category-page-name--' + category.toLowerCase();
+        var layoutCategoryName = <div className={customClass}>{category}</div>;
+
+        return layoutCategoryName;
+    },
 });
 
 module.exports = CategoryPage;

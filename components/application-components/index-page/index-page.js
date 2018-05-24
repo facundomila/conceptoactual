@@ -1,7 +1,5 @@
 var ads = require('services/advertisement.json');
 var Footer = require('components/core-components/footer');
-var Header = require('components/core-components/header');
-var Logo = require('components/core-components/logo');
 var NavigationBar = require('components/core-components/navigation-bar');
 var NewsGrid = require('components/common-components/news-grid');
 var NewsGridMobile = require('components/common-components/news-grid-mobile');

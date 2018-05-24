@@ -1,7 +1,5 @@
 var ads = require('services/advertisement.json');
 var Footer = require('components/core-components/footer');
-var Header = require('components/core-components/header');
-var Logo = require('components/core-components/logo');
 var NavigationBar = require('components/core-components/navigation-bar');
 var NewsGrid = require('components/common-components/news-grid');
 var NewsGridMobile = require('components/common-components/news-grid-mobile');
@@ -11,7 +9,7 @@ var storeProductApi = require('services/store-product/store-product-api');
 
 var DemoPage = React.createClass({
 
-    getInitialState: function() {
+    getInitialState: function () {
         return {
             news: ''
         };
@@ -27,7 +25,7 @@ var DemoPage = React.createClass({
             url: 'http://conceptoactual.com.ar/api/news/read.php'
         });
 
-        return this.setState({news: JSON.parse(newsObj)})
+        return this.setState({ news: JSON.parse(newsObj) })
     },
     render: function () {
         var isMobile = (window.screen.width < 1180);
@@ -35,31 +33,31 @@ var DemoPage = React.createClass({
         var HighlightedNews = [];
 
         NewsStore.forEach(function (item) {
-          if (item.ubicacion === "0") {
-            HighlightedNews.push(item);
-          }
+            if (item.ubicacion === "0") {
+                HighlightedNews.push(item);
+            }
         });
 
         return (
             <div className="demo-page">
-              <NavigationBar />
-              <div className="demo-page-highlighted">
-                <SliderNews>{HighlightedNews}</SliderNews>
-              </div>
-              <div className="demo-page-main">
-                {this.renderNewsGrid(ads, NewsStore, isMobile)}
-              </div>
-              <div className="demo-page-footer">
-                <Footer />
-              </div>
+                <NavigationBar />
+                <div className="demo-page-highlighted">
+                    <SliderNews>{HighlightedNews}</SliderNews>
+                </div>
+                <div className="demo-page-main">
+                    {this.renderNewsGrid(ads, NewsStore, isMobile)}
+                </div>
+                <div className="demo-page-footer">
+                    <Footer />
+                </div>
             </div>
         );
     },
 
     renderNewsGrid: function (ads, NewsStore, isMobile) {
-      var grid = (isMobile) ? <NewsGridMobile advertisment={ads}>{NewsStore}</NewsGridMobile> : <NewsGrid advertisment={ads}>{NewsStore}</NewsGrid>;
+        var grid = (isMobile) ? <NewsGridMobile advertisment={ads}>{NewsStore}</NewsGridMobile> : <NewsGrid advertisment={ads}>{NewsStore}</NewsGrid>;
 
-      return grid;
+        return grid;
     }
 });
 
